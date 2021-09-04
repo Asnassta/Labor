@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<title>Диагностический центр лабораторных исследований</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="glass" viewBox="0 0 32 12">
+			<g><g><path d="M8 2.004a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm5.25 1.094A3.994 3.994 0 0 1 16 2.004a3.986 3.986 0 0 1 2.75 1.094 6 6 0 0 1 11.168 1.906H31a1 1 0 1 1 0 2h-1.082a6 6 0 0 1-11.918-1 2 2 0 1 0-4 0 6 6 0 0 1-11.918 1H1a1 1 0 1 1 0-2h1.082A6 6 0 0 1 13.25 3.098zm13.578.077a4 4 0 1 0-5.656 5.657 4 4 0 0 0 5.656-5.657z"/></g></g>
+		</symbol>
+		<symbol id="search" viewBox="0 0 24 24">
+			<g><g><g/><g><path d="M17.615 15.512c.061.046.118.096.172.15l5.775 5.775a1.5 1.5 0 1 1-2.123 2.12l-5.775-5.774a1.754 1.754 0 0 1-.146-.172 9.75 9.75 0 1 1 2.097-2.099zm-2.03-11.598A8.25 8.25 0 1 0 3.918 15.58 8.25 8.25 0 0 0 15.585 3.914z"/></g></g></g>
+		</symbol>
+		<symbol id="arrow-slider" viewBox="0 0 21 14">
+			<g><g><path d="M14.672.786l6.182 6.182a.5.5 0 0 1 0 .708l-6.182 6.181a.5.5 0 1 1-.708-.707l5.329-5.328H.5a.5.5 0 0 1 0-1h18.793l-5.329-5.328a.5.5 0 1 1 .708-.708z"/></g></g>
+		</symbol>
+		<symbol id="close" viewBox="0 0 17 17">
+			<g><g><path d="M9.584 8.333l7.222-7.222a.651.651 0 0 0-.92-.92L8.662 7.413 1.441.19a.651.651 0 1 0-.92.92l7.222 7.222L.52 15.555a.651.651 0 1 0 .92.921l7.222-7.222 7.222 7.222a.65.65 0 0 0 .921 0 .651.651 0 0 0 0-.92z"/></g></g>
+		</symbol>
+	</svg>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<nav class="header__nav header__nav_small">
+						<a href="#" class="header__link">Государственным заказчикам</a>
+						<a href="#" class="header__link">Корпоративным клиентам</a>
+						<a href="mailto:dcli@zdrav.mos.ru" class="header__link header__link_mail">dcli@zdrav.mos.ru</a>
+						<a href="tel:+78001234567" class="header__link">8 (800) 123-45-67</a>
+						<a href="tel:+74953966668" class="header__link">8 (495) 396-66-68</a>
+						<a href="#" class="header__link">Личный кабинет</a>
+					</nav><!--/header__nav-->
+					<div class="header__buttons">
+						<a class="icon-glass" href="">
+							<svg>
+								<use xlink:href="#glass"></use>
+							</svg>
+						</a>
+						<a class="icon-search" href="" id="search-toggle">
+							<svg>
+								<use xlink:href="#search"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="header-search">
+						<div class="header-search__inner">
+							<span class="header-search__icon">
+								<svg>
+									<use xlink:href="#search"></use>
+								</svg>
+							</span>
+							<form action="" method="">
+  								<input placeholder="Что ищете?" type="search">
+  								<button type="submit">
+  									Найти
+  								</button>
+							</form>
+							<a href="" class="header-search__close">
+								<svg>
+									<use xlink:href="#close"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="header__inner">
+					<a href="/" class="header__logo">
+						<img src="assets/images/logo.png" alt="">
+					</a>
+					<nav class="header__nav">
+						<a href="#" class="header__link">COVID-19</a>
+						<a href="#" class="header__link">Анализы</a>
+						<a href="#" class="header__link">Адреса отделений</a>
+						<a href="#" class="header__link">Акции</a>
+						<a href="#" class="header__link">Запись к врачу</a>
+						<a href="#" class="header__link">Выезд  на дом</a>
+						<a href="#" class="header__link">О центре</a>
+						<div class="burger">
+							<span class="burger__item"></span>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="header__menu menu">
+				<div class="menu__inner container">
+					<div class="menu__column">
+						<ul class="menu_mobile">
+							<li>Главное</li>
+							<li><a href="#">Государственным заказчикам</a></li>
+							<li><a href="#">Корпоративным клиентам</a></li>
+							<li><a href="tel:+78001234567">8 (800) 123-45-67</a></li>
+							<li><a href="tel:+74953966668">8 (495) 396-66-68</a></li>
+							<li><a href="#">Личный кабинет</a></li>
+							<li><a href="#">COVID-19</a></li>
+							<li><a href="#">Анализы</a></li>
+							<li><a href="#">Адреса отделений</a></li>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Запись к врачу</a></li>
+							<li><a href="#">Выезд  на дом</a></li>
+							<li><a href="#">О центре</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+					</div><!--/menu__column-->
+					<div class="menu__column">
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+						</ul>
+					</div><!--/menu__column-->
+					<div class="menu__column">
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+						</ul>
+					</div><!--/menu__column-->
+					<div class="menu__column">
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+					</div><!--/menu__column-->
+				</div>
+			</div><!--/menu-->
+		</header><!--/header-->
+		<main class="main">
+			<div class="search">
+				<div class="container">
+					<form action="" method="">
+  						<input placeholder="Поиск медицинских анализов" type="search">
+  						<button type="submit">
+  							<svg>
+								<use xlink:href="#search"></use>
+							</svg>
+  						</button>
+					</form>
+				</div>
+			</div>
+			<div class="labor">
+				<div class="container">
+					<div class="labor__inner">
+						<a href="#" class="labor__item">
+							<div class="labor__icon">
+								<img src="assets/images/hospital-icon.svg" alt="">
+							</div>
+							<div class="labor__name">
+								Где сдать<br> анализы
+							</div>
+						</a><!--/labor__item-->
+
+						<a href="#" class="labor__item">
+							<div class="labor__icon">
+								<img src="assets/images/microscope-icon.svg" alt="">
+							</div>
+							<div class="labor__name">
+								Каталог <br>анализов
+							</div>
+						</a><!--/labor__item-->
+						<a href="#" class="labor__item">
+							<div class="labor__icon">
+								<img src="assets/images/doctor-icon.svg" alt="">
+							</div>
+							<div class="labor__name">
+								Записаться<br> к врачу
+							</div>
+						</a><!--/labor__item-->
+						<a href="#" class="labor__item">
+							<div class="labor__icon">
+								<img src="assets/images/house-icon.svg" alt="">
+							</div>
+							<div class="labor__name">
+								Сдать анализы<br> на дому
+							</div>
+						</a><!--/labor__item-->
+					</div>
+				</div>
+			</div><!--/labor-->
+			<section class="intro block">
+				<div class="container">
+					<div class="intro__slider">
+						<div class="intro__slide">
+							<div class="intro__inner">
+								<div class="intro__column">
+									<h1 class="title title-blob">Диагностический центр лабораторных исследований</h1>
+									<div class="subtitle">Департамента здравоохранения<br> города Москвы</div>
+									<a href="#" class="btn">Подробнее</a>
+								</div>
+								<div class="intro__column intro__image">
+									<img src="assets/images/dna.png" alt="">
+								</div>
+							</div>
+						</div><!--/intro__slide-->
+						<div class="intro__slide">
+							<div class="intro__inner">
+								<div class="intro__column">
+									<h1 class="title title-blob">Центр лабораторных исследований</h1>
+									<div class="subtitle">Департамента здравоохранения<br> города Москвы</div>
+									<a href="#" class="btn">Подробнее</a>
+								</div>
+								<div class="intro__column intro__image">
+									<img src="assets/images/dna.png" alt="">
+								</div>
+							</div>
+						</div><!--/intro__slide-->
+					</div>
+					<div class="slider__arrows">
+						<div class="slider-arrow slider-arrow-prev">
+							<svg>
+								<use xlink:href="#arrow-slider"></use>
+							</svg>
+						</div>
+						<div class="slider-arrow slider-arrow-next">
+							<svg>
+								<use xlink:href="#arrow-slider"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</section><!--/intro-->
+			<section class="stocks block">
+				<div class="container">
+					<div class="stocks__header">
+						<h2 class="title">Акции и преложения</h2>
+						<a href="#" class="link">Смотреть все</a>
+					</div>
+					<div class="stocks__inner">
+						<div class="stocks__item">
+							<div class="stocks__img">
+								<img src="assets/images/covid.png" alt="">
+							</div>
+							<a href="#" class="stocks__link">Диагностика коронавируса COVID-19</a>
+						</div><!--/stocks__item-->
+						<div class="stocks__item">
+							<div class="stocks__img">
+								<img src="assets/images/girl_1.png" alt="">
+							</div>
+							<a href="#" class="stocks__link">Проверка гормонального фона по специальной цене</a>
+						</div><!--/stocks__item-->
+						<div class="stocks__item">
+							<div class="stocks__img">
+								<img src="assets/images/girl_2.png" alt="">
+							</div>
+							<a href="#" class="stocks__link">Проверка уровень витамина D по выгодной цене</a>
+						</div><!--/stocks__item-->
+						<div class="stocks__item">
+							<div class="stocks__img">
+								<img src="assets/images/hands.png" alt="">
+							</div>
+							<a href="#" class="stocks__link">Онкодиагностика на любом этапе</a>
+						</div><!--/stocks__item-->
+
+					</div>
+				</div>
+			</section><!--/stocks-->
+			<section class="about block">
+				<div class="container">
+					<div class="about__slider">
+						<div class="about__slide">
+							<div class="about__inner">
+								<div class="about__column about__img">
+									<img src="assets/images/woman-labor.jpg" alt="">
+								</div>
+								<div class="about__column about__content">
+									<h2 class="title title-blob">Государственное бюджетное учреждение здравоохранения города Москвы «Диагностический центр</h2>
+									<div class="subtitle subtitle_semibold">Департамента здравоохранения города Москвы</div>
+									<div class="about__text text">
+										<p>Наша организация является самостоятельной медицинской организацией государственной системы здравоохранения города Москвы - ГБУЗ «Диагностический центр (Центр лабораторных исследований) Департамента здравоохранения города Москвы».</p>
+										<p>Наш центр проводит лабораторную диагностику по направлениям от медицинских учреждений, системы здравоохранения города Москвы, оказывающих медицинскую помощь и включенных в реестр медицинских организаций, осуществляющих деятельность в сфере обязательного медицинского страхования города Москвы.</p>
+									</div>
+									<a href="#" class="btn">Подробнее</a>
+								</div>
+							</div>
+						</div><!--about__slide-->
+						<div class="about__slide">
+							<div class="about__inner">
+								<div class="about__column about__img">
+									<img src="assets/images/woman-labor.jpg" alt="">
+								</div>
+								<div class="about__column about__content">
+									<h2 class="title title-blob">Государственное бюджетное учреждение здравоохранения города Москвы «Диагностический центр</h2>
+									<div class="subtitle subtitle_semibold">Департамента здравоохранения города Москвы</div>
+									<div class="about__text text">
+										<p>Наша организация является самостоятельной медицинской организацией государственной системы здравоохранения города Москвы - ГБУЗ «Диагностический центр (Центр лабораторных исследований) Департамента здравоохранения города Москвы».</p>
+										<p>Наш центр проводит лабораторную диагностику по направлениям от медицинских учреждений, системы здравоохранения города Москвы, оказывающих медицинскую помощь и включенных в реестр медицинских организаций, осуществляющих деятельность в сфере обязательного медицинского страхования города Москвы.</p>
+									</div>
+									<a href="#" class="btn">Подробнее</a>
+								</div>
+							</div>
+						</div><!--about__slide-->
+					</div><!--/about__slider-->
+					<div class="slider__arrows">
+						<div class="slider-arrow slider-arrow-prev about__slider-arrow-prev">
+							<svg>
+								<use xlink:href="#arrow-slider"></use>
+							</svg>
+						</div>
+						<div class="slider-arrow slider-arrow-next about__slider-arrow-next">
+							<svg>
+								<use xlink:href="#arrow-slider"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</section><!--/about-->
+			<section class="publications block">
+				<div class="container">
+					<div class="publications__inner">
+						<div class="publications__column">
+							<h2 class="title">Публикации</h2>
+							<div class="publications__item">
+								<div class="publications__date">18 августа 2021</div>
+								<h4 class="publications__title">Почему радиоактивен энергетический подуровень?</h3>
+								<div class="text">
+									<p>Флуоресценция, несмотря на некоторую вероятность коллапса, активирует бензол. Везикула окисляет сернистый газ, поскольку изоморфная кристаллизация с перманганатом рубидия невозможна.</p>
+								</div>
+							</div><!--/publications__item-->
+							<div class="publications__item">
+								<div class="publications__date">18 августа 2021</div>
+								<h4 class="publications__title">Почему радиоактивен энергетический подуровень?</h3>
+								<div class="text">
+									<p>Флуоресценция, несмотря на некоторую вероятность коллапса, активирует бензол. Везикула окисляет сернистый газ, поскольку изоморфная кристаллизация с перманганатом рубидия невозможна.</p>
+								</div>
+							</div><!--/publications__item-->
+							<a href="#" class="link">Смотреть все</a>
+						</div><!--/publications__column-->
+						<div class="publications__column">
+							<h2 class="title">Новости</h2>
+							<div class="publications__item">
+								<div class="publications__date">18 августа 2021</div>
+								<h4 class="publications__title">Почему радиоактивен энергетический подуровень?</h3>
+								<div class="text">
+									<p>Флуоресценция, несмотря на некоторую вероятность коллапса, активирует бензол. Везикула окисляет сернистый газ, поскольку изоморфная кристаллизация с перманганатом рубидия невозможна.</p>
+								</div>
+							</div><!--/publications__item-->
+							<div class="publications__item">
+								<div class="publications__date">18 августа 2021</div>
+								<h4 class="publications__title">Почему радиоактивен энергетический подуровень?</h3>
+								<div class="text">
+									<p>Флуоресценция, несмотря на некоторую вероятность коллапса, активирует бензол. Везикула окисляет сернистый газ, поскольку изоморфная кристаллизация с перманганатом рубидия невозможна.</p>
+								</div>
+							</div><!--/publications__item-->
+							<a href="#" class="link">Смотреть все</a>
+						</div><!--/publications__column-->
+					</div>
+				</div>
+			</section><!--/publications-->
+			<section class="publications publications-news block">
+				<div class="container">
+					<div class="publications-news__inner">
+						<h2 class="title title-blob">Новости Департамента здравоохранения города Москвы</h2>
+						<div class="publications__date">18 августа 2021</div>
+						<h4 class="publications__title">Начался прием заявок на получение почетного статуса «Московская медицинская сестра» и «Московский медицинский брат»</h3>
+						<div class="text">
+							<p>Получить почетный статус смогут специалисты со средним и высшим сестринским образованием благодаря стартовавшему в столице проекту по выявлению лучших профессионалов среди среднего медицинского персонала.</p>
+						</div>
+						<div class="publications-news__btn">
+							<a href="#" class="btn">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="block">
+					<div class="container">
+					<div class="servises">
+						<div class="slider__arrows">
+							<div class="slider-arrow slider-arrow-prev servises__slider-arrow-prev">
+								<svg>
+									<use xlink:href="#arrow-slider"></use>
+								</svg>
+							</div>
+							<div class="slider-arrow slider-arrow-next servises__slider-arrow-next">
+								<svg>
+									<use xlink:href="#arrow-slider"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="servises__inner servises__slider">
+							<div class="servises__item">
+								<form action="" class="servises__box">
+									<div class="servises__content">
+										<h4 class="servises__title">Опрос</h4>
+										<input type="text" placeholder="Ваш E-mail">
+										<div class="servises__question">
+											Какая информация для Вас наиболее важна на сайте поликлиники?
+										</div>
+										<div>
+											<input type="checkbox" name="survey" id="survey1">
+											<label for="survey1">
+												<span></span>
+												<i>Вариант ответа номер один</i>
+											</label>
+										</div>
+										<div>
+											<input type="checkbox" name="survey" id="survey2">
+											<label for="survey2">
+												<span></span>
+												<i>Вариант ответа номер один</i>
+											</label>
+										</div>
+										<div>
+											<input type="checkbox" name="survey" id="survey3">
+											<label for="survey3">
+												<span></span>
+												<i>Вариант ответа номер один</i>
+											</label>
+										</div>
+									</div>
+									<div class="servises__btn">
+										<button class="btn" type="submit">Отправить</button>
+									</div>
+								</form>
+							</div><!--/servises__item-->
+							<div class="servises__item">
+								<div class="servises__box">
+									<div class="servises__content">
+										<h4 class="servises__title">График приема граждан</h4>
+										<div class="servises__text">
+											Если у Вас возникли затруднения при получении медицинской помощи и Вы не смогли решить их по телефону, 	руководство медицинского учреждения готово лично принять Вас, в соответствии с графиком приема.
+										</div>
+									</div>
+									<div class="servises__btn">
+										<a href="#" class="btn" type="submit">Подробнее</a>
+									</div>
+								</div>
+							</div><!--/servises__item-->
+							<div class="servises__item">
+								<div class="servises__box">
+									<div class="servises__content">
+										<a href="#" class="servises__img">
+											<img src="assets/images/servise.jpg" alt="">
+										</a>
+										<h4 class="servises__title">Уважаемые Пациенты, помогите нам стать лучше!</h4>
+										<div class="servises__text">
+											Оставьте отзыв о работе нашего учреждения. Ваше мнение для нас очень важно.
+										</div>
+									</div>
+									<div class="servises__btn">
+										<a href="#" class="btn" type="submit">Подробнее</a>
+									</div>
+								</div>
+							</div><!--/servises__item-->
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+				
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
