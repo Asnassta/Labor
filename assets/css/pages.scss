@@ -23,7 +23,7 @@
 		width: calc(25% - 15px);
 	}
 	&__article {
-		margin: 30px 0;
+		margin: 30px 0 10px;
 	}
 	&__img {
 		img {
@@ -55,8 +55,12 @@
 	}
 	/*======news=======*/
 	&-news {
+		margin-bottom: 60px;
 		.page__wrapper {
-			margin: 20px 0 50px;
+			margin: 20px 0 0;
+		}
+		.page-share {
+			margin-top: 25px;
 		}
 	}
 	/*=========/news=========*/

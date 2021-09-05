@@ -333,6 +333,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		&:last-child {
 			margin-right: 0;
 		}
+		&.active {
+			color: $red;
+		}
 	}
 	&__nav {
 		display: flex;
@@ -907,6 +910,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		margin-bottom: 30px;
 		.title {
 			margin-right: 20px;
 		}
