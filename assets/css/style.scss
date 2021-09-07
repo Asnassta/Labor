@@ -43,6 +43,11 @@ img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
+body {
+	&.hidden {
+		overflow: hidden;
+	}
+}
 .container {
 	width: 100%;
 	max-width: 1230px;
@@ -357,7 +362,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		a {
 			&:hover {
 				svg {
-					fill: red;
+					fill: $red;
 				}
 			}
 		}
@@ -412,7 +417,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 			color: $bl;
 			transition: color .2s linear;
 			&:hover {
-				color: red;
+				color: $red;
 			}
 		}
 	}
