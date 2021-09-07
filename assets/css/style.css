@@ -20,59 +20,98 @@
   src: url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.ttf") format("truetype"); }
 
 .page {
+  margin-bottom: 50px;
   /*======news=======*/
   /*=========/news=========*/ }
   .page__header {
     width: 75%; }
     .page__header .title-blob:before {
-      top: -5px; }
-  .page__wrapper_flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start; }
+      top: -5px;
+      left: -145px; }
+  .page__wrapper {
+    margin: 40px 0 0; }
+    .page__wrapper_flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
   .page__content {
     width: calc(75% - 15px); }
   .page__sidebar {
     width: calc(25% - 15px); }
   .page__article {
-    margin: 30px 0 10px; }
+    margin: 0px 0 10px; }
+    .page__article img {
+      max-width: 100%; }
   .page__img img {
     max-width: 100%; }
-  .page-share__title {
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000000;
-    margin-bottom: 8px; }
-  .page-share__social {
+  .page-share {
+    margin-top: 25px; }
+    .page-share__title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000000;
+      margin-bottom: 8px; }
+    .page-share__social {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .page-share__social a {
+        margin-right: 16px;
+        -webkit-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear; }
+        .page-share__social a:hover {
+          -webkit-transform: scale3d(1.1, 1.1, 1.1);
+          transform: scale3d(1.1, 1.1, 1.1); }
+        .page-share__social a:last-child {
+          margin-right: 0; }
+  .page-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
-    .page-share__social a {
-      margin-right: 16px;
+    align-items: center;
+    margin-bottom: 15px; }
+    .page-nav a {
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000000;
       -webkit-transition: all .2s linear;
       -o-transition: all .2s linear;
-      transition: all .2s linear; }
-      .page-share__social a:hover {
-        -webkit-transform: scale3d(1.1, 1.1, 1.1);
-        transform: scale3d(1.1, 1.1, 1.1); }
-      .page-share__social a:last-child {
+      transition: all .2s linear;
+      margin-right: 10px;
+      margin-bottom: 5px; }
+      .page-nav a:last-child {
+        padding: 8px 0;
         margin-right: 0; }
-  .page-news {
-    margin-bottom: 60px; }
-    .page-news .page__wrapper {
-      margin: 20px 0 0; }
-    .page-news .page-share {
-      margin-top: 25px; }
+      .page-nav a:hover {
+        color: #c02524; }
+    .page-nav__btn {
+      padding: 8px 12px; }
+      .page-nav__btn.active {
+        background-color: #f3f3fe; }
+  .page-news .page__wrapper {
+    margin: 20px 0 0; }
+  .page-news .page__article {
+    margin-top: 30px; }
+  .page-news .page-share {
+    margin-top: 25px; }
+  .page-news_all .publications__item .text p {
+    margin-bottom: 0; }
 
 /*================Sidebar=====================*/
 .sidebar-block {
@@ -81,6 +120,8 @@
   margin-bottom: 30px; }
   .sidebar-block:last-child {
     margin-bottom: 0; }
+  .sidebar-block:first-child {
+    background: url("../images/decor-small.svg") top right -10px no-repeat, #f3f3fe; }
 
 .sidebar .title {
   margin-bottom: 20px; }
@@ -112,6 +153,22 @@
   .sidebar__item_line:last-child {
     margin-bottom: 0;
     border-bottom: none; }
+
+.sidebar-menu li {
+  margin-bottom: 20px; }
+  .sidebar-menu li:last-child {
+    margin-bottom: 0; }
+
+.sidebar-menu a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear; }
+  .sidebar-menu a:hover {
+    color: #c02524; }
 
 /*================Adaptive===================*/
 @media (max-width: 1200px) {
