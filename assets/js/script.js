@@ -40,20 +40,6 @@ $(document).ready(function() {
 	});
 	/*============/search-toggle================*/
 
-	/*===============Gallery-zoom=================*/
-	/*$(".page-gallery__photo").on("click", function() {
-		$(this).next().fadeIn(333);
- 
-		$(this).next().css('top', $(window).scrollTop()+'px');
-		$(this).next().find(".gallery-zoom__inner").fadeIn(333);
-		$('body').addClass("hidden");
-	});
-	$(".gallery-zoom__close,  .closex").on("click", function(event) {
-		event.preventDefault();
-		$(".gallery-zoom").fadeOut('222');
-		$('body').removeClass("hidden");
-	});*/
-/*==============/gallery-zoom=================*/
 
 	/*======Slider-intro=============*/
 	$('.intro__slider').slick({
