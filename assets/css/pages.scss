@@ -173,13 +173,31 @@
 		}
 	}
 	/*======/reviews=======*/
+	/*======FAQ============*/
+	&-faq {
+		.form-block {
+			margin: 45px 0 40px;
+		}
+		.form-block__photo {
+			background-image: url("../images/laborants-form.jpg");
+		}
+	}
+	/*======/FAQ=======*/
 }
 
-.reviews__item {
+/*=============Items============*/
+.reviews__item, .faq-item {
 	padding: 0 0 40px 40px;
 	border-bottom: 1px solid $lgray;
 
 }
+.faq-item {
+	&__answer {
+		margin-top: 15px;
+	}
+}
+/*==============/items===========*/
+
 
 /*================Sidebar=====================*/
 .sidebar {
@@ -450,6 +468,9 @@
 		&__wrapper {
 			flex-direction: column;
 		}
+		&__header {
+			width: 100%;
+		}
 		&__content {
 			width: 100%;
 		}
@@ -466,7 +487,7 @@
 }
 
 @media(max-width: 546px) {
-	.reviews__item {
+	.reviews__item, .faq-item {
 		padding-bottom: 30px;
 	}
 }
@@ -494,7 +515,7 @@
 			}
 		}
 	}
-	.reviews__item {
+	.reviews__item, .faq-item {
 		padding-left: 25px;
 	}
 }

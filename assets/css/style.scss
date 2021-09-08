@@ -183,6 +183,7 @@ body {
 		font-family: $ff;
 		font-size: 12px;
 		font-weight: 500;
+		line-height: 1.5;
 		color: $lblack;
 		position: relative;
 		padding-right: 11px;
@@ -203,6 +204,8 @@ body {
 			color: $red;
 		}
 		&:last-child {
+			padding-right: 0;
+			margin-right: 0;
 			&:after {
 				display: none;
 			}
