@@ -1,6 +1,7 @@
 @import 'fonts.scss';
 @import 'variables.scss';
 @import 'pages.scss';
+@import 'form.scss';
 
 /*Reset
 ===============*/
@@ -707,6 +708,11 @@ body {
 	}
 	&__title {
 		margin-bottom: 10px;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1.3;
+		color: $bl;
 		a {
 			font-family: $ff;
 			font-size: 16px;
@@ -718,6 +724,14 @@ body {
 				color: $red;
 			}
 		}
+	}
+	&__autor {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.3;
+		color: $blue;
+		margin-bottom: 10px;
 	}
 	.link {
 		display: block;

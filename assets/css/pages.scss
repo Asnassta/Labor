@@ -166,6 +166,19 @@
 		}
 	}
 	/*=========/about=========*/
+	/*=========reviews=======*/
+	&-reviews {
+		.form-block{
+			margin-top: 40px;
+		}
+	}
+	/*======/reviews=======*/
+}
+
+.reviews__item {
+	padding: 0 0 40px 40px;
+	border-bottom: 1px solid $lgray;
+
 }
 
 /*================Sidebar=====================*/
@@ -452,6 +465,12 @@
 	}
 }
 
+@media(max-width: 546px) {
+	.reviews__item {
+		padding-bottom: 30px;
+	}
+}
+
 @media(max-width: 414px) {
 	.page {
 		&-gallery {
@@ -474,5 +493,8 @@
 				margin-right: 0;
 			}
 		}
+	}
+	.reviews__item {
+		padding-left: 25px;
 	}
 }
