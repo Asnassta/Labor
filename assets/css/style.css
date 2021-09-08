@@ -527,17 +527,13 @@
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse; }
     .form-block__photo {
-      width: 100%;
-      background-size: 100% auto;
-      height: 450px; }
+      display: none; }
     .form-block__form {
       width: 100%; } }
 
 @media (max-width: 546px) {
   .form-block .title {
     font-size: 16px; }
-  .form-block__photo {
-    height: 350px; }
   .form-block input[type="text"], .form-block textarea {
     padding: 20px;
     font-size: 14px; }

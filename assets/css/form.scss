@@ -126,9 +126,7 @@
 	.form-block {
 		flex-direction: column-reverse;
 		&__photo {
-			width: 100%;
-			background-size: 100% auto;
-			height: 450px;
+			display: none;
 		}
 		&__form {
 			width: 100%;
@@ -139,9 +137,6 @@
 	.form-block {
 		.title {
 			font-size: 16px;
-		}
-		&__photo {
-			height: 350px;
 		}
 		input[type="text"], textarea {
 			padding: 20px;
