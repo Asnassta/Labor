@@ -41,7 +41,7 @@ $(document).ready(function() {
 	/*============/search-toggle================*/
 
 	/*===============Gallery-zoom=================*/
-	$(".page-gallery__photo").on("click", function() {
+	/*$(".page-gallery__photo").on("click", function() {
 		$(this).next().fadeIn(333);
  
 		$(this).next().css('top', $(window).scrollTop()+'px');
@@ -52,7 +52,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		$(".gallery-zoom").fadeOut('222');
 		$('body').removeClass("hidden");
-	});
+	});*/
 /*==============/gallery-zoom=================*/
 
 	/*======Slider-intro=============*/
