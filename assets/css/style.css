@@ -1058,7 +1058,10 @@ input[type="text"], input.input-search, select {
   -o-transition: all .2s linear;
   transition: all .2s linear;
   background-color: #fff;
-  border-radius: 0 !important; }
+  border-radius: 0 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
   input[type="text"]::-webkit-input-placeholder, input.input-search::-webkit-input-placeholder, select::-webkit-input-placeholder {
     opacity: 1;
     font-family: "Montserrat", sans-serif;
@@ -1106,6 +1109,11 @@ input[type="text"], input.input-search, select {
         transition: fill .2s linear; }
       .input-search__wrapper button:hover svg {
         fill: #c02524; }
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
 
 .input-date {
   background: url("../images/calendar.svg") center right 20px no-repeat; }
