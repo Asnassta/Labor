@@ -135,6 +135,11 @@
 		>* {
 		width: calc(33.33333% - 20px);
 		}
+		input[type="search"] {
+			&:focus {
+				border-color: $blue;
+			}
+		}
 	}
 	/*======news=======*/
 	&-news {
@@ -198,7 +203,9 @@
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
-			margin-bottom: -20px;
+		}
+		.page-nav {
+			margin-top: 30px;
 		}
 		.card-doctor {
 			width: calc(50% - 55px);
@@ -472,7 +479,7 @@
 			position: absolute;
 			max-width: 100%;
 			bottom: 0;
-			right: -20px;
+			right: -15px;
 			z-index: -1;
 			img {
 				max-width: 100%;
@@ -481,7 +488,55 @@
 	}
 }
 
+/*============Castom-select=============*/
+.jq-selectbox {
+	cursor: pointer;
+}
+.jq-selectbox__select {
+	border: 1px solid $lgray;
+	padding: 22px 25px;
+	font-family: $ff;
+	font-size: 16px;
+	font-weight: 400;
+	color: #776c6c;
+	display: block;
+	transition: all .2s linear;
+	background: url("../images/arrow-select.svg") center right 25px no-repeat;
+	&:focus {
+		border-color: $blue;
+	}
+}
+.jq-selectbox__dropdown {
+	width: 100%;
+	padding: 0;
+	background: $wh;
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+	transition: all .2s linear;
+}
+.jq-selectbox li {
+	min-height: 18px;
+	padding: 22px 25px;
+	color: #776c6c;
+	transition: all .2s linear;
 
+}
+
+.jq-selectbox li:hover {
+	background-color: $lpurple;
+
+}
+.jq-selectbox__select-text {
+	color: #776c6c;
+}
+
+.jq-selectbox li.disabled {
+	background-color: $wh;
+	color: #776c6c;
+
+}
+.jq-selectbox li.disabled:hover {
+	background-color: $wh;
+}
 
 
 /*================Adaptive===================*/

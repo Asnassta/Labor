@@ -213,7 +213,7 @@ body {
 	}
 }
 
-input[type="text"], input.input-search, select {
+input[type="text"], input.input-search, .jq-selectbox__select  {
 	border: 1px solid $lgray;
 	padding: 22px 25px;
 	font-family: $ff;
@@ -222,6 +222,7 @@ input[type="text"], input.input-search, select {
 	color: $lblack;
 	display: block;
 	transition: all .2s linear;
+	background-color: $wh;
 	&::placeholder {
 		opacity: 1;
 		font-family: $ff;
@@ -230,6 +231,7 @@ input[type="text"], input.input-search, select {
 		color: #776c6c;
 	}
 }
+
 
 .input-search {
 	width: 100%;
@@ -262,9 +264,11 @@ input[type="text"], input.input-search, select {
 }
 
 select {
+	color: #776c6c;
 	appearance: none;
 	background: url("../images/arrow-select.svg") center right 25px no-repeat;
 }
+
 
 
 

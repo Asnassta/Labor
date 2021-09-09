@@ -56,6 +56,11 @@ $(document).ready(function() {
 		$('body').removeClass("hidden");
 	});
 /*==============/Form-popup=================*/
+	/*======Select-styler=============*/
+	$(function() {
+		$('select').styler();
+	});
+	/*======/select=============*/
 
 
 	/*======Slider-intro=============*/
