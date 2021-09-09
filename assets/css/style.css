@@ -456,6 +456,7 @@
   font-weight: 400;
   color: #776c6c;
   display: block;
+  height: 100%;
   -webkit-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear;
@@ -471,7 +472,8 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   -webkit-transition: all .2s linear;
   -o-transition: all .2s linear;
-  transition: all .2s linear; }
+  transition: all .2s linear;
+  margin-top: 3px; }
 
 .jq-selectbox li {
   min-height: 18px;
@@ -1044,7 +1046,7 @@ body.hidden {
       .breadcrumbs a:last-child:after {
         display: none; }
 
-input[type="text"], input.input-search, .jq-selectbox__select {
+input[type="text"], input.input-search, select {
   border: 1px solid #9d9d9d;
   padding: 22px 25px;
   font-family: "Montserrat", sans-serif;
@@ -1055,26 +1057,27 @@ input[type="text"], input.input-search, .jq-selectbox__select {
   -webkit-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear;
-  background-color: #fff; }
-  input[type="text"]::-webkit-input-placeholder, input.input-search::-webkit-input-placeholder, .jq-selectbox__select::-webkit-input-placeholder {
+  background-color: #fff;
+  border-radius: 0 !important; }
+  input[type="text"]::-webkit-input-placeholder, input.input-search::-webkit-input-placeholder, select::-webkit-input-placeholder {
     opacity: 1;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #776c6c; }
-  input[type="text"]:-ms-input-placeholder, input.input-search:-ms-input-placeholder, .jq-selectbox__select:-ms-input-placeholder {
+  input[type="text"]:-ms-input-placeholder, input.input-search:-ms-input-placeholder, select:-ms-input-placeholder {
     opacity: 1;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #776c6c; }
-  input[type="text"]::-ms-input-placeholder, input.input-search::-ms-input-placeholder, .jq-selectbox__select::-ms-input-placeholder {
+  input[type="text"]::-ms-input-placeholder, input.input-search::-ms-input-placeholder, select::-ms-input-placeholder {
     opacity: 1;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #776c6c; }
-  input[type="text"]::placeholder, input.input-search::placeholder, .jq-selectbox__select::placeholder {
+  input[type="text"]::placeholder, input.input-search::placeholder, select::placeholder {
     opacity: 1;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;

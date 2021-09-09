@@ -213,7 +213,7 @@ body {
 	}
 }
 
-input[type="text"], input.input-search, .jq-selectbox__select  {
+input[type="text"], input.input-search, select  {
 	border: 1px solid $lgray;
 	padding: 22px 25px;
 	font-family: $ff;
@@ -223,6 +223,7 @@ input[type="text"], input.input-search, .jq-selectbox__select  {
 	display: block;
 	transition: all .2s linear;
 	background-color: $wh;
+	border-radius: 0!important;
 	&::placeholder {
 		opacity: 1;
 		font-family: $ff;
