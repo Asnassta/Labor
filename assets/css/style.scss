@@ -79,12 +79,22 @@ body {
 			z-index: 1;
 		}
 	}
+	&-medium {
+		font-family: $ff;
+		font-size: 21px;
+		font-weight: 600;
+		line-height: 1.2;
+		color: $bl;
+	}
 	&-small {
 		font-family: $ff;
 		font-size: 16px;
 		font-weight: 600;
-		line-height: 1.2;
+		line-height: 1.3;
 		color: $bl;
+	}
+	&_blue {
+		color: $blue;
 	}
 }
 
@@ -153,6 +163,9 @@ body {
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+	&_medium {
+		font-weight: 500;
 	}
 }
 

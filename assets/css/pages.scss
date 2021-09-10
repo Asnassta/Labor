@@ -21,6 +21,18 @@
 	}
 	&__content {
 		width: calc(75% - 15px);
+		&_flex {
+			display: flex;
+			justify-content: space-between;
+		}
+		&-column {
+			&:first-child {
+				width: calc(67.77777% - 10px);
+			}
+			&:nth-child(2) {
+				width: calc(33.33333% - 10px);
+			}
+		}
 	}
 	&__sidebar {
 		width: calc(25% - 15px);
@@ -213,6 +225,29 @@
 		}
 	}
 	/*======/doctor_list=============*/
+	/*======Doctor_page=============*/
+	&-doctor_page {
+		.title-medium {
+			margin: 40px 0 30px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		&__info {
+			.text {
+				p {
+					margin-bottom: 40px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.page-share {
+			margin-top: 40px;
+		}
+	}
+	/*======/doctor_page=============*/
 }
 
 /*=============Items============*/
@@ -488,6 +523,123 @@
 	}
 }
 
+/*=============Doctor-box===============*/
+.doctor-box {
+	&__photo {
+		text-align: right;
+		img {
+			max-width: 100%;
+			/*object-fit: cover;
+			object-position: bottom right;*/
+		}
+	}
+	&__block {
+		padding: 25px 25px 30px;
+		background-color: $lpurple;
+	}
+	&__item {
+		margin-bottom: 30px;
+	}
+	&__title {
+		margin-bottom: 5px;
+	}
+	&__info {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 500;
+		color: $lgray;
+		line-height: 1.5;
+		a {
+			display: block;
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 500;
+			color: $lgray;
+			line-height: 1.5;
+			transition: color .2s linear;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	&__price {
+			font-family: $ff;
+			font-size: 20px;
+			font-weight: 600;
+			color: $blue;
+	}
+	&__btn {
+		margin-top: 40px;
+		display: flex;
+		justify-content: center;
+	}
+}
+
+/*==============Timetable=========*/
+.timetable {
+	&__row {
+		display: flex;
+		border-bottom: 1px solid $lgray;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	&__item {
+		width: 33.33333%;
+		padding: 26px 10px;
+		text-align: center;
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $bl;
+		line-height: 1.5;
+		&_purple {
+			background-color: $lpurple;
+		}
+	}
+	&__header {
+		margin-left: -10px;
+		.timetable__item {
+			padding: 10px;
+			font-weight: 500;
+			&:first-child {
+				text-align: left;
+			}
+		}
+	}
+}
+
+/*============Service-block===================*/
+.service {
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid $lgray;
+		padding: 20px 0;
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__item {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.3;
+		color: $bl;
+		&:nth-child(1) {
+			width: 78%;
+		}
+		&:nth-child(2) {
+			width: 22%;
+			padding-left: 15px;
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
+}
+
 /*============Castom-select=============*/
 .jq-selectbox {
 	cursor: pointer;
@@ -569,7 +721,7 @@
 		&__sidebar {
 			width: calc(30% - 10px);
 		}
-		&-doctor_list {
+		&-doctor_list, &-doctor_page {
 			.page__wrapper_flex {
 				flex-wrap: wrap;
 			}
@@ -671,6 +823,14 @@
 		}
 		&__content {
 			width: 100%;
+			&_flex {
+				flex-direction: column-reverse;
+			}
+			&-column {
+				&:first-child, &:nth-child(2) {
+					width: 100%;
+				}
+			}
 		}
 		&__sidebar {
 			width: 100%;
@@ -689,6 +849,11 @@
 				width: 100%;
 			}
 		}
+		&-doctor_page {
+			.doctor-box {
+				margin-bottom: 40px;
+			}
+		}
 	}
 	.sidebar {
 		margin-top: 25px;
@@ -701,6 +866,21 @@
 @media(max-width: 546px) {
 	.reviews__item, .faq-item {
 		padding-bottom: 30px;
+	}
+	.page {
+		&-doctor_page {
+			.title-medium {
+				margin: 30px 0 20px;
+			}
+		}
+	}
+	.service {
+		&__item {
+			font-size: 12px;
+			&:nth-child(2) {
+				font-size: 14px;
+			}
+		}
 	}
 }
 
@@ -730,7 +910,18 @@
 	.reviews__item, .faq-item {
 		padding-left: 25px;
 	}
-
+	.timetable {
+		&__item {
+			font-size: 12px;
+		}
+	}
+	.service {
+		&__item {
+			&:nth-child(2) {
+				font-size: 12px;
+			}
+		}
+	}
 }
 
 @media(max-width: 375px) {
@@ -739,6 +930,16 @@
 		.card__photo {
 			img {
 				max-height: 240px;
+			}
+		}
+	}
+	.service {
+		&__item {
+			&:nth-child(1) {
+				width: 70%;
+			}
+			&:nth-child(2) {
+				width: 30%;
 			}
 		}
 	}
