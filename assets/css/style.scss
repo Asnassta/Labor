@@ -115,11 +115,18 @@ body {
 	font-family: $ff;
 	font-size: 14px;
 	font-weight: 600;
+	text-align: center;
 	color: $wh;
 	display: inline-block;
 	transition: all .2s linear;
 	&:hover {
 		transform: scale3d(1.05, 1.05, 1);
+	}
+	&__wrapper {
+		display: flex;
+		&_center {
+			justify-content: center;
+		}
 	}
 }
 
@@ -256,7 +263,7 @@ input[type="text"], input.input-search, select  {
 			background-color: $wh;
 			position: absolute;
 			top:  50%;
-			right: 25px;
+			right: 20px;
 			z-index: 1;
 			transform:translateY(-50%);
 			svg {
