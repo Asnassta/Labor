@@ -22,6 +22,7 @@
 .page {
   margin-bottom: 50px;
   /*===========Page-filter================*/
+  /*===========Page-contact================*/
   /*======news=======*/
   /*=========/news=========*/
   /*========About==========*/
@@ -35,7 +36,9 @@
   /*======Doctor_page=============*/
   /*======/doctor_page=============*/
   /*======Page_procedure-list=============*/
-  /*======/page_procedure-list=============*/ }
+  /*======/page_procedure-list=============*/
+  /*======Page_procedure=============*/
+  /*======/page_procedure=============*/ }
   .page__header {
     width: 75%; }
     .page__header .title-blob:before {
@@ -63,13 +66,20 @@
       -ms-flex-pack: justify;
       justify-content: space-between; }
     .page__content-column:first-child {
-      width: calc(67.77777% - 10px); }
+      width: calc(67.66666% - 20px); }
     .page__content-column:nth-child(2) {
-      width: calc(33.33333% - 10px); }
+      width: calc(32.33333% - 10px); }
   .page__sidebar {
     width: calc(25% - 15px); }
+  .page__block {
+    margin-top: 45px; }
   .page__article img {
     max-width: 100%; }
+  .page__info {
+    margin-top: 40px; }
+    .page__info-block {
+      padding: 35px 30px;
+      background-color: #f3f3fe; }
   .page__img img {
     max-width: 100%; }
   .page__row {
@@ -181,6 +191,31 @@
         margin-right: 0; }
     .page-filter input[type="search"]:focus {
       border-color: #006a83; }
+  .page-contact {
+    padding: 50px  175px 50px 62px;
+    background-color: #f3f3fe;
+    margin: 40px 0; }
+    .page-contact__row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      margin-bottom: 20px; }
+    .page-contact__link a {
+      font-family: "Montserrat", sans-serif;
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: #c02524;
+      -webkit-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear; }
+      .page-contact__link a:hover {
+        color: #000000; }
+    .page-contact .text {
+      font-size: 16px; }
   .page-news .page__wrapper {
     margin-top: 20px; }
   .page-news .page__article {
@@ -238,6 +273,29 @@
     margin-top: 45px; }
     .page_procedure-list__info .text {
       margin-top: 25px; }
+  .page_procedure .search {
+    margin: 40px 0; }
+  .page_procedure .sidebar-block {
+    padding-bottom: 40px; }
+    .page_procedure .sidebar-block:first-child {
+      background: #f3f3fe; }
+  .page_procedure .block__tab {
+    padding-top: 30px; }
+    .page_procedure .block__tab .text {
+      font-size: 16px; }
+  .page_procedure .block__tabs {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+    .page_procedure .block__tabs a {
+      font-size: 16px;
+      margin-right: 45px; }
+  .page_procedure .procedure-list__info {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+  .page_procedure .procedure-list__price {
+    margin-top: 0; }
 
 /*=============Items============*/
 .reviews__item, .faq-item {
@@ -494,6 +552,51 @@
     .card-doctor .card__photo img {
       max-width: 100%; }
 
+/*============About-box===================*/
+.about-box__block {
+  padding: 25px 25px 30px;
+  background-color: #f3f3fe; }
+
+.about-box__item {
+  margin-bottom: 30px; }
+  .about-box__item-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .about-box__item-icon img {
+      margin-right: 25px; }
+
+.about-box__title {
+  margin-bottom: 8px; }
+
+.about-box__info {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9d9d9d;
+  line-height: 1.5; }
+  .about-box__info a {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #9d9d9d;
+    line-height: 1.5;
+    -webkit-transition: color .2s linear;
+    -o-transition: color .2s linear;
+    transition: color .2s linear; }
+    .about-box__info a:hover {
+      color: #c02524; }
+
+.about-box__price {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #006a83; }
+
 /*=============Doctor-box===============*/
 .doctor-box__photo {
   text-align: right; }
@@ -740,7 +843,9 @@
     .sidebar-block .title-small {
       font-size: 16px; }
   .sidebar-block .publications__title a {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .page-contact {
+    padding: 50px 40px; } }
 
 @media (max-width: 1024px) {
   .procedure-list__price {
@@ -757,17 +862,33 @@
     width: calc(70% - 10px); }
   .page__sidebar {
     width: calc(30% - 10px); }
-  .page-doctor_list .page__wrapper_flex, .page-doctor_page .page__wrapper_flex {
+  .page-doctor_list .page__wrapper_flex, .page-doctor_page .page__wrapper_flex, .page_procedure .page__wrapper_flex {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-  .page-doctor_list .page__sidebar, .page-doctor_page .page__sidebar {
+  .page-doctor_list .page__sidebar, .page-doctor_page .page__sidebar, .page_procedure .page__sidebar {
     width: 100%;
     margin-bottom: 40px;
     margin-top: 0; }
-  .page-doctor_list .page__content, .page-doctor_page .page__content {
+  .page-doctor_list .page__content, .page-doctor_page .page__content, .page_procedure .page__content {
     width: 100%; }
   .sidebar-block {
     margin-bottom: 20px; }
+    .sidebar-block_procedure {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
+      .sidebar-block_procedure > * {
+        width: calc(33.33333% - 20px);
+        margin-right: 30px; }
+        .sidebar-block_procedure > *:nth-child(3n + 3) {
+          margin-right: 0; }
+      .sidebar-block_procedure .btn__wrapper {
+        width: 100%; }
   .legal-docs__row > div {
     margin-right: 30px; }
   .legal-docs__header {
@@ -833,10 +954,38 @@
     margin-right: 0; }
     .page-filter > *:last-child {
       margin-bottom: 0; }
+  .page-contact {
+    margin-top: 30px;
+    padding: 25px; }
+    .page-contact .title-medium {
+      font-size: 16px; }
+    .page-contact__row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .page-contact__row > * {
+        margin-bottom: 15px; }
+        .page-contact__row > *:last-child {
+          margin-bottom: 0; }
+    .page-contact__link {
+      padding-left: 30px; }
+      .page-contact__link a {
+        font-size: 16px; }
+    .page-contact .text {
+      font-size: 14px; }
   .page-doctor_list .card-doctor {
     width: 100%; }
   .page-doctor_page .doctor-box {
     margin-bottom: 40px; }
+  .page_procedure .tabs {
+    margin-top: 35px; }
+  .page_procedure .block__tab {
+    padding-top: 10px; }
+  .page_procedure .block__tabs a {
+    font-size: 18px; }
+  .page .stocks {
+    margin-bottom: -20px; }
   .sidebar {
     margin-top: 25px; }
     .sidebar-block {
@@ -851,6 +1000,8 @@
     padding-bottom: 30px; }
   .page-doctor_page .title-medium {
     margin: 30px 0 20px; }
+  .page_procedure .block__tab .text {
+    font-size: 14px; }
   .service__item {
     font-size: 12px; }
     .service__item:nth-child(2) {
@@ -869,7 +1020,10 @@
     -webkit-box-flex: 1;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
-    text-align: left; } }
+    text-align: left; }
+  .sidebar-block_procedure > * {
+    width: 100%;
+    margin-right: 0; } }
 
 @media (max-width: 414px) {
   .page-gallery__item {

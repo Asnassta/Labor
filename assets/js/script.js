@@ -8,7 +8,14 @@
 
   $('.projects__slider').slick('refresh');
 
-  
+};
+
+function tabs(n)
+{
+  $('.block__tabs a').removeClass('active');
+  $('.block__tabs a.t'+n).addClass('active');
+  $('.block__tab').fadeOut(0);
+  $('.block__tab.tab_'+n).fadeIn(222);
 };
 
 $(document).ready(function() {

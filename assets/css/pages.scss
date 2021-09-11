@@ -27,19 +27,29 @@
 		}
 		&-column {
 			&:first-child {
-				width: calc(67.77777% - 10px);
+				width: calc(67.66666% - 20px);
 			}
 			&:nth-child(2) {
-				width: calc(33.33333% - 10px);
+				width: calc(32.33333% - 10px);
 			}
 		}
 	}
 	&__sidebar {
 		width: calc(25% - 15px);
 	}
+	&__block {
+		margin-top: 45px;
+	}
 	&__article {
 		img {
 			max-width: 100%;
+		}
+	}
+	&__info {
+		margin-top: 40px;
+		&-block {
+			padding: 35px 30px;
+			background-color: $lpurple;
 		}
 	}
 	&__img {
@@ -156,6 +166,33 @@
 			}
 		}
 	}
+	/*===========Page-contact================*/
+	&-contact {
+		padding: 50px  175px 50px 62px ;
+		background-color: $lpurple;
+		margin: 40px 0;
+		&__row {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
+		&__link {
+			a {
+				font-family: $ff;
+				font-size: 21px;
+				font-weight: 500;
+				line-height: 1.2;
+				color: $red;
+				transition: all .2s linear;
+				&:hover {
+					color: $bl;
+				}
+			}
+		}
+		.text {
+			font-size: 16px;
+		}
+	}
 	/*======news=======*/
 	&-news {
 		.page__wrapper {
@@ -270,6 +307,40 @@
 		}
 	}
 	/*======/page_procedure-list=============*/
+	/*======Page_procedure=============*/
+	&_procedure {
+		.search {
+			margin: 40px 0;
+		}
+		.sidebar-block {
+			padding-bottom: 40px;
+			&:first-child {
+				background: $lpurple;
+			}
+		}
+		.block__tab {
+			padding-top: 30px;
+			.text {
+				font-size: 16px;
+			}
+		}
+		.block__tabs {
+			justify-content: flex-start;
+			a {
+				font-size: 16px;
+				margin-right: 45px;
+			}
+		}
+		.procedure-list {
+			&__info {
+				justify-content: flex-start;
+			}
+			&__price {
+				margin-top: 0;
+			}
+		}
+	}
+	/*======/page_procedure=============*/
 }
 
 /*=============Items============*/
@@ -563,6 +634,52 @@
 	}
 }
 
+/*============About-box===================*/
+.about-box {
+	&__block {
+		padding: 25px 25px 30px;
+		background-color: $lpurple;
+	}
+	&__item {
+		margin-bottom: 30px;
+		&-icon {
+			display: flex;
+			align-items: center;
+			img {
+				margin-right: 25px;
+			}
+		}
+	}
+	&__title {
+		margin-bottom: 8px;
+	}
+	&__info {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 500;
+		color: $lgray;
+		line-height: 1.5;
+		a {
+			display: block;
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 500;
+			color: $lgray;
+			line-height: 1.5;
+			transition: color .2s linear;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	&__price {
+			font-family: $ff;
+			font-size: 20px;
+			font-weight: 600;
+			color: $blue;
+	}
+}
+
 /*=============Doctor-box===============*/
 .doctor-box {
 	&__photo {
@@ -813,6 +930,11 @@
 			}
 		}
 	}
+	.page {
+		&-contact {
+			padding: 50px 40px;
+		}
+	}
 }
 
 @media(max-width: 1024px) {
@@ -836,7 +958,7 @@
 		&__sidebar {
 			width: calc(30% - 10px);
 		}
-		&-doctor_list, &-doctor_page {
+		&-doctor_list, &-doctor_page, &_procedure {
 			.page__wrapper_flex {
 				flex-wrap: wrap;
 			}
@@ -853,6 +975,21 @@
 	.sidebar {
 		&-block {
 			margin-bottom: 20px;
+			&_procedure {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: flex-start;
+				>* {
+					width: calc(33.33333% - 20px);
+					margin-right: 30px;
+					&:nth-child(3n + 3) {
+						margin-right: 0;
+					}
+				}
+				.btn__wrapper {
+					width: 100%;
+				}
+			}
 		}
 	}
 	.legal-docs {
@@ -960,6 +1097,31 @@
 				}
 			}
 		}
+		&-contact {
+			margin-top: 30px;
+			padding: 25px;
+			.title-medium {
+				font-size: 16px;
+			}
+			&__row {
+				flex-direction: column;
+				>* {
+					margin-bottom: 15px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+			&__link {
+				padding-left: 30px;
+				a {
+					font-size: 16px;
+				}
+			}
+			.text {
+				font-size: 14px;
+			}
+		}
 		&-doctor_list {
 			.card-doctor {
 				width: 100%;
@@ -969,6 +1131,22 @@
 			.doctor-box {
 				margin-bottom: 40px;
 			}
+		}
+		&_procedure {
+			.tabs {
+				margin-top: 35px;
+			}
+			.block__tab {
+				padding-top: 10px;
+			}
+			.block__tabs {
+				a {
+					font-size: 18px;
+				}
+			}
+		}
+		.stocks {
+			margin-bottom: -20px;
 		}
 	}
 	.sidebar {
@@ -997,6 +1175,13 @@
 				margin: 30px 0 20px;
 			}
 		}
+		&_procedure {
+			.block__tab {
+				.text {
+					font-size: 14px;
+				}
+			}
+		}
 	}
 	.service {
 		&__item {
@@ -1017,6 +1202,16 @@
 			margin-top: 20px;
 			flex: 1 1 100%;
 			text-align: left;
+		}
+	}
+	.sidebar {
+		&-block {
+			&_procedure {
+				>* {
+					width: 100%;
+					margin-right: 0;
+				}
+			}
 		}
 	}
 }
