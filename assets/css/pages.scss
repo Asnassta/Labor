@@ -341,6 +341,31 @@
 		}
 	}
 	/*======/page_procedure=============*/
+	/*======Page_form=============*/
+	&_form {
+		.form-block {
+			margin-top: 50px;
+			&__photo {
+				background-image: url("../images/woman-window.jpg");
+				background-size: cover;
+				@media(max-width: 880px) {
+					background-position: bottom left -150px;
+				}
+			}
+			.jq-selectbox, .jq-selectbox__select {
+				display: block;
+				width: 100%;
+			}
+			textarea {
+				margin-top: 40px;
+				min-height: 145px;
+			}
+		}
+		.page-share {
+				margin-top: 40px;
+			}
+	}
+	/*======/page_form=============*/
 }
 
 /*=============Items============*/
@@ -912,6 +937,29 @@
 	background-color: $wh;
 }
 
+/*=============Castom-file=============*/
+.jq-file__name {
+	display: none;
+}
+.jq-file__browse {
+	border: 1px solid $blue;
+	padding: 10px 35px;
+	font-family: $ff;
+	font-size: 14px;
+	font-weight: 600;
+	color: $blue;
+	text-align: center;
+	transition: all .2s linear;
+}
+
+.input-file {
+	cursor: pointer;
+	&:hover {
+		.jq-file__browse {
+			background-color: $wh;
+		}
+	}
+}
 
 /*================Adaptive===================*/
 @media(max-width: 1200px) {

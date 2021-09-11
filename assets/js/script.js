@@ -65,7 +65,7 @@ $(document).ready(function() {
 /*==============/Form-popup=================*/
 	/*======Select-styler=============*/
 	$(function() {
-		$('select').styler();
+		$('select, .input-file').styler();
 	});
 	/*======/select=============*/
 

@@ -38,7 +38,9 @@
   /*======Page_procedure-list=============*/
   /*======/page_procedure-list=============*/
   /*======Page_procedure=============*/
-  /*======/page_procedure=============*/ }
+  /*======/page_procedure=============*/
+  /*======Page_form=============*/
+  /*======/page_form=============*/ }
   .page__header {
     width: 75%; }
     .page__header .title-blob:before {
@@ -296,6 +298,22 @@
     justify-content: flex-start; }
   .page_procedure .procedure-list__price {
     margin-top: 0; }
+  .page_form .form-block {
+    margin-top: 50px; }
+    .page_form .form-block__photo {
+      background-image: url("../images/woman-window.jpg");
+      background-size: cover; }
+      @media (max-width: 880px) {
+        .page_form .form-block__photo {
+          background-position: bottom left -150px; } }
+    .page_form .form-block .jq-selectbox, .page_form .form-block .jq-selectbox__select {
+      display: block;
+      width: 100%; }
+    .page_form .form-block textarea {
+      margin-top: 40px;
+      min-height: 145px; }
+  .page_form .page-share {
+    margin-top: 40px; }
 
 /*=============Items============*/
 .reviews__item, .faq-item {
@@ -836,6 +854,27 @@
 .jq-selectbox li.disabled:hover {
   background-color: #fff; }
 
+/*=============Castom-file=============*/
+.jq-file__name {
+  display: none; }
+
+.jq-file__browse {
+  border: 1px solid #006a83;
+  padding: 10px 35px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #006a83;
+  text-align: center;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear; }
+
+.input-file {
+  cursor: pointer; }
+  .input-file:hover .jq-file__browse {
+    background-color: #fff; }
+
 /*================Adaptive===================*/
 @media (max-width: 1200px) {
   .sidebar-block .title {
@@ -1073,7 +1112,7 @@
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-  .form-block input[type="text"], .form-block textarea {
+  .form-block input[type="text"], .form-block textarea, .form-block select {
     display: block;
     width: 100%;
     padding: 25px;
@@ -1086,41 +1125,55 @@
     -webkit-transition: all .2s linear;
     -o-transition: all .2s linear;
     transition: all .2s linear; }
-    .form-block input[type="text"]::-webkit-input-placeholder, .form-block textarea::-webkit-input-placeholder {
+    .form-block input[type="text"]::-webkit-input-placeholder, .form-block textarea::-webkit-input-placeholder, .form-block select::-webkit-input-placeholder {
       font-family: "Montserrat", sans-serif;
       font-size: 16px;
       font-weight: 400;
       color: #776c6c;
       opacity: 1; }
-    .form-block input[type="text"]:-ms-input-placeholder, .form-block textarea:-ms-input-placeholder {
+    .form-block input[type="text"]:-ms-input-placeholder, .form-block textarea:-ms-input-placeholder, .form-block select:-ms-input-placeholder {
       font-family: "Montserrat", sans-serif;
       font-size: 16px;
       font-weight: 400;
       color: #776c6c;
       opacity: 1; }
-    .form-block input[type="text"]::-ms-input-placeholder, .form-block textarea::-ms-input-placeholder {
+    .form-block input[type="text"]::-ms-input-placeholder, .form-block textarea::-ms-input-placeholder, .form-block select::-ms-input-placeholder {
       font-family: "Montserrat", sans-serif;
       font-size: 16px;
       font-weight: 400;
       color: #776c6c;
       opacity: 1; }
-    .form-block input[type="text"]::placeholder, .form-block textarea::placeholder {
+    .form-block input[type="text"]::placeholder, .form-block textarea::placeholder, .form-block select::placeholder {
       font-family: "Montserrat", sans-serif;
       font-size: 16px;
       font-weight: 400;
       color: #776c6c;
       opacity: 1; }
-    .form-block input[type="text"].form-block__input_small, .form-block textarea.form-block__input_small {
+    .form-block input[type="text"].form-block__input_small, .form-block textarea.form-block__input_small, .form-block select.form-block__input_small {
       width: calc(50% - 35px); }
-      .form-block input[type="text"].form-block__input_small:nth-child(odd), .form-block textarea.form-block__input_small:nth-child(odd) {
+      .form-block input[type="text"].form-block__input_small:nth-child(odd), .form-block textarea.form-block__input_small:nth-child(odd), .form-block select.form-block__input_small:nth-child(odd) {
         margin-right: 70px; }
-    .form-block input[type="text"]:focus, .form-block textarea:focus {
+    .form-block input[type="text"]:focus, .form-block textarea:focus, .form-block select:focus {
       border-color: #006a83; }
   .form-block input[type="text"] {
     margin-bottom: 40px; }
   .form-block textarea {
     margin-bottom: 30px;
     min-width: 100%; }
+  .form-block__row {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .form-block__row .jq-file {
+      width: calc(50% - 55px);
+      cursor: pointer; }
   .form-block__btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1235,6 +1288,18 @@
       margin-right: 0; }
   .form-block__captcha-place {
     width: 100%; }
+  .form-block__row {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .form-block__row .jq-file {
+      width: 100%;
+      max-width: 220px;
+      margin-bottom: 30px; }
   .form-popup__inner {
     top: 5%; } }
 

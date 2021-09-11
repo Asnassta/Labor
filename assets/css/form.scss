@@ -17,7 +17,7 @@
 		display: flex;
 		flex-wrap: wrap;
 	}
-	input[type="text"],  textarea {
+	input[type="text"],  textarea, select {
 		display: block;
 		width: 100%;
 		padding: 25px;
@@ -48,9 +48,20 @@
 	input[type="text"] {
 		margin-bottom: 40px;
 	}
+
 	textarea {
 		margin-bottom: 30px;
 		min-width: 100%;
+	}
+	&__row {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.jq-file {
+			width: calc(50% - 55px);
+			cursor: pointer;
+		}
 	}
 	&__btn {
 		display: flex;
@@ -193,6 +204,15 @@
 		}
 		&__captcha-place {
 			width: 100%;
+		}
+		&__row {
+			align-items: flex-start;
+			flex-direction: column;
+			.jq-file {
+				width: 100%;
+				max-width: 220px;
+				margin-bottom: 30px;
+			}
 		}
 	}
 	.form-popup__inner {
