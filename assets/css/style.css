@@ -891,79 +891,82 @@
   padding: 40px 40px 45px 70px;
   border-bottom: 1px solid #9d9d9d; }
 
-.vacancy-item__title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #000000;
-  line-height: 1.5; }
-  .vacancy-item__title a {
+.vacancy-item {
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear; }
+  .vacancy-item:hover {
+    background-color: #f3f3fe; }
+  .vacancy-item__title {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 600;
     color: #000000;
-    line-height: 1.5;
-    -webkit-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear; }
-    .vacancy-item__title a:hover {
-      color: #c02524; }
-
-.vacancy-item__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  padding-top: 8px; }
-
-.vacancy-item__geo {
-  margin-right: 20px;
-  padding-left: 22px; }
-  .vacancy-item__geo a {
+    line-height: 1.5; }
+    .vacancy-item__title a {
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000000;
+      line-height: 1.5;
+      -webkit-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear; }
+      .vacancy-item__title a:hover {
+        color: #c02524; }
+  .vacancy-item__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 8px; }
+  .vacancy-item__geo {
+    margin-right: 20px;
+    padding-left: 22px; }
+    .vacancy-item__geo a {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #006a83;
+      line-height: 1.5;
+      position: relative; }
+      .vacancy-item__geo a:before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url("../images/geo-blue.svg") center no-repeat;
+        position: absolute;
+        left: -22px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
+      .vacancy-item__geo a:after {
+        content: "";
+        height: 1px;
+        width: 0px;
+        background-color: #006a83;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-transition: all .3s linear;
+        -o-transition: all .3s linear;
+        transition: all .3s linear; }
+      .vacancy-item__geo a:hover:after {
+        width: 100%; }
+  .vacancy-item__price {
     font-family: "Montserrat", sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
-    color: #006a83;
-    line-height: 1.5;
-    position: relative; }
-    .vacancy-item__geo a:before {
-      content: "";
-      width: 16px;
-      height: 16px;
-      background: url("../images/geo-blue.svg") center no-repeat;
-      position: absolute;
-      left: -22px;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
-    .vacancy-item__geo a:after {
-      content: "";
-      height: 1px;
-      width: 0px;
-      background-color: #006a83;
-      position: absolute;
-      bottom: -2px;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
-      -webkit-transition: all .3s linear;
-      -o-transition: all .3s linear;
-      transition: all .3s linear; }
-    .vacancy-item__geo a:hover:after {
-      width: 100%; }
-
-.vacancy-item__price {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #c02524; }
+    color: #c02524; }
 
 /*=========/vacancy===========*/
 /*============Castom-select=============*/
