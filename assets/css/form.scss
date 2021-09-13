@@ -16,6 +16,7 @@
 	&__inner {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 	input[type="text"],  textarea, select {
 		display: block;
@@ -37,9 +38,9 @@
 		}
 		&.form-block__input_small {
 			width: calc(50% - 35px);
-			&:nth-child(odd) {
+			/*&:nth-child(odd) {
 				margin-right: 70px;
-			}
+			}*/
 		}
 		&:focus {
 			border-color: $blue;
@@ -179,9 +180,9 @@
 		input[type="text"], textarea {
 			&.form-block__input_small {
 				width: calc(50% - 15px);
-				&:nth-child(odd) {
+				/*&:nth-child(odd) {
 					margin-right: 30px;
-				}
+				}*/
 			}
 		}
 		input[type="text"] {

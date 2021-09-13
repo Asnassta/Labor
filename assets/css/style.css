@@ -1368,7 +1368,10 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
   .form-block input[type="text"], .form-block textarea, .form-block select {
     display: block;
     width: 100%;
@@ -1407,9 +1410,10 @@
       color: #776c6c;
       opacity: 1; }
     .form-block input[type="text"].form-block__input_small, .form-block textarea.form-block__input_small, .form-block select.form-block__input_small {
-      width: calc(50% - 35px); }
-      .form-block input[type="text"].form-block__input_small:nth-child(odd), .form-block textarea.form-block__input_small:nth-child(odd), .form-block select.form-block__input_small:nth-child(odd) {
-        margin-right: 70px; }
+      width: calc(50% - 35px);
+      /*&:nth-child(odd) {
+				margin-right: 70px;
+			}*/ }
     .form-block input[type="text"]:focus, .form-block textarea:focus, .form-block select:focus {
       border-color: #006a83; }
   .form-block input[type="text"] {
@@ -1530,9 +1534,10 @@
   .form-block__form {
     padding: 54px 30px 40px; }
   .form-block input[type="text"].form-block__input_small, .form-block textarea.form-block__input_small {
-    width: calc(50% - 15px); }
-    .form-block input[type="text"].form-block__input_small:nth-child(odd), .form-block textarea.form-block__input_small:nth-child(odd) {
-      margin-right: 30px; }
+    width: calc(50% - 15px);
+    /*&:nth-child(odd) {
+					margin-right: 30px;
+				}*/ }
   .form-block input[type="text"] {
     margin-bottom: 30px; } }
 
