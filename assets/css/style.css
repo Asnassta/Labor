@@ -23,26 +23,30 @@
   margin-bottom: 50px;
   /*===========Page-filter================*/
   /*===========Page-contact================*/
-  /*======news=======*/
-  /*=========/news=========*/
-  /*========About==========*/
-  /*=========/about=========*/
-  /*=========reviews=======*/
-  /*======/reviews=======*/
-  /*======FAQ============*/
-  /*======/FAQ=======*/
-  /*======Doctor_list=============*/
-  /*======/doctor_list=============*/
-  /*======Doctor_page=============*/
-  /*======/doctor_page=============*/
+  /*=================PAGE_==================*/
+  /*======Page_news=======*/
+  /*=========/page_news=========*/
+  /*========Page_about==========*/
+  /*=========/page_about=========*/
+  /*=========Page_reviews=======*/
+  /*======/page_reviews=======*/
+  /*======Page_FAQ============*/
+  /*======/page_FAQ=======*/
+  /*======Page_Doctor_list=============*/
+  /*======/page_doctor_list=============*/
+  /*======Page_Doctor_page=============*/
+  /*======/page_doctor_page=============*/
   /*======Page_procedure-list=============*/
   /*======/page_procedure-list=============*/
   /*======Page_procedure=============*/
   /*======/page_procedure=============*/
   /*======Page_form=============*/
-  /*======/page_form=============*/ }
+  /*======/page_form=============*/
+  /*======Page_vacancy-list=========*/
+  /*======/page_vacancy-list=========*/ }
   .page__header {
-    width: 75%; }
+    width: 75%;
+    margin-bottom: 40px; }
     .page__header .title-blob:before {
       top: -5px;
       left: -145px; }
@@ -309,11 +313,15 @@
     .page_form .form-block .jq-selectbox, .page_form .form-block .jq-selectbox__select {
       display: block;
       width: 100%; }
+    .page_form .form-block .jq-selectbox__select {
+      padding: 25px 32px 25px 25px; }
     .page_form .form-block textarea {
       margin-top: 40px;
       min-height: 145px; }
   .page_form .page-share {
     margin-top: 40px; }
+  .page_vacancy-list .info-block {
+    margin-top: 45px; }
 
 /*=============Items============*/
 .reviews__item, .faq-item {
@@ -800,6 +808,163 @@
   color: #000000;
   margin-top: -25px; }
 
+/***************=About-block======================*/
+.about-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f3f3fe; }
+  .about-block__photo {
+    width: 40%; }
+    .about-block__photo img {
+      max-width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover; }
+  .about-block__content {
+    padding: 60px 80px 65px;
+    width: 80%;
+    background: url("../images/decor-big.svg") top right no-repeat; }
+  .about-block__subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    margin: 50px 0 15px; }
+  .about-block .btn__wrapper {
+    margin-top: 50px; }
+
+/*==========Info-block============*/
+.info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -25px -40px; }
+  .info-block > * {
+    padding: 0 25px;
+    margin-bottom: 40px; }
+  .info-block_two > * {
+    width: 50%; }
+  .info-block_four > * {
+    width: 25%; }
+  .info-block__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .info-block__icon {
+    margin-right: 10px;
+    position: relative; }
+    .info-block__icon:before {
+      content: "";
+      width: 82px;
+      height: 23px;
+      background: url("../images/icon/blob-icon.svg") center no-repeat;
+      position: absolute;
+      bottom: -7px;
+      right: 0;
+      z-index: 1; }
+  .info-block__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.5;
+    margin-bottom: 25px; }
+    .info-block__title:last-child {
+      margin-bottom: 0; }
+  .info-block__text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 1.5; }
+
+/*==========/info-block============*/
+/*=========Vacancy===========*/
+.vacancy-list__item {
+  padding: 40px 40px 45px 70px;
+  border-bottom: 1px solid #9d9d9d; }
+
+.vacancy-item__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.5; }
+  .vacancy-item__title a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.5;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
+    .vacancy-item__title a:hover {
+      color: #c02524; }
+
+.vacancy-item__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 8px; }
+
+.vacancy-item__geo {
+  margin-right: 20px;
+  padding-left: 22px; }
+  .vacancy-item__geo a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #006a83;
+    line-height: 1.5;
+    position: relative; }
+    .vacancy-item__geo a:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background: url("../images/geo-blue.svg") center no-repeat;
+      position: absolute;
+      left: -22px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    .vacancy-item__geo a:after {
+      content: "";
+      height: 1px;
+      width: 0px;
+      background-color: #006a83;
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      -webkit-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      transition: all .3s linear; }
+    .vacancy-item__geo a:hover:after {
+      width: 100%; }
+
+.vacancy-item__price {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #c02524; }
+
+/*=========/vacancy===========*/
 /*============Castom-select=============*/
 .jq-selectbox {
   cursor: pointer; }
@@ -957,6 +1122,22 @@
   .sidebar-block .publications__date {
     font-size: 12px; } }
 
+@media (max-width: 880px) {
+  .about-block__photo {
+    width: 45%; }
+  .about-block__content {
+    width: 55%;
+    padding: 60px 35px 40px;
+    background-position: top -60px right -30px; }
+  .page_vacancy-list .mb-70 {
+    margin-bottom: 40px; }
+  .page_vacancy-list .info-block_two > * {
+    width: 100%; }
+  .page_vacancy-list .info-block__title {
+    margin-bottom: 15px; }
+  .vacancy-item__price {
+    font-size: 16px; } }
+
 @media (max-width: 768px) {
   .page-about .page__row {
     -ms-flex-wrap: wrap;
@@ -1032,7 +1213,11 @@
   .page_procedure-list .sidebar {
     margin-top: 0; }
   .procedure-list {
-    margin-top: 15px; } }
+    margin-top: 15px; }
+  .about-block__photo {
+    display: none; }
+  .about-block__content {
+    width: 100%; } }
 
 @media (max-width: 546px) {
   .reviews__item, .faq-item {
@@ -1062,7 +1247,28 @@
     text-align: left; }
   .sidebar-block_procedure > * {
     width: 100%;
-    margin-right: 0; } }
+    margin-right: 0; }
+  .about-block__subtitle {
+    font-size: 14px; }
+  .info-block__title {
+    font-size: 14px; }
+  .info-block__text {
+    font-size: 14px; }
+  .vacancy-item {
+    padding: 30px 20px; }
+    .vacancy-item__info {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .vacancy-item__price {
+      margin-top: 15px; }
+    .vacancy-item__title {
+      font-size: 14px; }
+      .vacancy-item__title a {
+        font-size: 14px; }
+    .vacancy-item__geo a {
+      font-size: 12px; } }
 
 @media (max-width: 414px) {
   .page-gallery__item {
@@ -1432,6 +1638,12 @@ body.hidden {
       top: -16px;
       left: -118px;
       z-index: 1; }
+  .title-24 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #000000; }
   .title-medium {
     font-family: "Montserrat", sans-serif;
     font-size: 21px;
@@ -1479,6 +1691,13 @@ body.hidden {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
+    .btn__wrapper_right {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
 
 .link {
   font-family: "Montserrat", sans-serif;
@@ -1574,6 +1793,27 @@ body.hidden {
       .breadcrumbs a:last-child:after {
         display: none; }
 
+.menu-dots li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  padding-left: 20px;
+  position: relative; }
+  .menu-dots li:before {
+    content: "";
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: #000000;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
 input[type="text"], input.input-search, select {
   border: 1px solid #9d9d9d;
   padding: 22px 25px;
@@ -1652,6 +1892,13 @@ select {
   -moz-appearance: none;
   appearance: none;
   background: url("../images/arrow-select.svg") center right 25px no-repeat; }
+
+/*==============Margin-Padding================*/
+.mt-0 {
+  margin-top: 0; }
+
+.mb-70 {
+  margin-bottom: 70px; }
 
 /*==============Slider===========*/
 .slider-arrow {
@@ -2750,6 +2997,10 @@ select {
     margin-bottom: 40px; }
   .title {
     font-size: 18px; }
+    .title-24 {
+      font-size: 18px; }
+    .title-medium {
+      font-size: 16px; }
   .subtitle {
     font-size: 14px; }
   .menu__column {
@@ -2764,6 +3015,8 @@ select {
       font-size: 12px; }
     .search input::placeholder {
       font-size: 12px; }
+  .menu-dots li {
+    font-size: 14px; }
   .intro__inner {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;

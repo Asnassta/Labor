@@ -2,6 +2,7 @@
 	margin-bottom: 50px;
 	&__header {
 		width: 75%;
+		margin-bottom: 40px;
 		.title {
 			&-blob {
 				&:before {
@@ -193,7 +194,9 @@
 			font-size: 16px;
 		}
 	}
-	/*======news=======*/
+	
+/*=================PAGE_==================*/
+	/*======Page_news=======*/
 	&-news {
 		.page__wrapper {
 			margin-top: 20px;
@@ -217,8 +220,8 @@
 			}
 		}
 	}
-	/*=========/news=========*/
-	/*========About==========*/
+	/*=========/page_news=========*/
+	/*========Page_about==========*/
 	&-about {
 		.page__row {
 			margin-bottom: 25px;
@@ -231,15 +234,15 @@
 			}
 		}
 	}
-	/*=========/about=========*/
-	/*=========reviews=======*/
+	/*=========/page_about=========*/
+	/*=========Page_reviews=======*/
 	&-reviews {
 		.form-block{
 			margin-top: 40px;
 		}
 	}
-	/*======/reviews=======*/
-	/*======FAQ============*/
+	/*======/page_reviews=======*/
+	/*======Page_FAQ============*/
 	&-faq {
 		.form-block {
 			margin: 30px 0 40px;
@@ -248,8 +251,8 @@
 			background-image: url("../images/laborants-form.jpg");
 		}
 	}
-	/*======/FAQ=======*/
-	/*======Doctor_list=============*/
+	/*======/page_FAQ=======*/
+	/*======Page_Doctor_list=============*/
 	&-doctor_list {
 		.page__content {
 			display: flex;
@@ -264,8 +267,8 @@
 			margin-bottom: 20px;
 		}
 	}
-	/*======/doctor_list=============*/
-	/*======Doctor_page=============*/
+	/*======/page_doctor_list=============*/
+	/*======Page_Doctor_page=============*/
 	&-doctor_page {
 		.title-medium {
 			margin: 40px 0 30px;
@@ -287,7 +290,7 @@
 			margin-top: 40px;
 		}
 	}
-	/*======/doctor_page=============*/
+	/*======/page_doctor_page=============*/
 	/*======Page_procedure-list=============*/
 	&_procedure-list {
 		.search {
@@ -356,6 +359,9 @@
 				display: block;
 				width: 100%;
 			}
+			.jq-selectbox__select {
+				padding: 25px 32px 25px 25px;
+			}
 			textarea {
 				margin-top: 40px;
 				min-height: 145px;
@@ -366,6 +372,13 @@
 			}
 	}
 	/*======/page_form=============*/
+	/*======Page_vacancy-list=========*/
+	&_vacancy-list {
+		.info-block {
+			margin-top: 45px;
+		}
+	}
+	/*======/page_vacancy-list=========*/
 }
 
 /*=============Items============*/
@@ -884,6 +897,173 @@
 	}
 }
 
+/***************=About-block======================*/
+.about-block {
+	display: flex;
+	background-color: $lpurple;
+	&__photo {
+		width: 40%;
+		img {
+			max-width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__content {
+		padding: 60px 80px 65px;
+		width: 80%;
+		background: url("../images/decor-big.svg") top right no-repeat;
+	}
+	&__subtitle {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 500;
+		color: $bl;
+		margin: 50px 0 15px;
+	}
+	.btn__wrapper {
+		margin-top: 50px;
+	}
+}
+
+/*==========Info-block============*/
+.info-block {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -25px -40px;
+	>* {
+		padding: 0 25px;
+		margin-bottom: 40px;
+	}
+	&_two {
+		>* {
+			width: 50%;
+		}
+	}
+	&_four {
+		>* {
+			width: 25%;
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: flex-start;
+	}
+	&__icon {
+		margin-right: 10px;
+		position: relative;
+		&:before {
+			content: "";
+			width: 82px;
+			height: 23px;
+			background: url("../images/icon/blob-icon.svg") center no-repeat;
+			position: absolute;
+			bottom: -7px;
+			right: 0;
+			z-index: 1;
+		}
+	}
+	&__title {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 600;
+		color: $bl;
+		line-height: 1.5;
+		margin-bottom: 25px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__text {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 500;
+		color: $bl;
+		line-height: 1.5;
+	}
+}
+/*==========/info-block============*/
+
+/*=========Vacancy===========*/
+.vacancy {
+	&-list__item {
+		padding: 40px 40px 45px 70px;
+		border-bottom: 1px solid $lgray;
+	}
+	&-item {
+		&__title {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 600;
+			color: $bl;
+			line-height: 1.5;
+			a {
+				font-family: $ff;
+				font-size: 16px;
+				font-weight: 600;
+				color: $bl;
+				line-height: 1.5;
+				transition: all .2s linear;
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+		&__info {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding-top: 8px;
+		}
+		&__geo {
+			margin-right: 20px;
+			padding-left: 22px;
+			a {
+				font-family: $ff;
+				font-size: 14px;
+				font-weight: 500;
+				color: $blue;
+				line-height: 1.5;
+				position: relative;
+				&:before {
+					content: "";
+					width: 16px;
+					height: 16px;
+					background: url("../images/geo-blue.svg") center no-repeat;
+					position: absolute;
+					left: -22px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				&:after {
+					content: "";
+					height: 1px;
+					width: 0px;
+					background-color: $blue;
+					position: absolute;
+					bottom: -2px;
+					left: 50%;
+					transform: translateX(-50%);
+					transition: all .3s linear;
+				}
+				&:hover {
+					&:after {
+						width: 100%;
+					}
+				}
+
+			}
+		}
+		&__price {
+			font-family: $ff;
+			font-size: 18px;
+			font-weight: 500;
+			color: $red;
+		}
+	}
+}
+/*=========/vacancy===========*/
+
 /*============Castom-select=============*/
 .jq-selectbox {
 	cursor: pointer;
@@ -1093,6 +1273,37 @@
 	}
 }
 
+@media(max-width: 880px) {
+	.about-block {
+		&__photo {
+			width: 45%;
+		}
+		&__content {
+			width: 55%;
+			padding: 60px 35px 40px;
+			background-position: top -60px right -30px;
+		}
+	}
+	.page_vacancy-list {
+		.mb-70 {
+			margin-bottom: 40px;
+		}
+		.info-block {
+			&_two {
+				>* {
+					width: 100%;
+				}
+			}
+			&__title {
+				margin-bottom: 15px;
+			}
+		}
+	}
+	.vacancy-item__price {
+		font-size: 16px;
+	}
+}
+
 @media(max-width: 768px) {
 	.page {
 		&-about {
@@ -1211,6 +1422,15 @@
 	.procedure-list {
 		margin-top: 15px;
 	}
+
+	.about-block {
+		&__photo {
+			display: none;
+		}
+		&__content {
+			width: 100%;
+		}
+	}
 }
 
 @media(max-width: 546px) {
@@ -1259,6 +1479,39 @@
 					width: 100%;
 					margin-right: 0;
 				}
+			}
+		}
+	}
+	.about-block {
+		&__subtitle {
+			font-size: 14px;
+		}
+	}
+	.info-block {
+		&__title {
+			font-size: 14px;
+		}
+		&__text {
+			font-size: 14px;
+		}
+	}
+	.vacancy-item {
+		padding: 30px 20px;
+		&__info {
+			flex-direction: column;
+		}
+		&__price {
+			margin-top: 15px;
+		}
+		&__title {
+			font-size: 14px;
+			a {
+				font-size: 14px;
+			}
+		}
+		&__geo {
+			a {
+				font-size: 12px;
 			}
 		}
 	}

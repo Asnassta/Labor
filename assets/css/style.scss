@@ -79,6 +79,13 @@ body {
 			z-index: 1;
 		}
 	}
+	&-24 {
+		font-family: $ff;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 1.2;
+		color: $bl;
+	}
 	&-medium {
 		font-family: $ff;
 		font-size: 21px;
@@ -126,6 +133,10 @@ body {
 		display: flex;
 		&_center {
 			justify-content: center;
+		}
+		&_right {
+			display: flex;
+			justify-content: flex-end;
 		}
 	}
 }
@@ -233,6 +244,29 @@ body {
 	}
 }
 
+.menu-dots {
+	li {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.5;
+		color: $bl;
+		padding-left: 20px;
+		position: relative;
+		&:before {
+			content: "";
+			width: 2px;
+			height: 2px;
+			border-radius: 50%;
+			background-color: $bl;
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
 input[type="text"], input.input-search, select  {
 	border: 1px solid $lgray;
 	padding: 22px 25px;
@@ -296,6 +330,14 @@ select {
 }
 
 
+/*==============Margin-Padding================*/
+.mt-0 {
+	margin-top: 0;
+}
+
+.mb-70 {
+	margin-bottom: 70px;
+}
 
 
 /*==============Slider===========*/
@@ -1437,6 +1479,12 @@ select {
 	}
 	.title {
 		font-size: 18px;
+		&-24 {
+			font-size: 18px;
+		}
+		&-medium {
+			font-size: 16px;
+		}
 	}
 	.subtitle {
 		font-size: 14px;
@@ -1452,6 +1500,11 @@ select {
 			&::placeholder {
 				font-size: 12px;
 			}
+		}
+	}
+	.menu-dots {
+		li {
+			font-size: 14px;
 		}
 	}
 	.intro {
