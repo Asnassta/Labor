@@ -379,6 +379,23 @@
 		}
 	}
 	/*======/page_vacancy-list=========*/
+	/*======Page_vacancy=========*/
+	&_vacancy {
+		.vacancy-item {
+			padding: 40px;
+			border: 1px solid $lgray;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			>* {
+				margin-right: 30px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	/*======/page_vacancy=========*/
 }
 
 /*=============Items============*/
@@ -990,12 +1007,12 @@
 	&-list__item {
 		padding: 40px 40px 45px 70px;
 		border-bottom: 1px solid $lgray;
-	}
-	&-item {
 		transition: all .2s linear;
 		&:hover {
 			background-color: $lpurple;
 		}
+	}
+	&-item {
 		&__title {
 			font-family: $ff;
 			font-size: 16px;
@@ -1063,8 +1080,29 @@
 			font-family: $ff;
 			font-size: 18px;
 			font-weight: 500;
+			line-height: 1.5;
 			color: $red;
 		}
+		&__date {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 1.5;
+			color: $lgray;
+			margin-top: 5px;
+		}
+	}
+}
+
+.vacancy-info {
+	&__block {
+		margin-bottom: 35px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.title-medium {
+		margin-bottom: 12px;
 	}
 }
 /*=========/vacancy===========*/
@@ -1181,6 +1219,11 @@
 			justify-content: flex-start;
 		}
 	}
+	.page_vacancy {
+		.vacancy-item {
+			padding: 30px;
+		}
+	}
 }
 
 @media(max-width: 992px) {
@@ -1250,6 +1293,21 @@
 		&__link {
 			svg {
 				margin-bottom: 5px;
+			}
+		}
+	}
+
+	.page_vacancy {
+		.vacancy-item {
+			flex-wrap: wrap;
+			>* {
+				&:nth-child(2) {
+					margin-right: 0;
+				}
+				&:nth-child(3) {
+					margin-top: 20px;
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -1500,13 +1558,15 @@
 			font-size: 14px;
 		}
 	}
-	.vacancy-item {
+	.vacancy-list__item {
 		padding: 30px 20px;
+		.vacancy-item__price {
+			margin-top: 15px;
+		}
+	}
+	.vacancy-item {
 		&__info {
 			flex-direction: column;
-		}
-		&__price {
-			margin-top: 15px;
 		}
 		&__title {
 			font-size: 14px;

@@ -43,7 +43,9 @@
   /*======Page_form=============*/
   /*======/page_form=============*/
   /*======Page_vacancy-list=========*/
-  /*======/page_vacancy-list=========*/ }
+  /*======/page_vacancy-list=========*/
+  /*======Page_vacancy=========*/
+  /*======/page_vacancy=========*/ }
   .page__header {
     width: 75%;
     margin-bottom: 40px; }
@@ -322,6 +324,22 @@
     margin-top: 40px; }
   .page_vacancy-list .info-block {
     margin-top: 45px; }
+  .page_vacancy .vacancy-item {
+    padding: 40px;
+    border: 1px solid #9d9d9d;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .page_vacancy .vacancy-item > * {
+      margin-right: 30px; }
+      .page_vacancy .vacancy-item > *:last-child {
+        margin-right: 0; }
 
 /*=============Items============*/
 .reviews__item, .faq-item {
@@ -889,84 +907,103 @@
 /*=========Vacancy===========*/
 .vacancy-list__item {
   padding: 40px 40px 45px 70px;
-  border-bottom: 1px solid #9d9d9d; }
-
-.vacancy-item {
+  border-bottom: 1px solid #9d9d9d;
   -webkit-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear; }
-  .vacancy-item:hover {
+  .vacancy-list__item:hover {
     background-color: #f3f3fe; }
-  .vacancy-item__title {
+
+.vacancy-item__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.5; }
+  .vacancy-item__title a {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 600;
     color: #000000;
-    line-height: 1.5; }
-    .vacancy-item__title a {
-      font-family: "Montserrat", sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: #000000;
-      line-height: 1.5;
-      -webkit-transition: all .2s linear;
-      -o-transition: all .2s linear;
-      transition: all .2s linear; }
-      .vacancy-item__title a:hover {
-        color: #c02524; }
-  .vacancy-item__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    padding-top: 8px; }
-  .vacancy-item__geo {
-    margin-right: 20px;
-    padding-left: 22px; }
-    .vacancy-item__geo a {
-      font-family: "Montserrat", sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      color: #006a83;
-      line-height: 1.5;
-      position: relative; }
-      .vacancy-item__geo a:before {
-        content: "";
-        width: 16px;
-        height: 16px;
-        background: url("../images/geo-blue.svg") center no-repeat;
-        position: absolute;
-        left: -22px;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%); }
-      .vacancy-item__geo a:after {
-        content: "";
-        height: 1px;
-        width: 0px;
-        background-color: #006a83;
-        position: absolute;
-        bottom: -2px;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        -webkit-transition: all .3s linear;
-        -o-transition: all .3s linear;
-        transition: all .3s linear; }
-      .vacancy-item__geo a:hover:after {
-        width: 100%; }
-  .vacancy-item__price {
+    line-height: 1.5;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
+    .vacancy-item__title a:hover {
+      color: #c02524; }
+
+.vacancy-item__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 8px; }
+
+.vacancy-item__geo {
+  margin-right: 20px;
+  padding-left: 22px; }
+  .vacancy-item__geo a {
     font-family: "Montserrat", sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
-    color: #c02524; }
+    color: #006a83;
+    line-height: 1.5;
+    position: relative; }
+    .vacancy-item__geo a:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background: url("../images/geo-blue.svg") center no-repeat;
+      position: absolute;
+      left: -22px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    .vacancy-item__geo a:after {
+      content: "";
+      height: 1px;
+      width: 0px;
+      background-color: #006a83;
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      -webkit-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      transition: all .3s linear; }
+    .vacancy-item__geo a:hover:after {
+      width: 100%; }
+
+.vacancy-item__price {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #c02524; }
+
+.vacancy-item__date {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #9d9d9d;
+  margin-top: 5px; }
+
+.vacancy-info__block {
+  margin-bottom: 35px; }
+  .vacancy-info__block:last-child {
+    margin-bottom: 0; }
+
+.vacancy-info .title-medium {
+  margin-bottom: 12px; }
 
 /*=========/vacancy===========*/
 /*============Castom-select=============*/
@@ -1063,7 +1100,9 @@
     padding-top: 5px;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start; } }
+    justify-content: flex-start; }
+  .page_vacancy .vacancy-item {
+    padding: 30px; } }
 
 @media (max-width: 992px) {
   .page__content {
@@ -1113,7 +1152,15 @@
     .legal-docs__name a, .legal-docs__date a, .legal-docs__link a {
       font-size: 12px; }
   .legal-docs__link svg {
-    margin-bottom: 5px; } }
+    margin-bottom: 5px; }
+  .page_vacancy .vacancy-item {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .page_vacancy .vacancy-item > *:nth-child(2) {
+      margin-right: 0; }
+    .page_vacancy .vacancy-item > *:nth-child(3) {
+      margin-top: 20px;
+      width: 100%; } }
 
 @media (max-width: 880px) and (min-width: 766px) {
   .sidebar-block .title {
@@ -1258,21 +1305,21 @@
     font-size: 14px; }
   .info-block__text {
     font-size: 14px; }
-  .vacancy-item {
+  .vacancy-list__item {
     padding: 30px 20px; }
-    .vacancy-item__info {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-    .vacancy-item__price {
+    .vacancy-list__item .vacancy-item__price {
       margin-top: 15px; }
-    .vacancy-item__title {
+  .vacancy-item__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .vacancy-item__title {
+    font-size: 14px; }
+    .vacancy-item__title a {
       font-size: 14px; }
-      .vacancy-item__title a {
-        font-size: 14px; }
-    .vacancy-item__geo a {
-      font-size: 12px; } }
+  .vacancy-item__geo a {
+    font-size: 12px; } }
 
 @media (max-width: 414px) {
   .page-gallery__item {
@@ -1813,10 +1860,7 @@ body.hidden {
     background-color: #000000;
     position: absolute;
     left: 10px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
+    top: 11px; }
 
 input[type="text"], input.input-search, select {
   border: 1px solid #9d9d9d;
@@ -2425,6 +2469,16 @@ select {
   font-weight: 600;
   color: #9d9d9d;
   margin-bottom: 10px; }
+  .publications__date a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #9d9d9d;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
+    .publications__date a:hover {
+      color: #006a83; }
 
 .publications__title {
   margin-bottom: 10px;

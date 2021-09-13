@@ -261,8 +261,7 @@ body {
 			background-color: $bl;
 			position: absolute;
 			left: 10px;
-			top: 50%;
-			transform: translateY(-50%);
+			top: 11px;
 		}
 	}
 }
@@ -835,6 +834,16 @@ select {
 		font-weight: 600;
 		color: $lgray;
 		margin-bottom: 10px;
+		a {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 600;
+			color: $lgray;
+			transition: all .2s linear;
+			&:hover {
+				color: $blue;
+			}
+		}
 	}
 	&__title {
 		margin-bottom: 10px;
