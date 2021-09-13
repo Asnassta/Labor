@@ -858,7 +858,8 @@
     align-items: flex-start; }
   .info-block__icon {
     margin-right: 10px;
-    position: relative; }
+    position: relative;
+    padding-left: 12px; }
     .info-block__icon:before {
       content: "";
       width: 82px;
