@@ -991,11 +991,25 @@
 			height: 100%;
 			object-fit: cover;
 		}
+		&_right {
+			text-align: right;
+		}
+		&_50 {
+			width: 50%;
+		}
 	}
 	&__content {
 		padding: 60px 80px 65px;
 		width: 80%;
-		background: url("../images/decor-big.svg") top right no-repeat;
+		background: url("../images/decor-big.svg") top -35px right no-repeat;
+		&_left {
+			background: url("../images/decor-left.svg") top -50px left no-repeat;
+		}
+		&_50 {
+			width: 50%;
+			padding-top: 90px;
+			padding-bottom: 100px;
+		}
 	}
 	&__subtitle {
 		font-family: $ff;
@@ -1003,6 +1017,10 @@
 		font-weight: 500;
 		color: $bl;
 		margin: 50px 0 15px;
+	}
+	.text {
+		font-size: 16px;
+		margin-top: 30px;
 	}
 	.btn__wrapper {
 		margin-top: 50px;
@@ -1023,6 +1041,11 @@
 			width: 50%;
 		}
 	}
+	&_three {
+		>* {
+			width: 33.33333%;
+		}
+	}
 	&_four {
 		>* {
 			width: 25%;
@@ -1031,6 +1054,10 @@
 	&__item {
 		display: flex;
 		align-items: flex-start;
+		&_center {
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	&__icon {
 		margin-right: 10px;
@@ -1046,6 +1073,9 @@
 			right: 0;
 			z-index: 1;
 		}
+	}
+	&__img {
+		margin-right: 15px;
 	}
 	&__title {
 		font-family: $ff;
@@ -1064,6 +1094,29 @@
 		font-weight: 500;
 		color: $bl;
 		line-height: 1.5;
+		&_big {
+			font-size: 18px;
+		}
+	}
+	&__link {
+		a {
+			font-family: $ff;
+			font-weight: 500;
+			font-size: 18px;
+			color: $bl;
+			line-height: 1.5;
+			transition: all .2s linear;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	&__price {
+		font-family: $ff;
+			font-weight: 500;
+			font-size: 18px;
+			color: $red;
+			line-height: 1.5;
 	}
 }
 /*==========/info-block============*/
@@ -1172,6 +1225,81 @@
 	}
 }
 /*=========/vacancy===========*/
+
+/*=========Research-block=========*/
+.research {
+	&-block {
+		&__item {
+			padding: 45px 0 40px 40px;
+			border-bottom: 1px solid $lgray;
+			display: flex;
+			align-items: flex-start;
+		}
+		&__description {
+			width: calc(65% - 40px);
+			margin-right: 40px;
+		}
+		.text {
+			margin-top: 25px;
+			font-size: 16px;
+		}
+		&__box {
+			width: 35%;
+		}
+	}
+	&-box {
+		padding: 30px 35px 35px;
+		background-color: $lpurple;
+		&__row {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin-bottom: 30px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			>* {
+				&:first-child {
+					margin-right: 20px;
+				}
+			}
+		}
+		&__price {
+			font-family: $ff;
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 1.3;
+			color: $bl;
+			&-description {
+				font-family: $ff;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 1.5;
+				color: $lgray;
+			}
+		}
+		&__date {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $bl;
+			line-height: 1.5;
+			padding: 7px 25px;
+			border: 1px solid $bl;
+		}
+		&__text {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $bl;
+			line-height: 1.5;
+			&_medium {
+				font-weight: 500;
+			}
+		}
+	}
+}
+/*=========/research-block=========*/
 
 /*========Page-slider=========*/
 .page-slider {
@@ -1324,6 +1452,25 @@
 			}
 		}
 	}
+
+	.research {
+		&-block {
+			&__item {
+				padding-left: 20px;
+			}
+			&__description {
+				width: 50%;
+			}
+			&__box {
+				width: 50%;
+			}
+		}
+		&-box {
+			&__price {
+				font-size: 20px;
+			}
+		}
+	}
 }
 
 @media(max-width: 992px) {
@@ -1412,6 +1559,16 @@
 		}
 	}
 
+	.page_stock {
+		.info-block {
+			&_three {
+				>* {
+					width: 100%;
+				}
+			}
+		}
+	}
+
 }
 
 @media(max-width: 880px) and (min-width: 766px) {
@@ -1445,6 +1602,9 @@
 			width: 55%;
 			padding: 60px 35px 40px;
 			background-position: top -60px right -30px;
+			&_left {
+				background-position: top -70px left;
+			}
 		}
 	}
 	.page_vacancy-list {
@@ -1483,6 +1643,12 @@
 			&__item {
 				width: calc(50% - 15px);
 			}
+		}
+		.mb-55 {
+			margin-bottom: 35px;
+		}
+		.mb-70 {
+			margin-bottom: 40px;
 		}
 	}
 }
@@ -1606,6 +1772,22 @@
 			padding: 35px 25px;
 		}
 	}
+	.research {
+		&-block {
+			&__item {
+				flex-direction: column;
+				padding: 30px 0;
+			}
+			&__description {
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+			&__box {
+				width: 100%;
+			}
+		}
+	}
 }
 
 @media(max-width: 546px) {
@@ -1671,6 +1853,14 @@
 		}
 		&__text {
 			font-size: 14px;
+		}
+		&__link {
+			a {
+				font-size: 16px;
+			}
+		}
+		&__price {
+			font-size: 16px;
 		}
 	}
 	.vacancy-list__item {
@@ -1747,6 +1937,13 @@
 			margin-top: 20px;
 		}
 	}
+	.info-block {
+		&__item {
+			&_center {
+				justify-content: flex-start;
+			}
+		}
+	}
 }
 
 @media(max-width: 375px) {
@@ -1775,6 +1972,32 @@
 				a {
 					font-size: 14px;
 				}
+			}
+		}
+	}
+}
+
+@media(max-width: 370px) {
+	.research {
+		&-block {
+			.text {
+				font-size: 14px;
+			}
+		}
+		&-box {
+			padding: 20px;
+			&__price {
+				font-size: 16px;
+				&-description {
+					font-size: 12px;
+				}
+			}
+			&__date {
+				font-size: 12px;
+				padding: 7px 10px;
+			}
+			&__text {
+				font-size: 12px;
 			}
 		}
 	}

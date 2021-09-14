@@ -904,16 +904,29 @@
       height: 100%;
       -o-object-fit: cover;
       object-fit: cover; }
+    .about-block__photo_right {
+      text-align: right; }
+    .about-block__photo_50 {
+      width: 50%; }
   .about-block__content {
     padding: 60px 80px 65px;
     width: 80%;
-    background: url("../images/decor-big.svg") top right no-repeat; }
+    background: url("../images/decor-big.svg") top -35px right no-repeat; }
+    .about-block__content_left {
+      background: url("../images/decor-left.svg") top -50px left no-repeat; }
+    .about-block__content_50 {
+      width: 50%;
+      padding-top: 90px;
+      padding-bottom: 100px; }
   .about-block__subtitle {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 500;
     color: #000000;
     margin: 50px 0 15px; }
+  .about-block .text {
+    font-size: 16px;
+    margin-top: 30px; }
   .about-block .btn__wrapper {
     margin-top: 50px; }
 
@@ -930,6 +943,8 @@
     margin-bottom: 40px; }
   .info-block_two > * {
     width: 50%; }
+  .info-block_three > * {
+    width: 33.33333%; }
   .info-block_four > * {
     width: 25%; }
   .info-block__item {
@@ -939,6 +954,13 @@
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start; }
+    .info-block__item_center {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
   .info-block__icon {
     margin-right: 10px;
     position: relative;
@@ -952,6 +974,8 @@
       bottom: -7px;
       right: 0;
       z-index: 1; }
+  .info-block__img {
+    margin-right: 15px; }
   .info-block__title {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -966,6 +990,25 @@
     font-size: 16px;
     font-weight: 500;
     color: #000000;
+    line-height: 1.5; }
+    .info-block__text_big {
+      font-size: 18px; }
+  .info-block__link a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.5;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
+    .info-block__link a:hover {
+      color: #c02524; }
+  .info-block__price {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #c02524;
     line-height: 1.5; }
 
 /*==========/info-block============*/
@@ -1071,6 +1114,76 @@
   margin-bottom: 12px; }
 
 /*=========/vacancy===========*/
+/*=========Research-block=========*/
+.research-block__item {
+  padding: 45px 0 40px 40px;
+  border-bottom: 1px solid #9d9d9d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.research-block__description {
+  width: calc(65% - 40px);
+  margin-right: 40px; }
+
+.research-block .text {
+  margin-top: 25px;
+  font-size: 16px; }
+
+.research-block__box {
+  width: 35%; }
+
+.research-box {
+  padding: 30px 35px 35px;
+  background-color: #f3f3fe; }
+  .research-box__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin-bottom: 30px; }
+    .research-box__row:last-child {
+      margin-bottom: 0; }
+    .research-box__row > *:first-child {
+      margin-right: 20px; }
+  .research-box__price {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #000000; }
+    .research-box__price-description {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #9d9d9d; }
+  .research-box__date {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.5;
+    padding: 7px 25px;
+    border: 1px solid #000000; }
+  .research-box__text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.5; }
+    .research-box__text_medium {
+      font-weight: 500; }
+
+/*=========/research-block=========*/
 /*========Page-slider=========*/
 .page-slider__header {
   display: -webkit-box;
@@ -1196,7 +1309,15 @@
   .page_vacancy .vacancy-item {
     padding: 30px; }
   .card__wrapper_three > * {
-    width: calc(50% - 30px); } }
+    width: calc(50% - 30px); }
+  .research-block__item {
+    padding-left: 20px; }
+  .research-block__description {
+    width: 50%; }
+  .research-block__box {
+    width: 50%; }
+  .research-box__price {
+    font-size: 20px; } }
 
 @media (max-width: 992px) {
   .page__content {
@@ -1254,7 +1375,9 @@
       margin-right: 0; }
     .page_vacancy .vacancy-item > *:nth-child(3) {
       margin-top: 20px;
-      width: 100%; } }
+      width: 100%; }
+  .page_stock .info-block_three > * {
+    width: 100%; } }
 
 @media (max-width: 880px) and (min-width: 766px) {
   .sidebar-block .title {
@@ -1274,6 +1397,8 @@
     width: 55%;
     padding: 60px 35px 40px;
     background-position: top -60px right -30px; }
+    .about-block__content_left {
+      background-position: top -70px left; }
   .page_vacancy-list .mb-70 {
     margin-bottom: 40px; }
   .page_vacancy-list .info-block_two > * {
@@ -1292,7 +1417,11 @@
       margin-right: 0;
       margin-bottom: 25px; }
   .page-gallery__item {
-    width: calc(50% - 15px); } }
+    width: calc(50% - 15px); }
+  .page .mb-55 {
+    margin-bottom: 35px; }
+  .page .mb-70 {
+    margin-bottom: 40px; } }
 
 @media (max-width: 765px) {
   .page__wrapper {
@@ -1366,7 +1495,19 @@
   .card__wrapper_three > * {
     width: 100%; }
   .card-info {
-    padding: 35px 25px; } }
+    padding: 35px 25px; }
+  .research-block__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 30px 0; }
+  .research-block__description {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px; }
+  .research-block__box {
+    width: 100%; } }
 
 @media (max-width: 546px) {
   .reviews__item, .faq-item {
@@ -1405,6 +1546,10 @@
     font-size: 14px; }
   .info-block__text {
     font-size: 14px; }
+  .info-block__link a {
+    font-size: 16px; }
+  .info-block__price {
+    font-size: 16px; }
   .vacancy-list__item {
     padding: 30px 20px; }
     .vacancy-list__item .vacancy-item__price {
@@ -1446,7 +1591,11 @@
     .page-slider__header .slider__arrows {
       margin-top: 40px; }
   .page-slider__slider {
-    margin-top: 20px; } }
+    margin-top: 20px; }
+  .info-block__item_center {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; } }
 
 @media (max-width: 375px) {
   .card-doctor {
@@ -1461,6 +1610,21 @@
     font-size: 14px; }
     .card-info .card__title a {
       font-size: 14px; } }
+
+@media (max-width: 370px) {
+  .research-block .text {
+    font-size: 14px; }
+  .research-box {
+    padding: 20px; }
+    .research-box__price {
+      font-size: 16px; }
+      .research-box__price-description {
+        font-size: 12px; }
+    .research-box__date {
+      font-size: 12px;
+      padding: 7px 10px; }
+    .research-box__text {
+      font-size: 12px; } }
 
 .form-block {
   display: -webkit-box;
@@ -2065,6 +2229,12 @@ select {
 
 .mb-0 {
   margin-bottom: 0; }
+
+.mt-55 {
+  margin-top: 55px; }
+
+.mb-55 {
+  margin-bottom: 55px; }
 
 .mb-70 {
   margin-bottom: 70px; }
