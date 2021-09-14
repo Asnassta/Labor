@@ -155,6 +155,47 @@ $(document).ready(function() {
 	});
 	/*=============/helpful__slider==============*/
 
+/*======Page-slider=============*/
+	$('.page-slider__slider').slick({
+  		infinite: true,
+  		slidesToShow: 4,
+  		slidesToScroll: 1,
+  		prevArrow: $('.page-slider-arrow-prev'),
+		nextArrow: $('.page-slider-arrow-next'),
+		responsive: [
+     {
+       breakpoint: 992,
+      settings: {
+        infinite: true,
+  		slidesToShow: 3,
+  		slidesToScroll: 1,
+  		prevArrow: $('.page-slider-arrow-prev'),
+		nextArrow: $('.page-slider-arrow-next'),
+		}
+      },
+      {
+       breakpoint: 600,
+      settings: {
+        infinite: true,
+  		slidesToShow: 2,
+  		slidesToScroll: 1,
+  		prevArrow: $('.page-slider-arrow-prev'),
+		nextArrow: $('.page-slider-arrow-next'),
+		}
+      },
+      {
+       breakpoint: 376,
+      settings: {
+        infinite: true,
+  		slidesToShow: 1,
+  		slidesToScroll: 1,
+  		prevArrow: $('.page-slider-arrow-prev'),
+		nextArrow: $('.page-slider-arrow-next'),
+		}
+      }
+  ]
+	});
+	/*=============/page-slider==============*/
 
 		
 
