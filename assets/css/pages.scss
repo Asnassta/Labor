@@ -396,6 +396,22 @@
 		}
 	}
 	/*======/page_vacancy=========*/
+	/*======Page_stock-list=========*/
+	&_stock-list {
+		.stocks {
+			&__inner {
+				flex-wrap: wrap;
+				margin-bottom: -30px;
+			}
+			&__item {
+				margin-bottom: 30px;
+			}
+			&__header {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	/*======/page_stock-list=========*/
 }
 
 /*=============Items============*/
@@ -1735,6 +1751,14 @@
 		}
 		.stocks {
 			margin-bottom: -20px;
+		}
+		&_stock-list {
+			.stocks {
+				margin-bottom: 40px;
+				&__header {
+					margin-bottom: 25px;
+				}
+			}
 		}
 	}
 	.sidebar {

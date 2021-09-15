@@ -45,7 +45,9 @@
   /*======Page_vacancy-list=========*/
   /*======/page_vacancy-list=========*/
   /*======Page_vacancy=========*/
-  /*======/page_vacancy=========*/ }
+  /*======/page_vacancy=========*/
+  /*======Page_stock-list=========*/
+  /*======/page_stock-list=========*/ }
   .page__header {
     width: 75%;
     margin-bottom: 40px; }
@@ -340,6 +342,14 @@
       margin-right: 30px; }
       .page_vacancy .vacancy-item > *:last-child {
         margin-right: 0; }
+  .page_stock-list .stocks__inner {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: -30px; }
+  .page_stock-list .stocks__item {
+    margin-bottom: 30px; }
+  .page_stock-list .stocks__header {
+    margin-bottom: 40px; }
 
 /*=============Items============*/
 .reviews__item, .faq-item {
@@ -1480,6 +1490,10 @@
     font-size: 18px; }
   .page .stocks {
     margin-bottom: -20px; }
+  .page_stock-list .stocks {
+    margin-bottom: 40px; }
+    .page_stock-list .stocks__header {
+      margin-bottom: 25px; }
   .sidebar {
     margin-top: 25px; }
     .sidebar-block {
