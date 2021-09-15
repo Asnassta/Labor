@@ -740,6 +740,9 @@
 		&_small {
 			font-size: 12px;
 			margin-bottom: 5px;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 	&__date {
@@ -844,10 +847,47 @@
 			align-items: center;
 			justify-content: flex-end;
 			flex-wrap: wrap;
+		}
+		&__icon {
+			position: relative;
+			margin-right: 15px;
+			padding-top: 10px;
 			img {
 				display: block;
-				margin-right: 15px;
-				margin-top: 10px;
+				
+			}
+			&__tooltip {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate3d(-50%, -100%, 0);
+				z-index: 1;
+				padding: 7px;
+				background-color: $wh;
+				font-family: $ff;
+				font-size: 12px;
+				color: $red;
+				text-align: center;
+				z-index: 1;
+				transition: all .2s linear;
+				opacity: 0;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+				&:before {
+					content: "";
+					width: 8px;
+					height: 8px;
+					background-color: $wh;
+					position: absolute;
+					bottom: -5px;
+					left: 50%;
+					z-index: 1;
+					transform: translateX(-50%) rotate(45deg);
+				}
+			}
+			&:hover {
+				.card-address__icon__tooltip {
+					opacity: 1;
+				}
 			}
 		}
 	}

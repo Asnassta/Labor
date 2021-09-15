@@ -628,6 +628,8 @@
   .card__text_small {
     font-size: 12px;
     margin-bottom: 5px; }
+    .card__text_small:last-child {
+      margin-bottom: 0; }
 
 .card__date {
   font-family: "Montserrat", sans-serif;
@@ -742,10 +744,46 @@
     justify-content: flex-end;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-    .card-address__icons img {
-      display: block;
-      margin-right: 15px;
-      margin-top: 10px; }
+  .card-address__icon {
+    position: relative;
+    margin-right: 15px;
+    padding-top: 10px; }
+    .card-address__icon img {
+      display: block; }
+    .card-address__icon__tooltip {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translate3d(-50%, -100%, 0);
+      transform: translate3d(-50%, -100%, 0);
+      z-index: 1;
+      padding: 7px;
+      background-color: #fff;
+      font-family: "Montserrat", sans-serif;
+      font-size: 12px;
+      color: #c02524;
+      text-align: center;
+      z-index: 1;
+      -webkit-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear;
+      opacity: 0;
+      -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); }
+      .card-address__icon__tooltip:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        z-index: 1;
+        -webkit-transform: translateX(-50%) rotate(45deg);
+        -ms-transform: translateX(-50%) rotate(45deg);
+        transform: translateX(-50%) rotate(45deg); }
+    .card-address__icon:hover .card-address__icon__tooltip {
+      opacity: 1; }
 
 /*============About-box===================*/
 .about-box__block {
