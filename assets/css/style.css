@@ -47,7 +47,9 @@
   /*======Page_vacancy=========*/
   /*======/page_vacancy=========*/
   /*======Page_stock-list=========*/
-  /*======/page_stock-list=========*/ }
+  /*======/page_stock-list=========*/
+  /*======Page_statutory-docs=========*/
+  /*======/page_statutory-docs=========*/ }
   .page__header {
     width: 75%;
     margin-bottom: 40px; }
@@ -350,6 +352,8 @@
     margin-bottom: 30px; }
   .page_stock-list .stocks__header {
     margin-bottom: 40px; }
+  .page_statutory-docs .page-gallery {
+    margin: 0; }
 
 /*=============Items============*/
 .reviews__item, .faq-item {
