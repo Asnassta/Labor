@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#c02524">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+	<link href="assets/css/jquery.formstyler.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<title>Отделения ДЦЛИ в Москве</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="glass" viewBox="0 0 32 12">
+			<g><g><path d="M8 2.004a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm5.25 1.094A3.994 3.994 0 0 1 16 2.004a3.986 3.986 0 0 1 2.75 1.094 6 6 0 0 1 11.168 1.906H31a1 1 0 1 1 0 2h-1.082a6 6 0 0 1-11.918-1 2 2 0 1 0-4 0 6 6 0 0 1-11.918 1H1a1 1 0 1 1 0-2h1.082A6 6 0 0 1 13.25 3.098zm13.578.077a4 4 0 1 0-5.656 5.657 4 4 0 0 0 5.656-5.657z"/></g></g>
+		</symbol>
+		<symbol id="search" viewBox="0 0 24 24">
+			<g><g><g/><g><path d="M17.615 15.512c.061.046.118.096.172.15l5.775 5.775a1.5 1.5 0 1 1-2.123 2.12l-5.775-5.774a1.754 1.754 0 0 1-.146-.172 9.75 9.75 0 1 1 2.097-2.099zm-2.03-11.598A8.25 8.25 0 1 0 3.918 15.58 8.25 8.25 0 0 0 15.585 3.914z"/></g></g></g>
+		</symbol>
+		<symbol id="arrow-slider" viewBox="0 0 21 14">
+			<g><g><path d="M14.672.786l6.182 6.182a.5.5 0 0 1 0 .708l-6.182 6.181a.5.5 0 1 1-.708-.707l5.329-5.328H.5a.5.5 0 0 1 0-1h18.793l-5.329-5.328a.5.5 0 1 1 .708-.708z"/></g></g>
+		</symbol>
+		<symbol id="close" viewBox="0 0 17 17">
+			<g><g><path d="M9.584 8.333l7.222-7.222a.651.651 0 0 0-.92-.92L8.662 7.413 1.441.19a.651.651 0 1 0-.92.92l7.222 7.222L.52 15.555a.651.651 0 1 0 .92.921l7.222-7.222 7.222 7.222a.65.65 0 0 0 .921 0 .651.651 0 0 0 0-.92z"/></g></g>
+		</symbol>
+		<symbol id="cloud-download" viewBox="0 0 18 18">
+			<g><g><g/><g><path  d="M4.957 1.51A6.221 6.221 0 0 1 9 0c3.026 0 5.538 2.25 5.812 5.151C16.602 5.405 18 6.904 18 8.745c0 2.02-1.685 3.63-3.727 3.63H11.25a.562.562 0 1 1 0-1.125h3.024c1.452 0 2.601-1.139 2.601-2.505 0-1.368-1.147-2.507-2.602-2.507h-.563v-.562C13.711 3.178 11.62 1.125 9 1.125a5.096 5.096 0 0 0-3.309 1.238c-.851.733-1.297 1.617-1.297 2.311v.504l-.5.055c-1.572.173-2.769 1.463-2.769 3 0 1.65 1.384 3.017 3.129 3.017H6.75a.563.563 0 0 1 0 1.125H4.254C1.92 12.375 0 10.537 0 8.233 0 6.249 1.424 4.607 3.31 4.19c.16-.971.785-1.939 1.647-2.681z"/></g><g><path d="M8.6 17.84a.564.564 0 0 0 .796 0l3.375-3.374a.563.563 0 0 0-.796-.797l-2.414 2.416V6.193a.563.563 0 1 0-1.125 0v9.892L6.02 13.669a.563.563 0 0 0-.796.797z"/></g></g></g>
+		</symbol>
+	</svg>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<nav class="header__nav header__nav_small">
+						<a href="#" class="header__link">Государственным заказчикам</a>
+						<a href="#" class="header__link">Корпоративным клиентам</a>
+						<a href="mailto:dcli@zdrav.mos.ru" class="header__link header__link_mail">dcli@zdrav.mos.ru</a>
+						<a href="tel:+78001234567" class="header__link">8 (800) 123-45-67</a>
+						<a href="tel:+74953966668" class="header__link">8 (495) 396-66-68</a>
+						<a href="#" class="header__link active">Личный кабинет</a>
+					</nav><!--/header__nav-->
+					<div class="header__buttons">
+						<a class="icon-glass" href="">
+							<svg>
+								<use xlink:href="#glass"></use>
+							</svg>
+						</a>
+						<a class="icon-search" href="" id="search-toggle">
+							<svg>
+								<use xlink:href="#search"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="header-search">
+						<div class="header-search__inner">
+							<span class="header-search__icon">
+								<svg>
+									<use xlink:href="#search"></use>
+								</svg>
+							</span>
+							<form action="#">
+  								<input placeholder="Что ищете?" type="search">
+  								<button type="submit">
+  									Найти
+  								</button>
+							</form>
+							<a href="" class="header-search__close">
+								<svg>
+									<use xlink:href="#close"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="header__inner">
+					<a href="/" class="header__logo">
+						<img src="assets/images/logo.svg" alt="">
+					</a>
+					<nav class="header__nav">
+						<a href="#" class="header__link">COVID-19</a>
+						<a href="#" class="header__link">Анализы</a>
+						<a href="#" class="header__link">Адреса отделений</a>
+						<a href="#" class="header__link">Акции</a>
+						<a href="#" class="header__link">Запись к врачу</a>
+						<a href="#" class="header__link">Выезд  на дом</a>
+						<a href="about.html" class="header__link">О центре</a>
+						<div class="burger">
+							<span class="burger__item"></span>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="header__menu menu">
+				<div class="menu__inner container">
+					<div class="menu__column">
+						<ul class="menu_mobile">
+							<li>Главное</li>
+							<li><a href="#">Государственным заказчикам</a></li>
+							<li><a href="#">Корпоративным клиентам</a></li>
+							<li><a href="tel:+78001234567">8 (800) 123-45-67</a></li>
+							<li><a href="tel:+74953966668">8 (495) 396-66-68</a></li>
+							<li><a href="#">Личный кабинет</a></li>
+							<li><a href="#">COVID-19</a></li>
+							<li><a href="#">Анализы</a></li>
+							<li><a href="#">Адреса отделений</a></li>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Запись к врачу</a></li>
+							<li><a href="#">Выезд  на дом</a></li>
+							<li><a href="about.html">О центре</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+					</div><!--/menu__column-->
+					<div class="menu__column">
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+						</ul>
+					</div><!--/menu__column-->
+					<div class="menu__column">
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+						</ul>
+					</div><!--/menu__column-->
+					<div class="menu__column">
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+					</div><!--/menu__column-->
+				</div>
+			</div><!--/menu-->
+		</header><!--/header-->
+		<main class="main">
+				<div class="page page_address-list">
+					<div class="container">
+						<div class="page__header">
+							<div class="breadcrumbs">
+								<a href="/">ДЦЛИ</a>
+								<a href="address-list.html">Отделения ДЦЛИ в Москве</a>
+							</div>
+							<h1 class="title title-blob">Отделения ДЦЛИ в Москве</h1>
+						</div>
+						<div class="page__wrapper">
+							<div class="page__content">
+								<div class="address">
+									<div class="address__header">
+										<div class="title-small">Отделения ДЦЛИ в Москве</div>
+										<div class="address__links">
+											<a href="address-map.html" class="address__link">
+												<img src="assets/images/geo.svg" alt="">
+												<span>На карте</span>
+											</a>
+											<a href="address-list.html" class="address__link active">
+												<img src="assets/images/list-ul.svg" alt="">
+												<span>Списком</span>
+											</a>
+										</div>
+										<a href="#" class="btn">Выезд на дом</a>
+									</div><!--/address__header-->
+									<div class="address__search">
+										<form action="#">
+											<div class="input-search__wrapper">
+												<input class="input-search" type="search" placeholder="Поиск по станции метро">
+												<button type="submit">
+													<svg>
+														<use xlink:href="#search"></use>
+													</svg>
+												</button>
+											</div>
+										</form>
+									</div><!--/address__search-->
+									<div class="page__block address-list">
+										<div class="address-list__inner">
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+											<div class="card card-address">
+												<div class="card__title card__title_blob">
+													<a href="branch.html">Тимирязевская</a>
+												</div>
+												<div class="card__info-icon card__info-icon_bl">
+													<img src="assets/images/geo.svg" alt="">
+													<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+												</div>
+												<div class="card__info-icon">
+													<img src="assets/images/clock-icon.svg" alt="">
+													<div>Круглосуточно</div>
+												</div>
+												<div class="card-address__footer">
+													<div>
+														<div class="card__text card__text_small">Без выходных</div>
+														<div class="card__text card__text_small">Без очереди</div>
+														<div class="card__text card__text_small">Ускоренный результат</div>
+													</div>
+													<div class="card-address__icons">
+														<img src="assets/images/icon/doctor-icon.svg" alt="">
+														<img src="assets/images/icon/ultrasound-machine.svg" alt="">
+														<img src="assets/images/icon/cardiogram-icon.svg" alt="">
+														<img src="assets/images/icon/electrocardiogram-icon.svg" alt="">
+													</div>
+												</div>	
+											</div><!--/card-address-->
+										</div><!--/address-list__inner-->
+									</div><!--/address-list-->
+									<div class="page-nav">
+										<a href="#" class="page-nav__btn active">1</a>
+										<a href="#" class="page-nav__btn">2</a>
+										<a href="#" class="page-nav__btn">3</a>
+										<a href="#" class="page-nav__btn">4</a>
+										<a href="#">Следующая</a>
+									</div><!--/page-nav-->
+									<div class="page__info page__info_80">
+										<h2 class="title-medium">Оценка функции щитовидной железы (венозная кровь) </h3>
+										<div class="text">
+											<p>Очевидно, что ксантофильный цикл химически синтезирует жидкий белок. При облучении инфракрасным лазером кислота недостаточна.</p>
+											<p>Поглощение, если рассматривать процессы в рамках специальной теории относительности, захватывает фрагментарный бензол. Поглощение, если рассматривать процессы в рамках специальной теории относительности, захватывает фрагментарный бензол. Поглощение, если рассматривать процессы в рамках специальной теории относительности, захватывает фрагментарный бензол. Поглощение, если рассматривать процессы в рамках специальной теории относительности, захватывает фрагментарный бензол.</p>
+											<p>Поглощение, если рассматривать процессы в рамках специальной теории относительности, захватывает фрагментарный бензол. Поглощение, если рассматривать процессы в рамках специальной теории относительности, захватывает фрагментарный бензол. Поглощение, если рассматривать процессы в рамках специальной теории относительности, захватывает фрагментарный бензол. Поглощение, если рассматривать процессы в рамках специальной теории относительности, захватывает фрагментарный бензол.</p>
+											<p>Очевидно, что ксантофильный цикл химически синтезирует жидкий белок.</p>
+										</div>
+									</div>
+								</div><!--/address-->
+							</div><!--/page__content-->
+						</div><!--/page__wrapper-->
+						<div class="page-share">
+							<div class="page-share__title">Поделиться:</div>
+							<div class="page-share__social">
+								<a href="#" target="blank">
+									<img src="assets/images/vk-bl.svg" alt="">
+								</a>
+								<a href="#" target="blank">
+									<img src="assets/images/fb-bl.svg" alt="">
+								</a>
+								<a href="#" target="blank">
+									<img src="assets/images/odk-bl.svg" alt="">
+								</a>
+								<a href="#" target="blank">
+									<img src="assets/images/tg-bl.svg" alt="">
+								</a>
+								<a href="#" target="blank">
+									<img src="assets/images/wtsp-bl.svg" alt="">
+								</a>
+							</div>
+						</div><!--/page-share-->
+					</div>
+				</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__inner">
+				<div class="container">
+					<div class="footer__head">
+						<div>
+							<div class="footer__title">Диагностический центр лабораторных исследований</div>
+							<a href="https://yandex.ru/maps/-/CCUm5VDKtA" class="footer__link">117105 Москва, Варшавское шоссе, 19</a>
+						</div>
+						<div class="footer__social">
+							<a href="#" target="blank">
+								<img src="assets/images/vk.svg" alt="">
+							</a>
+							<a href="#" target="blank">
+								<img src="assets/images/yt.svg" alt="">
+							</a>
+							<a href="#" target="blank">
+								<img src="assets/images/inst.svg" alt="">
+							</a>
+							<a href="#" target="blank">
+								<img src="assets/images/fb.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="footer__menu">
+						<div class="footer__column">
+							<ul>
+								<li>О центре</li>
+								<li><a href="#" class="footer__link">История</a></li>
+								<li><a href="#" class="footer__link">Маркетинговая легенда</a></li>
+								<li><a href="#" class="footer__link">Лаборатория и мощности</a></li>
+								<li><a href="#" class="footer__link">Руководство</a></li>
+								<li><a href="#" class="footer__link">Контактная информация</a></li>
+							</ul>
+						</div><!--/footer__column-->
+						<div class="footer__column">
+							<ul>
+								<li>О центре</li>
+								<li><a href="#" class="footer__link">История</a></li>
+								<li><a href="#" class="footer__link">Маркетинговая легенда</a></li>
+								<li><a href="#" class="footer__link">Лаборатория и мощности</a></li>
+								<li><a href="#" class="footer__link">Руководство</a></li>
+								<li><a href="#" class="footer__link">Контактная информация</a></li>
+							</ul>
+						</div><!--/footer__column-->
+						<div class="footer__column">
+							<ul>
+								<li>О центре</li>
+								<li><a href="#" class="footer__link">История</a></li>
+								<li><a href="#" class="footer__link">Маркетинговая легенда</a></li>
+								<li><a href="#" class="footer__link">Лаборатория и мощности</a></li>
+								<li><a href="#" class="footer__link">Руководство</a></li>
+								<li><a href="#" class="footer__link">Контактная информация</a></li>
+							</ul>
+						</div><!--/footer__column-->
+						<div class="footer__column">
+							<ul>
+								<li>О центре</li>
+								<li><a href="#" class="footer__link">История</a></li>
+								<li><a href="#" class="footer__link">Маркетинговая легенда</a></li>
+								<li><a href="#" class="footer__link">Лаборатория и мощности</a></li>
+								<li><a href="#" class="footer__link">Руководство</a></li>
+								<li><a href="#" class="footer__link">Контактная информация</a></li>
+							</ul>
+						</div><!--/footer__column-->
+					</div><!--/footer__menu-->
+					<div class="footer__row">
+						<a href="#" class="btn">Версия для слабовидящих</a>
+						<div class="footer__contact">
+							<a href="tel:+74953966668">8 (495) 396-66-68</a>
+							<a href="mailto:">dcli@zdrav.mos.ru</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__foot">
+				<div class="container">
+					<div class="footer__row">
+						<a href="#" class="footer__lang lang">
+							<img src="assets/images/eng.svg" alt="">
+							<span>English</span>
+						</a>
+						<div class="copyright">Copyright © | 2021 ГБУЗ "ДЦЛИ ДЗМ"</div>
+						<a href="#" class="footer__link">Пользовательское соглашение</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="assets/js/jquery.formstyler.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
