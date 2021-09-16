@@ -942,18 +942,34 @@
 .timetable__content .timetable__item:nth-child(even) {
   background-color: #f3f3fe; }
 
-.timetable_four .timetable__item {
-  width: 22%; }
-  .timetable_four .timetable__item:first-child {
-    width: 34%; }
+.timetable_four .timetable__item, .timetable_five .timetable__item {
+  width: 22%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .timetable_four .timetable__item:first-child, .timetable_five .timetable__item:first-child {
+    width: 34%;
+    padding-left: 0; }
 
-.timetable_four .timetable__header .timetable__item {
+.timetable_four .timetable__header .timetable__item, .timetable_five .timetable__header .timetable__item {
   font-weight: 600; }
 
-.timetable_four .timetable__content .timetable__item:first-child {
+.timetable_four .timetable__content .timetable__item:first-child, .timetable_five .timetable__content .timetable__item:first-child {
   text-align: left;
-  font-weight: 500;
-  padding-left: 0; }
+  font-weight: 500; }
+
+.timetable_five .timetable__item {
+  width: 16.5%; }
+  .timetable_five .timetable__item:first-child {
+    width: 34%;
+    padding-left: 40px; }
 
 /*============Service-block===================*/
 .service__row {
@@ -1530,6 +1546,13 @@
     max-width: 100%;
     min-height: 292px; }
 
+/*==========Indicators=========*/
+.indicators__filter {
+  margin-top: 50px;
+  width: 32%; }
+  .indicators__filter input {
+    width: 100%; }
+
 /*========Page-slider=========*/
 .page-slider__header {
   display: -webkit-box;
@@ -1741,7 +1764,11 @@
       margin-top: 20px;
       width: 100%; }
   .page_stock .info-block_three > * {
-    width: 100%; } }
+    width: 100%; }
+  .indicators__filter {
+    width: 50%; }
+  .timetable_five .timetable__item:first-child {
+    padding-left: 0; } }
 
 @media (max-width: 880px) and (min-width: 766px) {
   .sidebar-block .title {
@@ -1969,6 +1996,8 @@
       font-size: 14px; }
   .vacancy-item__geo a {
     font-size: 12px; }
+  .timetable__row_decor {
+    display: none; }
   .timetable_many .timetable__header {
     display: none; }
   .timetable_many .timetable__row {
@@ -2002,7 +2031,9 @@
     .map-block__btn-yandex {
       padding-left: 0px; }
       .map-block__btn-yandex img {
-        margin-right: 0; } }
+        margin-right: 0; }
+  .indicators__filter {
+    width: 100%; } }
 
 @media (max-width: 414px) {
   .page-gallery__item {
@@ -3110,12 +3141,11 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  margin-left: -30px; }
 
 .stocks__item {
-  width: calc(25% - 22px); }
+  width: calc(25% - 30px);
+  margin-left: 30px; }
 
 .stocks__img {
   /*border-bottom-right-radius: 20px;
@@ -3733,7 +3763,7 @@ select {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
     .stocks__item {
-      width: calc(50% - 15px);
+      width: calc(50% - 30px);
       margin-bottom: 30px; }
     .stocks__img img {
       width: 100%; }

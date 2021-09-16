@@ -1065,11 +1065,15 @@
 			}
 		}
 	}
-	&_four {
+	&_four, &_five {
 		.timetable__item {
 			width: 22%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			&:first-child {
 				width: 34%;
+				padding-left: 0;
 			}
 		}
 		.timetable__header {
@@ -1082,10 +1086,18 @@
 				&:first-child {
 					text-align: left;
 					font-weight: 500;
-					padding-left: 0;
 				}
 			}
 		}	
+	}
+	&_five {
+		.timetable__item {
+			width: 16.5%;
+			&:first-child {
+				width: 34%;
+				padding-left: 40px;
+			}
+		}
 	}
 	&_many {
 
@@ -1684,6 +1696,18 @@
 	}
 }
 
+/*==========Indicators=========*/
+.indicators {
+	&__filter {
+		margin-top: 50px;
+		width: 32%;
+		input {
+			width: 100%;
+		}
+	}
+}
+
+
 /*========Page-slider=========*/
 .page-slider {
 	&__header {
@@ -1986,6 +2010,16 @@
 				>* {
 					width: 100%;
 				}
+			}
+		}
+	}
+	.indicators__filter {
+		width: 50%;
+	}
+	.timetable_five {
+		.timetable__item {
+			&:first-child {
+				padding-left: 0;
 			}
 		}
 	}
@@ -2372,6 +2406,11 @@
 	}
 
 	.timetable {
+		&__row {
+			&_decor {
+				display: none;
+			}
+		}
 		&_many {
 			.timetable__header {
 				display: none;
@@ -2421,6 +2460,9 @@
 				}
 			}
 		}
+	}
+	.indicators__filter {
+		width: 100%;
 	}
 }
 
