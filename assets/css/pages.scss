@@ -21,7 +21,7 @@
 		}
 	}
 	&__content {
-		width: calc(75% - 15px);
+		width: calc(75% - 8px);
 		&_flex {
 			display: flex;
 			justify-content: space-between;
@@ -36,7 +36,7 @@
 		}
 	}
 	&__sidebar {
-		width: calc(25% - 15px);
+		width: calc(25% - 22px);
 	}
 	&__block {
 		margin-top: 45px;
@@ -445,6 +445,35 @@
 		}
 	}
 	/*======/page_address-map=========*/
+	/*======Page_branch=========*/
+	&_branch {
+		.icons-block {
+			margin-right: 250px;
+		}
+		.page-slider {
+			margin-top: -80px;
+			&__header {
+				justify-content: flex-end;
+				margin-bottom: 55px;
+			}
+		}
+		.procedure-list {
+			width: calc(67.66666% - 15px);
+			&__box {
+				align-items: center;
+			}
+		}
+		.timetable {
+			margin-top: 30px;
+		}
+		.page-gallery {
+			margin-top: 30px;
+		}
+		.address-list {
+			margin-top: 30px;
+		}
+	}
+	/*======/page_branch=========*/
 }
 
 /*=============Items============*/
@@ -1014,16 +1043,52 @@
 		&_purple {
 			background-color: $lpurple;
 		}
+		&_title {
+			font-weight: 500;
+			display: none;
+		}
 	}
 	&__header {
-		margin-left: -10px;
 		.timetable__item {
-			padding: 10px;
+			padding: 10px 0;
 			font-weight: 500;
 			&:first-child {
+				padding-left: 0;
 				text-align: left;
 			}
 		}
+	}
+	&__content {
+		.timetable__item {
+			&:nth-child(even) {
+				background-color: $lpurple;
+			}
+		}
+	}
+	&_four {
+		.timetable__item {
+			width: 22%;
+			&:first-child {
+				width: 34%;
+			}
+		}
+		.timetable__header {
+			.timetable__item {
+				font-weight: 600;
+			}
+		}
+		.timetable__content {
+			.timetable__item {
+				&:first-child {
+					text-align: left;
+					font-weight: 500;
+					padding-left: 0;
+				}
+			}
+		}	
+	}
+	&_many {
+
 	}
 }
 
@@ -1513,6 +1578,112 @@
 	}
 }
 
+/*==========Icon-block===============*/
+.icons-block {
+	display: flex;
+	flex-wrap: wrap;
+ 
+	&__item {
+		display: flex;
+		flex: 0 1 25%;
+		align-items: center;
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $bl;
+		line-height: 1.3;
+		padding-right: 25px;
+		margin-bottom: 15px;
+		img {
+			margin-right: 10px;
+		}
+	}
+}
+
+/*==========Map-block===============*/
+.map-block {
+	&__geo {
+		margin: 25px 0 20px;
+		padding-left: 22px;
+		a {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 500;
+			color: $blue;
+			line-height: 1.5;
+			position: relative;
+			&:before {
+				content: "";
+				width: 16px;
+				height: 16px;
+				background: url("../images/geo.svg") center no-repeat;
+				position: absolute;
+				left: -22px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&:after {
+				content: "";
+				height: 1px;
+				width: 0px;
+				background-color: $blue;
+				position: absolute;
+				bottom: -2px;
+				left: 50%;
+				transform: translateX(-50%);
+				transition: all .3s linear;
+			}
+			&:hover {
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&__buttons {
+		display: flex;
+	}
+	&__btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 5px 30px 5px 15px;
+		border: 1px solid $blue;
+		transition: all .2s linear;
+		margin-right: 45px;
+		img {
+			max-width: 100%;
+			margin-right: 10px;
+		}
+		span {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 600;
+			color: $bl;
+			line-height: 1.3;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&-yandex {
+			padding-left: 0;
+			img {
+				margin-right: 5px;
+			}
+		}
+		&:hover {
+			border-color: $red;
+		}
+	}
+	&__map {
+		margin-top: 40px;
+		>* {
+			width: 100%;
+			max-width: 100%;
+			min-height: 292px;
+		}
+	}
+}
+
 /*========Page-slider=========*/
 .page-slider {
 	&__header {
@@ -1526,13 +1697,18 @@
 	}
 	&__slide {
 		margin-left: 30px;
+		height: 100%;
 	}
 	&__item {
 		display: block;
 		text-align: center;
+		height: 100%;
 		img {
 			margin: 0 auto;
 			max-width: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 }
@@ -1636,6 +1812,17 @@
 		&-contact {
 			padding: 50px 40px;
 		}
+		&_branch {
+			.icons-block {
+				margin-right: 0;
+			}
+			.page-slider {
+				margin-top: 20px;
+				&__header {
+					margin-bottom: 30px;
+				}
+			}
+		}
 	}
 	.address {
 		&-list {
@@ -1646,6 +1833,7 @@
 			}
 		}
 	}
+
 }
 
 @media(max-width: 1024px) {
@@ -1721,6 +1909,11 @@
 			.page__content {
 				width: 100%;
 			} 
+		}
+		&_branch {
+			.procedure-list {
+				width: 95%;
+			}
 		}
 	}
 	.sidebar {
@@ -1860,6 +2053,11 @@
 			}
 		}
 	}
+	.icons-block  {
+		&__item {
+			flex: 0 1 33.33333%;
+		}
+	}
 }
 
 @media(max-width: 768px) {
@@ -1984,6 +2182,11 @@
 				}
 			}
 		}
+		&_branch {
+			.procedure-list {
+				width: 100%;
+			}
+		}
 	}
 	.sidebar {
 		margin-top: 25px;
@@ -2080,6 +2283,18 @@
 				}
 			}
 		}
+		&_branch {
+			.timetable {
+				margin-top: 5px;
+			}
+			.procedure-list__box {
+				flex-direction: row;
+			}
+			.procedure-list__btn {
+				text-align: right;
+				margin-top: 0;
+			}
+		}
 	}
 	.service {
 		&__item {
@@ -2155,6 +2370,58 @@
 			}
 		}
 	}
+
+	.timetable {
+		&_many {
+			.timetable__header {
+				display: none;
+			}
+			.timetable__row {
+				flex-direction: column;
+			}
+			.timetable__item {
+				width: 100%;
+				font-size: 14px;
+				&:first-child {
+					width: 100%;
+					padding-bottom: 5px;
+				}
+				&_title {
+					margin-bottom: 10px;
+					display: block;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	.icons-block  {
+		&__item {
+			flex: 0 1 50%;
+			&:nth-child(even) {
+				padding-right: 0;
+			}
+		}
+	}
+	.map-block {
+		&__geo {
+			a {
+				font-size: 14px;
+			}
+		}
+		&__btn {
+			padding: 5px 20px 5px 15px;
+			margin-right: 15px;
+			span {
+				font-size: 12px;
+			}
+			&-yandex {
+				padding-left: 0px;
+				img {
+					margin-right: 0;
+				}
+			}
+		}
+	}
 }
 
 @media(max-width: 414px) {
@@ -2164,6 +2431,15 @@
 				width: 100%;
 				margin-right: 0;
 				margin-bottom: 20px;
+			}
+		}
+		&_branch {
+			.page-slider {
+				&__header {
+					.slider__arrows {
+						margin-top: 0;
+					}
+				}
 			}
 		}
 	}
@@ -2214,6 +2490,12 @@
 			}
 		}
 	}
+	.icons-block  {
+		&__item {
+			flex: 0 1 100%;
+			padding-right: 0;
+		}
+	}
 }
 
 @media(max-width: 375px) {
@@ -2241,6 +2523,23 @@
 				font-size: 14px;
 				a {
 					font-size: 14px;
+				}
+			}
+		}
+	}
+	.procedure-list__btn {
+		.btn {
+			font-size: 12px;
+		}
+	}
+	.map-block {
+		&__btn {
+			span {
+				font-size: 10px;
+			}
+			&-yandex {
+				img {
+					width: 40px;
 				}
 			}
 		}
