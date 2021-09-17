@@ -1639,6 +1639,80 @@
     background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px; } }
 
 /*==========/steps=========*/
+/*==========/Contact==========*/
+.contact__block .title-medium {
+  margin-bottom: 35px; }
+
+.contact__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px; }
+  .contact__item_mt {
+    margin-top: 25px; }
+
+.contact__description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3a3636;
+  line-height: 1.3;
+  width: 20%;
+  margin-right: 40px; }
+
+.contact__info {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3a3636;
+  line-height: 1.3;
+  width: calc(80% - 40px); }
+  .contact__info a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #3a3636;
+    line-height: 1.3;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
+    .contact__info a:hover {
+      color: #c02524; }
+
+.contact-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .contact-social__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 40px;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
+    .contact-social__item:last-child {
+      margin-right: 0; }
+    .contact-social__item img {
+      margin-right: 8px; }
+    .contact-social__item span {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #000000; }
+    .contact-social__item:hover span {
+      color: #c02524; }
+
+.map-box {
+  margin-top: 35px; }
+  .map-box > * {
+    width: 100%;
+    max-width: 100%;
+    min-height: 292px; }
+
 /*========Page-slider=========*/
 .page-slider__header {
   display: -webkit-box;
@@ -1764,7 +1838,11 @@
     .page_branch .page-slider__header {
       margin-bottom: 30px; }
   .address-list__inner > * {
-    width: calc(50% - 30px); } }
+    width: calc(50% - 30px); }
+  .contact__description {
+    width: 40%; }
+  .contact__info {
+    width: 60%; } }
 
 @media (max-width: 1024px) {
   .procedure-list__price {
@@ -2119,7 +2197,26 @@
       .map-block__btn-yandex img {
         margin-right: 0; }
   .indicators__filter {
-    width: 100%; } }
+    width: 100%; }
+  .contact__block .title-medium {
+    margin-bottom: 20px; }
+  .contact__description {
+    width: 50%;
+    font-size: 14px; }
+  .contact__info {
+    width: 50%;
+    font-size: 14px; }
+    .contact__info a {
+      font-size: 14px; }
+  .contact-social {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: -25px; }
+    .contact-social__item {
+      margin-bottom: 25px;
+      width: calc(50% - 20px); }
+      .contact-social__item:nth-child(even) {
+        margin-right: 0; } }
 
 @media (max-width: 414px) {
   .page-gallery__item {
