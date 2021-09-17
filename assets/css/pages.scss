@@ -1713,23 +1713,37 @@
 
 /*==========Steps=========*/
 .steps {
-	&__inner {
-		padding-left: 75px;
+	padding-left: 74px;
+	@media(min-width: 766px) {
+		padding-right: 35px;
+	}
+	&__inner-border {
 		position: relative;
 		&:before {
 			content: "";
 			width: 1px;
-			width: 100%;
-			height: 100%;
-			border-left: 1px dashed #c4c4c4;
+			height: calc(100% + 40px);
 			position: absolute;
-			left: 32px;
+			left: -52px;
 			top: 20px;
 			z-index: 1;
+			pointer-events: none;
+			border-left: 1px dashed #c4c4c4;
+
+			/*background: linear-gradient(90deg, #c4c4c4 50%, transparent 50%), linear-gradient(90deg, #c4c4c4 50%, transparent 50%), linear-gradient(0deg, #c4c4c4 50%, transparent 50%), linear-gradient(0deg, #c4c4c4 50%, transparent 50%);
+			background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+			background-size: 6px 1px, 6px 1px, 1px 6px, 1px 6px;
+			background-position: 0px 0px, 200px 100px, 0px 100px, 200px 0px;
+			animation: border-dance 15s infinite linear;*/
 		}
+		/*&:hover {
+			&:before {
+				animation: none;
+			}
+		}*/
 	}
 	&__item {
-		margin-bottom: 22px;
+		margin-bottom: 35px;
 		position: relative;
 		&:before {
 			content: "";
@@ -1740,7 +1754,7 @@
 			border-radius: 50%;
 			position: absolute;
 			top: 25px;
-			left: -52px;
+			left: -62px;
 			z-index: 3;
 		}
 		&:after {
@@ -1748,12 +1762,23 @@
 			width: 44px;
 			height: 44px;
 			background-color: $wh;
-			border: 1px solid $blue;
+			border: 1px solid #c4c4c4;
 			border-radius: 50%;
 			position: absolute;
-			top: 25px;
-			left: -52px;
+			top: 13px;
+			left: -74px;
 			z-index: 2;
+			transition: all .3s linear;
+		}
+		&:first-child {
+			&:after {
+				border-color: $blue;
+			}
+		}
+		&:hover {
+			&:after {
+				border-color: $blue;
+			}
 		}
 	}
 	&__title {
@@ -1762,13 +1787,23 @@
 		font-weight: 600;
 		line-height: 1.2;
 		color: $bl;
-		margin-bottom: 5px;
+		margin-bottom: 8px;
 		>* {
 			&:nth-child(2) {
 				font-size: 19px;
 			}
 		}
 	}
+}
+
+@keyframes border-dance {
+  0% {
+  	background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
+    
+  }
+  100% {
+    background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
+  }
 }
 /*==========/steps=========*/
 
@@ -2601,6 +2636,16 @@
 		&__item {
 			flex: 0 1 100%;
 			padding-right: 0;
+		}
+	}
+	.steps {
+		&__title {
+			font-size: 16px;
+			>* {
+				&:nth-child(2) {
+				font-size: 14px;
+				}
+			}
 		}
 	}
 }
