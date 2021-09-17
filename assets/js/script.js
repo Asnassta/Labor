@@ -63,13 +63,18 @@ $(document).ready(function() {
 		$('body').removeClass("hidden");
 	});
 /*==============/Form-popup=================*/
+
+
+
+
+
 	/*======Select-styler=============*/
 	$(function() {
 		$('select, .input-file').styler();
 	});
 	/*======/select=============*/
 
-
+/*=======================Sliders========================*/
 	/*======Slider-intro=============*/
 	$('.intro__slider').slick({
   		infinite: true,
@@ -197,9 +202,15 @@ $(document).ready(function() {
 	});
 	/*=============/page-slider==============*/
 
-		
+/*=======================/sliders========================*/
 
+		
 
 
 	
 });
+
+
+
+ 
+  

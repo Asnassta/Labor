@@ -1701,11 +1701,76 @@
 	&__filter {
 		margin-top: 50px;
 		width: 32%;
+		.title-small {
+			margin-bottom: 15px;
+		}
 		input {
 			width: 100%;
 		}
 	}
 }
+/*==========/indicators=========*/
+
+/*==========Steps=========*/
+.steps {
+	&__inner {
+		padding-left: 75px;
+		position: relative;
+		&:before {
+			content: "";
+			width: 1px;
+			width: 100%;
+			height: 100%;
+			border-left: 1px dashed #c4c4c4;
+			position: absolute;
+			left: 32px;
+			top: 20px;
+			z-index: 1;
+		}
+	}
+	&__item {
+		margin-bottom: 22px;
+		position: relative;
+		&:before {
+			content: "";
+			width: 20px;
+			height: 20px;
+			background-color: $wh;
+			border: 1px solid $blue;
+			border-radius: 50%;
+			position: absolute;
+			top: 25px;
+			left: -52px;
+			z-index: 3;
+		}
+		&:after {
+			content: "";
+			width: 44px;
+			height: 44px;
+			background-color: $wh;
+			border: 1px solid $blue;
+			border-radius: 50%;
+			position: absolute;
+			top: 25px;
+			left: -52px;
+			z-index: 2;
+		}
+	}
+	&__title {
+		font-family: $ff;
+		font-size: 21px;
+		font-weight: 600;
+		line-height: 1.2;
+		color: $bl;
+		margin-bottom: 5px;
+		>* {
+			&:nth-child(2) {
+				font-size: 19px;
+			}
+		}
+	}
+}
+/*==========/steps=========*/
 
 
 /*========Page-slider=========*/

@@ -1,0 +1,363 @@
+.popover .row {
+ 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rmrp-monthsContainer {
+	margin-top: 15px;
+}
+
+.rmrp-month {
+	float:left;
+	width: 33.333%;
+}
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  max-width: 276px;
+  padding: 1px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  font-size: 14px;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.popover.top {
+  margin-top: -10px;
+}
+.popover.right {
+  margin-left: 10px;
+}
+.popover.bottom {
+  margin-top: 10px;
+}
+.popover.left {
+  margin-left: -10px;
+}
+.popover-title {
+  margin: 0;
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 5px 5px 0 0;
+}
+.popover-content {
+  padding: 9px 14px;
+}
+.popover > .arrow,
+.popover > .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.popover > .arrow {
+  border-width: 11px;
+}
+.popover > .arrow:after {
+  border-width: 10px;
+  content: "";
+}
+.popover.top > .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-bottom-width: 0;
+  border-top-color: #999999;
+  border-top-color: rgba(0, 0, 0, 0.25);
+  bottom: -11px;
+}
+.popover.top > .arrow:after {
+  content: " ";
+  bottom: 1px;
+  margin-left: -10px;
+  border-bottom-width: 0;
+  border-top-color: #fff;
+}
+.popover.right > .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-left-width: 0;
+  border-right-color: #999999;
+  border-right-color: rgba(0, 0, 0, 0.25);
+}
+.popover.right > .arrow:after {
+  content: " ";
+  left: 1px;
+  bottom: -10px;
+  border-left-width: 0;
+  border-right-color: #fff;
+}
+.popover.bottom > .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999999;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  top: -11px;
+}
+.popover.bottom > .arrow:after {
+  content: " ";
+  top: 1px;
+  margin-left: -10px;
+  border-top-width: 0;
+  border-bottom-color: #fff;
+}
+.popover.left > .arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: #999999;
+  border-left-color: rgba(0, 0, 0, 0.25);
+}
+.popover.left > .arrow:after {
+  content: " ";
+  right: 1px;
+  border-right-width: 0;
+  border-left-color: #fff;
+  bottom: -10px;
+}
+
+.rmrp-icon{
+    border: solid 1px #ddd;
+    border-radius: 5px 0px 0px 5px;
+    /*color: #40667A;*/
+    background: #eee;
+    padding: 7px;
+    margin-right:0px;
+}
+
+.rmrp-monthdisplay{
+    display:block;
+    border: 1px solid #9d9d9d;
+    padding: 22px 45px 22px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    background-color: #fff;
+    cursor:pointer;
+    background: url("../images/calendar.svg") center right 20px no-repeat;
+}
+
+.rmrp-lowerMonth, .rmrp-upperMonth{
+    /*color: #40667A;*/
+    font-weight:bold;
+    font-size: 11px;
+    text-transform:uppercase;
+}
+
+.rmrp-to{
+    color: #aaa;
+    margin-right: 0px;
+    margin-left: 0px;
+    font-size: 11px;
+    text-transform: uppercase;
+    /* background-color: #eee; */
+    padding: 5px 3px 5px 3px;
+}
+
+.rmrp-calendar{
+    display:inline-block;
+    padding: 3px 5px;
+    /*border-right: solid #999 1px;*/
+}
+
+.rmrp-calendar:last-child{
+    border-right: none;
+}
+
+.rmrp-month{
+    padding: 8px;
+    /*text-transform: uppercase;*/
+    font-size: 12px;
+    text-align: center;
+}
+
+.rmrp-calendar h5{
+    width:100%;
+    text-align:center;
+    font-weight:bold;
+}
+
+.rmrp-selected{
+    background: #f3f3fe;/*BS Info = #5bc0de*/
+    color: #c02524;
+}
+
+.rmrp-extremity{
+    background: #c02524; /*BS primary = #337ab7*/
+    color: #fff;
+}
+
+.rmrp-month:hover{
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #ddd inset;
+    cursor:pointer;
+}
+
+.rmrp-selected.rmrp-month:hover{
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.rmrp-invalid{
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+
+.calendar-column {
+    min-width: 140px;
+    position: relative;
+    /*display: inline-table;*/
+}
+
+.button-column {
+    /*max-width: 80px;*/
+    /*min-width: 80px;*/
+    /*display: inline-table;*/
+    padding: 3px;
+    width: 100%;
+    text-align: center;
+}
+
+.button-column .btn{
+    /*background-color: #40667A;*/
+    /*border-color: #406670;*/
+    width:90%;
+    /*margin-bottom: px;*/
+    margin-top: 8px;
+    /*text-transform: uppercase;*/
+    font-size: 10px;
+    padding: 5px 0px;
+}
+
+/*.rmrp-quickset{*/
+    /*color: #666;*/
+    /*text-transform: uppercase;*/
+    /*text-align: center;*/
+/*}*/
+
+.rmrp-yeardown, .rmrp-yearup{
+    margin-left: 5px;
+    cursor: pointer;
+    color: #666;
+}
+
+.rmrp-yeardown{
+    float:left;
+}
+
+.rmrp-yearup{
+    float:right;
+}
+
+.rmrp-yeardown:hover,.rmrp-yearup:hover{
+    /*color: #40667A;*/
+}
+
+
+.popover{
+    /*min: 80px!important;*/
+    /*max-width: 1640px!important;*/
+    max-width: none;
+    font-family: 'Montserrat', sans-serif!important;
+    /*top: 71px !important;*/
+    /*left: 379px !important;*/
+}
+
+.col-xs-5 {
+    width: 50%;
+}
+
+.btn-primary {
+    background-color: #c02524;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    font-family: 'Montserrat', sans-serif!important;
+}
+
+.btn-primary:hover {
+    background-color: #c02524;
+} 
+
+.popover.bottom {
+    max-width: 360px;
+    padding-bottom: 10px;
+}
+
+
+
+/*.rmrp-container{
+    max-width: 180px!important;
+}*/
+/*makes arrow at the center of container*/
+
+
+/*=======Bootstrap-style===========*/
+/*.popover.bottom>.arrow {
+    top: -11px;
+    left: 50%;
+    margin-left: -11px;
+    border-top-width: 0;
+    border-bottom-color: #999;
+    border-bottom-color: rgba(0,0,0,.25);
+}
+
+.popover-title {
+    padding: 8px 14px;
+    margin: 0;
+    font-size: 14px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+}
+
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+
+.btn-group-vertical>.btn-group:after, .btn-toolbar:after, .clearfix:after, .container-fluid:after, .container:after, .dl-horizontal dd:after, .form-horizontal .form-group:after, .modal-footer:after, .modal-header:after, .nav:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after {
+    clear: both;
+}
+
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    float: left;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}*/

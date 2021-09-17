@@ -1550,9 +1550,64 @@
 .indicators__filter {
   margin-top: 50px;
   width: 32%; }
+  .indicators__filter .title-small {
+    margin-bottom: 15px; }
   .indicators__filter input {
     width: 100%; }
 
+/*==========/indicators=========*/
+/*==========Steps=========*/
+.steps__inner {
+  padding-left: 75px;
+  position: relative; }
+  .steps__inner:before {
+    content: "";
+    width: 1px;
+    width: 100%;
+    height: 100%;
+    border-left: 1px dashed #c4c4c4;
+    position: absolute;
+    left: 32px;
+    top: 20px;
+    z-index: 1; }
+
+.steps__item {
+  margin-bottom: 22px;
+  position: relative; }
+  .steps__item:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #006a83;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: -52px;
+    z-index: 3; }
+  .steps__item:after {
+    content: "";
+    width: 44px;
+    height: 44px;
+    background-color: #fff;
+    border: 1px solid #006a83;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: -52px;
+    z-index: 2; }
+
+.steps__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #000000;
+  margin-bottom: 5px; }
+  .steps__title > *:nth-child(2) {
+    font-size: 19px; }
+
+/*==========/steps=========*/
 /*========Page-slider=========*/
 .page-slider__header {
   display: -webkit-box;
