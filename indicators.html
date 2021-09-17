@@ -8,7 +8,14 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
 	<link href="assets/css/jquery.formstyler.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	 
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/responsive-month-range-picker.css">
 	<title>Основные показатели работы ДЦЛИ</title>
+
+
+
+
 </head>
 <body>
 	<!--Sprite-->
@@ -244,10 +251,10 @@
 								</script>
 							</div>
 							<div class="indicators__filter">
-								<form action="#">
-									<input type="text" class="input-date" placeholder="Выбрать период">
-								</form>
+								<div class="title-small">Выбрать период:</div>
+								<div id="indicators-calendar"></div>
 							</div>
+						 
 							<div class="page__block">
 								<div class="timetable timetable_five timetable_many">
 								<div class="timetable__header">
@@ -444,6 +451,21 @@
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="assets/js/jquery.formstyler.min.js"></script>
-	<script src="assets/js/script.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	<script src="assets/js/responsive-month-range-picker.js"></script>
+ 	<script src="assets/js/script.js"></script>
+
+ 	<script>
+ 	$("#indicators-calendar").responsiveMonthRange({
+        button:{
+            fiscalYtd: {show:false}
+        },
+        onApply: function (data) {
+            console.log("yes");
+        }
+    });
+	</script>
+
 </body>
 </html>
