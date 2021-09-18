@@ -55,7 +55,9 @@
   /*======Page_address-map=========*/
   /*======/page_address-map=========*/
   /*======Page_branch=========*/
-  /*======/page_branch=========*/ }
+  /*======/page_branch=========*/
+  /*======Page_labor=========*/
+  /*======/page_labor=========*/ }
   .page__header {
     width: 75%;
     margin-bottom: 40px; }
@@ -393,6 +395,14 @@
     margin-top: 30px; }
   .page_branch .address-list {
     margin-top: 30px; }
+  .page_labor .card-info {
+    padding: 18px 30px 30px; }
+    .page_labor .card-info__header {
+      margin-bottom: 20px; }
+    .page_labor .card-info__icon {
+      width: 50%; }
+  .page_labor .text {
+    font-size: 16px; }
 
 /*=============Items============*/
 .reviews__item, .faq-item {
@@ -687,7 +697,7 @@
   .card__wrapper > * {
     margin-left: 30px;
     margin-bottom: 30px; }
-  .card__wrapper_three > * {
+  .card__wrapper_three > *, .card__wrapper_phototext > * {
     width: calc(33.33333% - 30px); }
 
 .card-doctor {
@@ -810,6 +820,24 @@
     .card-address__icon:hover .card-address__icon__tooltip {
       opacity: 1;
       pointer-events: auto; }
+
+.card-phototext__img {
+  width: 100%;
+  height: 200px; }
+  .card-phototext__img img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
+
+.card-phototext__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.5;
+  margin-top: 15px; }
 
 /*============About-box===================*/
 .about-box__block {
@@ -1713,6 +1741,29 @@
     max-width: 100%;
     min-height: 292px; }
 
+/*==========Fact-block=========*/
+.fact-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .fact-block__icon {
+    margin-right: 30px; }
+    .fact-block__icon img {
+      max-width: 100%; }
+    .fact-block__icon_ml {
+      margin-left: -32px; }
+  .fact-block__text {
+    width: 90%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 1.5; }
+
+/*==========/fact-block=========*/
 /*========Page-slider=========*/
 .page-slider__header {
   display: -webkit-box;
@@ -1857,7 +1908,7 @@
     padding: 30px; }
   .page__info_80 {
     width: 100%; }
-  .card__wrapper_three > * {
+  .card__wrapper_three > *, .card__wrapper_phototext > * {
     width: calc(50% - 30px); }
   .research-block__item {
     padding-left: 20px; }
@@ -2003,7 +2054,7 @@
       width: 100%; }
   .page__sidebar {
     width: 100%; }
-  .page__info .text {
+  .page__info .text, .page_labor .text {
     font-size: 14px; }
   .page-filter > * {
     width: 100%;
@@ -2258,7 +2309,13 @@
   .steps__title {
     font-size: 16px; }
     .steps__title > *:nth-child(2) {
-      font-size: 14px; } }
+      font-size: 14px; }
+  .card__wrapper_phototext > * {
+    width: 100%; }
+  .fact-block__icon {
+    margin-right: 15px; }
+  .fact-block__text {
+    font-size: 14px; } }
 
 @media (max-width: 375px) {
   .card-doctor {
@@ -2898,6 +2955,9 @@ select {
 
 .mb-0 {
   margin-bottom: 0; }
+
+.mb-25 {
+  margin-bottom: 25px; }
 
 .mt-55 {
   margin-top: 55px; }
