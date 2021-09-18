@@ -185,6 +185,9 @@ body {
 	&_medium {
 		font-weight: 500;
 	}
+	&_big {
+		font-size: 16px;
+	}
 }
 
 .lang {
@@ -1527,6 +1530,11 @@ select {
 			&::placeholder {
 				font-size: 12px;
 			}
+		}
+	}
+	.text {
+		&_big {
+			font-size: 14px;
 		}
 	}
 	.menu-dots {

@@ -57,7 +57,9 @@
   /*======Page_branch=========*/
   /*======/page_branch=========*/
   /*======Page_labor=========*/
-  /*======/page_labor=========*/ }
+  /*======/page_labor=========*/
+  /*======Page_marketing=========*/
+  /*======/page_marketing=========*/ }
   .page__header {
     width: 75%;
     margin-bottom: 40px; }
@@ -403,6 +405,8 @@
       width: 50%; }
   .page_labor .text {
     font-size: 16px; }
+  .page_marketing .menu-dots {
+    margin-top: 12px; }
 
 /*=============Items============*/
 .reviews__item, .faq-item {
@@ -1326,6 +1330,8 @@
   margin-bottom: 12px; }
 
 /*=========/vacancy===========*/
+/*=========Administration========*/
+/*=========/administration========*/
 /*=========Research-block=========*/
 .research-block__item {
   padding: 45px 0 40px 40px;
@@ -2800,6 +2806,8 @@ body.hidden {
       margin-bottom: 0; }
   .text_medium {
     font-weight: 500; }
+  .text_big {
+    font-size: 16px; }
 
 .lang {
   display: block; }
@@ -4092,6 +4100,8 @@ select {
       font-size: 12px; }
     .search input::placeholder {
       font-size: 12px; }
+  .text_big {
+    font-size: 14px; }
   .menu-dots li {
     font-size: 14px; }
   .intro__inner {
