@@ -47,6 +47,12 @@ $(document).ready(function() {
 	});
 	/*============/search-toggle================*/
 
+	/*=============FAQ-toggle================*/
+	$(".faq-block__item").on("click", function() {
+		$(this).find(".faq-block__answer").slideToggle(333);
+		$(this).find(".faq-block__question").toggleClass('active');
+	});
+
 	/*===============Form-popup=================*/
 	$(".btn-open").on("click", function(event) {
 		event.preventDefault();
