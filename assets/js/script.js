@@ -48,6 +48,12 @@ $(document).ready(function() {
 	/*============/search-toggle================*/
 
 	/*=============FAQ-toggle================*/
+	$(".timetable__btn-more").on("click", function(event) {
+		event.preventDefault();
+		$(".timetable__more").slideToggle(333);
+	});
+
+	/*=============Timetable-more================*/
 	$(".faq-block__item").on("click", function() {
 		$(this).find(".faq-block__answer").slideToggle(333);
 		$(this).find(".faq-block__question").toggleClass('active');
