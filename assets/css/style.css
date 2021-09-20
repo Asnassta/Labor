@@ -431,6 +431,9 @@
       .page_covid .timetable__item:first-child {
         padding-left: 30px;
         width: 60%; }
+        @media (min-width: 1200px) {
+          .page_covid .timetable__item:first-child {
+            width: 70%; } }
 
 /*=============Items============*/
 .reviews__item, .faq-item {

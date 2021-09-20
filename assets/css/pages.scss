@@ -529,6 +529,9 @@
 				&:first-child {
 					padding-left: 30px;
 					width: 60%;
+					@media(min-width: 1200px) {
+						width: 70%;
+					}
 				}
 			}
 		}
