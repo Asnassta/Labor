@@ -40,6 +40,9 @@
 	}
 	&__block {
 		margin-top: 45px;
+		&_80 {
+			width: 80%;
+		}
 	}
 	&__article {
 		img {
@@ -47,7 +50,7 @@
 		}
 	}
 	&__info {
-		margin-top: 40px;
+		margin-top: 45px;
 		.title-medium {
 			margin-bottom: 25px;
 		}
@@ -517,6 +520,8 @@
 		}
 	}
 	/*======/page_service-home=========*/
+	/*======Page_paid-service=========*/
+	/*======/page_paid-service=========*/
 }
 
 /*=============Items============*/
@@ -767,6 +772,20 @@
 				z-index: 1;
 			}
 		}
+		&_line {
+			position: relative;
+			padding-bottom: 10px;
+			&:after {
+				content: "";
+				width: 65px;
+				height: 3px;
+				background-color: $red;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: 1;
+			}
+		}
 	}
 	&__subtitle {
 		font-family: $ff;
@@ -850,6 +869,11 @@
 		&_three, &_phototext {
 			>* {
 				width: calc(33.33333% - 30px);
+			}
+		}
+		&_four {
+			>* {
+				width: calc(25% - 30px);
 			}
 		}
 	}
@@ -983,6 +1007,16 @@
 			color: $bl;
 			line-height: 1.5;
 			margin-top: 15px;
+		}
+	}
+	&-simple {
+		padding: 20px 30px 30px;
+		border: 1px solid $lgray;
+		.card__title {
+			margin-bottom: 30px;
+		}
+		.card__text {
+			line-height: 1.5;
 		}
 	}
 }
@@ -1198,6 +1232,56 @@
 	}
 }
 
+/*================Service-box============*/
+.service-box {
+	display: flex;
+	padding: 20px 30px 0;
+	background-color: $lpurple;
+	&__wrapper {
+		display: flex;
+		margin-left: -30px;
+		>* {
+			flex: 1 1 50%;
+			margin-left: 30px;
+		}
+		.service-box__title {
+			font-size: 18px;
+		}
+		.menu-dots {
+			li {
+				font-size: 14px;
+			}
+		}
+	}
+	&__photo {
+		width: 35%;
+		display: flex;
+		align-items: flex-end;
+		img {
+			max-width: 100%;
+		}
+	}
+	&__info {
+		width: 65%;
+		padding: 0 0 20px 20px;
+	}
+	&__title {
+		font-family: $ff;
+		font-size: 21px;
+		font-weight: 600;
+		color: $bl;
+		line-height: 1.5;
+		margin-bottom: 15px;
+	}
+	.menu-dots {
+		margin-left: -10px;
+		li {
+			margin-bottom: 5px;
+		}
+	}
+}
+/*================/service-box============*/
+
 /*===================Procedure-list================*/
 .procedure-list {
 	&__box {
@@ -1304,6 +1388,16 @@
 	}
 	.btn__wrapper {
 		margin-top: 50px;
+	}
+	.fact-block {
+		margin-top: 10px;	
+		&__icon {
+			margin-left: -5px;
+			margin-right: 16px;		
+		}
+		&__text {
+			font-weight: 600;	
+		}
 	}
 }
 
@@ -2411,7 +2505,7 @@
 		}
 	}
 	.page {
-		&__info {
+		&__info , &__block{
 			&_80 {
 				width: 100%;
 			}
@@ -2447,6 +2541,28 @@
 	}
 	.administration-block__header {
 		margin-bottom: 25px;
+	}
+	.service-box {
+		padding: 20px 60px 0;
+		&__wrapper {
+			flex-wrap: wrap;
+			>* {
+				width: 100%;
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__info {
+			padding: 30px  0 20px;
+			&_left {
+				padding-right: 90px;
+			}
+			&_right {
+				padding-left: 90px;
+			}
+		}
 	}
 }
 
@@ -2601,7 +2717,15 @@
 			font-size: 16px;
 		}
 	}
-
+	.card {
+		&__wrapper {
+			&_four {
+				>* {
+					width: calc(50% - 30px);
+				}
+			}
+		}
+	}
 }
 
 @media(max-width: 880px) and (min-width: 766px) {
@@ -2921,6 +3045,18 @@
 			}
 		}
 	}
+	.service-box {
+		padding: 20px 30px 0;
+		&__info {
+			padding-top: 0;
+			&_left {
+				padding-right: 20px;
+			}
+			&_right {
+				padding-left: 20px;
+			}
+		}
+	}
 }
 
 @media(max-width: 546px) {
@@ -3132,6 +3268,31 @@
 		}
 		&__question {
 			font-size: 14px;
+		}
+	}
+	.card {
+		&__wrapper {
+			&_four {
+				>* {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.service-box {
+		padding: 15px 20px 0;
+		flex-wrap: wrap;
+		&:first-child {
+			flex-direction: column-reverse;
+		}
+		.service-box__title {
+			font-size: 16px;
+		}
+		&__photo {
+			width: 100%;
+		}
+		&__info {
+			width: 100%;
 		}
 	}
 }
