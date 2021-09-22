@@ -263,7 +263,7 @@ body {
 			border-radius: 50%;
 			background-color: $bl;
 			position: absolute;
-			left: 10px;
+			left: 8px;
 			top: 11px;
 		}
 	}
@@ -1071,6 +1071,9 @@ select {
 		&.tab_2, &.tab_3 {
 			display: none;
 		}
+	}
+	.timetable {
+		margin-top: 0;
 	}
 }
 /*=================/tabs============*/

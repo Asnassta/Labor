@@ -434,6 +434,23 @@
         @media (min-width: 1200px) {
           .page_covid .timetable__item:first-child {
             width: 70%; } }
+  .page_covid .stages-block {
+    background: #f3f3fe; }
+    .page_covid .stages-block .menu-dots {
+      margin-top: 25px; }
+    .page_covid .stages-block__item:last-child {
+      padding-right: 36px; }
+  .page_covid .block__tabs {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+    .page_covid .block__tabs a {
+      font-size: 21px;
+      margin-right: 90px; }
+  .page_covid .block__tab {
+    padding-top: 50px; }
+    .page_covid .block__tab .timetable {
+      margin-top: -20px; }
 
 /*=============Items============*/
 .reviews__item, .faq-item {
@@ -1022,7 +1039,7 @@
     border-bottom: none; }
     .timetable__row:last-child .timetable__item {
       padding-top: 20px;
-      padding-bottom: 10px; }
+      padding-bottom: 20px; }
 
 .timetable__more {
   display: none; }
@@ -1075,31 +1092,35 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  flex-direction: column; }
   .timetable_four .timetable__item:first-child, .timetable_five .timetable__item:first-child {
     width: 34%;
     padding-left: 0; }
 
 .timetable_four .timetable__header .timetable__item, .timetable_five .timetable__header .timetable__item {
-  font-weight: 600; }
+  font-weight: 600;
+  padding: 20px 10px 0; }
+  .timetable_four .timetable__header .timetable__item:nth-child(even), .timetable_five .timetable__header .timetable__item:nth-child(even) {
+    background-color: #f3f3fe; }
 
-.timetable_four .timetable__content .timetable__item:first-child, .timetable_five .timetable__content .timetable__item:first-child {
-  text-align: left;
-  font-weight: 500; }
+.timetable_four .timetable__content .timetable__item, .timetable_five .timetable__content .timetable__item {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .timetable_four .timetable__content .timetable__item:first-child, .timetable_five .timetable__content .timetable__item:first-child {
+    text-align: left;
+    font-weight: 500; }
 
 .timetable_five .timetable__item {
   width: 16.5%; }
   .timetable_five .timetable__item:first-child {
     width: 34%;
-    padding-left: 40px; }
+    padding-left: 30px; }
 
 .timetable_medium .timetable__header .timetable__item {
   font-weight: 600; }
   .timetable_medium .timetable__header .timetable__item:first-child {
-    padding-left: 10px; }
+    padding-left: 30px; }
 
 .timetable_medium .timetable__content .timetable__item:first-child {
   text-align: left;
@@ -1304,6 +1325,7 @@
     .about-block__photo img {
       max-width: 100%;
       height: 100%;
+      width: 100%;
       -o-object-fit: cover;
       object-fit: cover; }
     .about-block__photo_right {
@@ -1312,7 +1334,7 @@
       width: 50%; }
   .about-block__content {
     padding: 60px 80px 65px;
-    width: 80%;
+    width: 60%;
     background: url("../images/decor-big.svg") top -35px right no-repeat; }
     .about-block__content_left {
       background: url("../images/decor-left.svg") top -50px left no-repeat; }
@@ -1338,6 +1360,13 @@
       margin-right: 16px; }
     .about-block .fact-block__text {
       font-weight: 600; }
+  .about-block_white .about-block__content {
+    background: #fff;
+    padding: 0 60px 0 40px; }
+  .about-block_white .menu-dots {
+    margin-top: 25px; }
+  .about-block_white .text {
+    margin-top: 0; }
 
 /*==========Info-block============*/
 .info-block {
@@ -1960,7 +1989,35 @@
   100% {
     background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px; } }
 
-/*==========/steps=========*/
+/*==========Guarantee-block=========*/
+.guarantee-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  .guarantee-block__column {
+    width: 50%; }
+  .guarantee-block__info {
+    padding: 0 50px 0 40px; }
+  .guarantee-block .text {
+    margin-bottom: 25px; }
+  .guarantee-block__sertificats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -12px; }
+    .guarantee-block__sertificats > * {
+      width: calc(33.33333% - 12px);
+      margin: 0 12px;
+      text-align: center; }
+      .guarantee-block__sertificats > * img {
+        max-width: 100%;
+        height: 100%;
+        cursor: pointer; }
+
+/*==========/guarantee-block=========*/
 /*==========/Contact==========*/
 .contact__block .title-medium {
   margin-bottom: 35px; }
@@ -2482,7 +2539,14 @@
   .faq-block__question {
     font-size: 16px; }
   .card__wrapper_four > * {
-    width: calc(50% - 30px); } }
+    width: calc(50% - 30px); }
+  .guarantee-block {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .guarantee-block__column {
+      width: 100%; }
+    .guarantee-block__info {
+      padding: 0 0 20px 0; } }
 
 @media (max-width: 880px) and (min-width: 766px) {
   .sidebar-block .title {
@@ -2529,7 +2593,10 @@
       .service-box_100 .service-box__info .btn__wrapper .btn {
         font-size: 12px; }
   .service-box__title {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .page_covid .block__tabs a {
+    font-size: 18px;
+    margin-right: 50px; } }
 
 @media (max-width: 768px) {
   .page-about .page__row {
@@ -2762,6 +2829,10 @@
       padding-bottom: 8px; }
   .about-block__subtitle {
     font-size: 14px; }
+  .about-block_white .about-block__content {
+    padding: 0 0 0 10px; }
+  .about-block_white .text {
+    font-size: 14px; }
   .info-block__title {
     font-size: 14px; }
   .info-block__text {
@@ -2795,7 +2866,7 @@
     -ms-flex-direction: column;
     flex-direction: column; }
   .timetable_many .timetable__item {
-    width: 100%;
+    width: 100% !important;
     font-size: 14px; }
     .timetable_many .timetable__item:first-child {
       width: 100%;
@@ -2871,6 +2942,10 @@
     width: 25%; }
     .page_covid .timetable__item:first-child {
       width: 50%; }
+  .page_covid .block__tab {
+    padding-top: 20px; }
+  .page_covid .block__tabs a {
+    font-size: 16px; }
   .timetable_medium .timetable__header .timetable__item:first-child {
     padding-left: 0; }
   .timetable_medium .timetable__item:first-child {
@@ -3530,7 +3605,7 @@ body.hidden {
     border-radius: 50%;
     background-color: #000000;
     position: absolute;
-    left: 10px;
+    left: 8px;
     top: 11px; }
 
 input[type="text"], input.input-search, select {
@@ -4379,6 +4454,9 @@ select {
   padding-top: 86px; }
   .block__tab.tab_2, .block__tab.tab_3 {
     display: none; }
+
+.block .timetable {
+  margin-top: 0; }
 
 /*=================/tabs============*/
 /*===================/Projects===============*/

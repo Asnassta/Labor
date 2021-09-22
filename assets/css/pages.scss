@@ -535,6 +535,30 @@
 				}
 			}
 		}
+		.stages-block {
+			background: $lpurple;
+			.menu-dots {
+				margin-top: 25px;
+			}
+			&__item {
+				&:last-child {
+					padding-right: 36px;
+				}
+			}
+		}
+		.block__tabs {
+			justify-content: flex-start;
+			a {
+				font-size: 21px;
+				margin-right: 90px;
+			}
+		}
+		.block__tab {
+			padding-top: 50px;
+			.timetable {
+				margin-top: -20px;
+			}
+		}
 	}
 	/*======/page_covid=========*/
 }
@@ -1164,7 +1188,7 @@
 			border-bottom: none;
 			.timetable__item {
 				padding-top: 20px;
-				padding-bottom: 10px;
+				padding-bottom: 20px;
 
 			} 
 		}
@@ -1226,7 +1250,6 @@
 			width: 22%;
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
 			&:first-child {
 				width: 34%;
 				padding-left: 0;
@@ -1235,10 +1258,15 @@
 		.timetable__header {
 			.timetable__item {
 				font-weight: 600;
+				padding: 20px 10px 0;
+				&:nth-child(even) {
+					background-color: $lpurple;
+				}
 			}
 		}
 		.timetable__content {
 			.timetable__item {
+				justify-content: center;
 				&:first-child {
 					text-align: left;
 					font-weight: 500;
@@ -1251,7 +1279,7 @@
 			width: 16.5%;
 			&:first-child {
 				width: 34%;
-				padding-left: 40px;
+				padding-left: 30px;
 			}
 		}
 	}
@@ -1260,7 +1288,7 @@
 			.timetable__item {
 				font-weight: 600;
 				&:first-child {
-					padding-left: 10px;
+					padding-left: 30px;
 				}
 			}
 		}
@@ -1471,6 +1499,7 @@
 		img {
 			max-width: 100%;
 			height: 100%;
+			width: 100%;
 			object-fit: cover;
 		}
 		&_right {
@@ -1482,7 +1511,7 @@
 	}
 	&__content {
 		padding: 60px 80px 65px;
-		width: 80%;
+		width: 60%;
 		background: url("../images/decor-big.svg") top -35px right no-repeat;
 		&_left {
 			background: url("../images/decor-left.svg") top -50px left no-repeat;
@@ -1515,6 +1544,18 @@
 		}
 		&__text {
 			font-weight: 600;	
+		}
+	}
+	&_white {
+		.about-block__content {
+			background: $wh;
+			padding: 0 60px 0 40px;
+		}
+		.menu-dots {
+			margin-top: 25px;
+		}
+		.text {
+			margin-top: 0;
 		}
 	}
 }
@@ -2189,7 +2230,35 @@
     background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
   }
 }
-/*==========/steps=========*/
+/*==========Guarantee-block=========*/
+.guarantee-block {
+	display: flex;
+	align-items: flex-start;
+	&__column {
+		width: 50%;
+	}
+	&__info {
+		padding: 0 50px 0 40px;
+	}
+	.text {
+		margin-bottom: 25px;
+	}
+	&__sertificats {
+		display: flex;
+		margin: 0 -12px;
+		>* {
+			width: calc(33.33333% - 12px);
+			margin: 0 12px;
+			text-align: center;
+			img {
+				max-width: 100%;
+				height: 100%;
+				cursor: pointer;
+			}
+		}
+	}
+}
+/*==========/guarantee-block=========*/
 
 
 /*==========/Contact==========*/
@@ -2852,6 +2921,15 @@
 			}
 		}
 	}
+	.guarantee-block {
+		flex-wrap: wrap;
+		&__column {
+			width: 100%;
+		}
+		&__info {
+			padding: 0 0 20px 0;
+		}
+	}
 }
 
 @media(max-width: 880px) and (min-width: 766px) {
@@ -2939,6 +3017,14 @@
 	}
 	.service-box__title {
 		font-size: 18px;
+	}
+	.page_covid {
+		.block__tabs {
+			a {
+				font-size: 18px;
+				margin-right: 50px;
+			}
+		}
 	}
 }
 
@@ -3287,6 +3373,14 @@
 		&__subtitle {
 			font-size: 14px;
 		}
+		&_white {
+			.about-block__content {
+				padding: 0 0 0 10px;
+			}
+			.text {
+				font-size: 14px;
+			}
+		}
 	}
 	.info-block {
 		&__title {
@@ -3341,7 +3435,7 @@
 				flex-direction: column;
 			}
 			.timetable__item {
-				width: 100%;
+				width: 100%!important;
 				font-size: 14px;
 				&:first-child {
 					width: 100%;
@@ -3463,6 +3557,14 @@
 			width: 25%;
 			&:first-child {
 				width: 50%;
+			}
+		}
+		.block__tab {
+			padding-top: 20px;
+		}
+		.block__tabs {
+			a {
+				font-size: 16px;
 			}
 		}
 	}
