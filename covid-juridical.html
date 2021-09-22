@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#c02524">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link href="assets/css/jquery.formstyler.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+	<title>Диагностика COVID-19 для оранизаций</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="glass" viewBox="0 0 32 12">
+			<g><g><path d="M8 2.004a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm5.25 1.094A3.994 3.994 0 0 1 16 2.004a3.986 3.986 0 0 1 2.75 1.094 6 6 0 0 1 11.168 1.906H31a1 1 0 1 1 0 2h-1.082a6 6 0 0 1-11.918-1 2 2 0 1 0-4 0 6 6 0 0 1-11.918 1H1a1 1 0 1 1 0-2h1.082A6 6 0 0 1 13.25 3.098zm13.578.077a4 4 0 1 0-5.656 5.657 4 4 0 0 0 5.656-5.657z"/></g></g>
+		</symbol>
+		<symbol id="search" viewBox="0 0 24 24">
+			<g><g><g/><g><path d="M17.615 15.512c.061.046.118.096.172.15l5.775 5.775a1.5 1.5 0 1 1-2.123 2.12l-5.775-5.774a1.754 1.754 0 0 1-.146-.172 9.75 9.75 0 1 1 2.097-2.099zm-2.03-11.598A8.25 8.25 0 1 0 3.918 15.58 8.25 8.25 0 0 0 15.585 3.914z"/></g></g></g>
+		</symbol>
+		<symbol id="arrow-slider" viewBox="0 0 21 14">
+			<g><g><path d="M14.672.786l6.182 6.182a.5.5 0 0 1 0 .708l-6.182 6.181a.5.5 0 1 1-.708-.707l5.329-5.328H.5a.5.5 0 0 1 0-1h18.793l-5.329-5.328a.5.5 0 1 1 .708-.708z"/></g></g>
+		</symbol>
+		<symbol id="close" viewBox="0 0 17 17">
+			<g><g><path d="M9.584 8.333l7.222-7.222a.651.651 0 0 0-.92-.92L8.662 7.413 1.441.19a.651.651 0 1 0-.92.92l7.222 7.222L.52 15.555a.651.651 0 1 0 .92.921l7.222-7.222 7.222 7.222a.65.65 0 0 0 .921 0 .651.651 0 0 0 0-.92z"/></g></g>
+		</symbol>
+		<symbol id="cloud-download" viewBox="0 0 18 18">
+			<g><g><g/><g><path  d="M4.957 1.51A6.221 6.221 0 0 1 9 0c3.026 0 5.538 2.25 5.812 5.151C16.602 5.405 18 6.904 18 8.745c0 2.02-1.685 3.63-3.727 3.63H11.25a.562.562 0 1 1 0-1.125h3.024c1.452 0 2.601-1.139 2.601-2.505 0-1.368-1.147-2.507-2.602-2.507h-.563v-.562C13.711 3.178 11.62 1.125 9 1.125a5.096 5.096 0 0 0-3.309 1.238c-.851.733-1.297 1.617-1.297 2.311v.504l-.5.055c-1.572.173-2.769 1.463-2.769 3 0 1.65 1.384 3.017 3.129 3.017H6.75a.563.563 0 0 1 0 1.125H4.254C1.92 12.375 0 10.537 0 8.233 0 6.249 1.424 4.607 3.31 4.19c.16-.971.785-1.939 1.647-2.681z"/></g><g><path d="M8.6 17.84a.564.564 0 0 0 .796 0l3.375-3.374a.563.563 0 0 0-.796-.797l-2.414 2.416V6.193a.563.563 0 1 0-1.125 0v9.892L6.02 13.669a.563.563 0 0 0-.796.797z"/></g></g></g>
+		</symbol>
+	</svg>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<nav class="header__nav header__nav_small">
+						<a href="#" class="header__link">Государственным заказчикам</a>
+						<a href="#" class="header__link">Корпоративным клиентам</a>
+						<a href="mailto:dcli@zdrav.mos.ru" class="header__link header__link_mail">dcli@zdrav.mos.ru</a>
+						<a href="tel:+78001234567" class="header__link">8 (800) 123-45-67</a>
+						<a href="tel:+74953966668" class="header__link">8 (495) 396-66-68</a>
+						<a href="#" class="header__link active">Личный кабинет</a>
+					</nav><!--/header__nav-->
+					<div class="header__buttons">
+						<a class="icon-glass" href="">
+							<svg>
+								<use xlink:href="#glass"></use>
+							</svg>
+						</a>
+						<a class="icon-search" href="" id="search-toggle">
+							<svg>
+								<use xlink:href="#search"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="header-search">
+						<div class="header-search__inner">
+							<span class="header-search__icon">
+								<svg>
+									<use xlink:href="#search"></use>
+								</svg>
+							</span>
+							<form action="#">
+  								<input placeholder="Что ищете?" type="search">
+  								<button type="submit">
+  									Найти
+  								</button>
+							</form>
+							<a href="" class="header-search__close">
+								<svg>
+									<use xlink:href="#close"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="header__inner">
+					<a href="/" class="header__logo">
+						<img src="assets/images/logo.svg" alt="">
+					</a>
+					<nav class="header__nav">
+						<a href="#" class="header__link">COVID-19</a>
+						<a href="#" class="header__link">Анализы</a>
+						<a href="#" class="header__link">Адреса отделений</a>
+						<a href="#" class="header__link">Акции</a>
+						<a href="#" class="header__link">Запись к врачу</a>
+						<a href="#" class="header__link">Выезд  на дом</a>
+						<a href="about.html" class="header__link">О центре</a>
+						<div class="burger">
+							<span class="burger__item"></span>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="header__menu menu">
+				<div class="menu__inner container">
+					<div class="menu__column">
+						<ul class="menu_mobile">
+							<li>Главное</li>
+							<li><a href="#">Государственным заказчикам</a></li>
+							<li><a href="#">Корпоративным клиентам</a></li>
+							<li><a href="tel:+78001234567">8 (800) 123-45-67</a></li>
+							<li><a href="tel:+74953966668">8 (495) 396-66-68</a></li>
+							<li><a href="#">Личный кабинет</a></li>
+							<li><a href="#">COVID-19</a></li>
+							<li><a href="#">Анализы</a></li>
+							<li><a href="#">Адреса отделений</a></li>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Запись к врачу</a></li>
+							<li><a href="#">Выезд  на дом</a></li>
+							<li><a href="#">О центре</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+					</div><!--/menu__column-->
+					<div class="menu__column">
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+						</ul>
+					</div><!--/menu__column-->
+					<div class="menu__column">
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+							<li><a href="#">История</a></li>
+						</ul>
+					</div><!--/menu__column-->
+					<div class="menu__column">
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+						<ul>
+							<li>О центре</li>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Маркетинговая легенда</a></li>
+							<li><a href="#">Лаборатория и мощности</a></li>
+							<li><a href="#">Руководство</a></li>
+							<li><a href="#">Контактная информация</a></li>
+						</ul>
+					</div><!--/menu__column-->
+				</div>
+			</div><!--/menu-->
+		</header><!--/header-->
+		<main class="main">
+				<div class="page page_covid  page_covid-juridical">
+					<div class="container">
+						<div class="page__header mb-0">
+							<div class="breadcrumbs">
+								<a href="/">ДЦЛИ</a>
+								<a href="paid-service.html">Платные услуги</a>
+								<a href="covid-juridical.html">Диагностика COVID-19 для оранизаций</a>
+							</div>
+							<h1 class="title title-blob">Диагностика COVID-19 для оранизаций</h1>
+						</div>
+						<div class="page__wrapper">
+							<div class="about-block page__block mb-70">
+								<div class="about-block__photo">
+									<img src="assets/images/covid-office.jpg" alt="">
+								</div>
+								<div class="about-block__content">
+									<h2 class="title-medium">Диагностика COVID-19 для оранизаций</h2>
+									<div class="text">
+										<p>В нынешних условиях введения карантинных ограничений многие организации и предприятия продолжают работать. Такая непростая ситуация требует от работодателей постоянно контролировать состояние здоровья всех сотрудников. </p>
+									</div>
+									<div class="fact-block">
+									<div class="fact-block__icon fact-block__icon_ml">
+										<img src="assets/images/icon/laurel.svg" alt="">
+									</div>
+									<div class="fact-block__text">
+										<p>Лаборатории ДЦЛИ получили статус референс-центра по верификации результатов исследований на COVID-19.</p>
+									</div>
+								</div><!--/fact-block-->
+									<div class="btn__wrapper btn__wrapper_right">
+										<a href="#" class="btn btn-open">Получить консультацию</a>
+									</div>
+								</div>
+							</div><!--/about-block-->
+							<div class="info-block info-block_four">
+								<div class="info-block__item">
+									<div class="info-block__icon info-block__icon_mr">
+										<img src="assets/images/icon/medical-checkup_1.svg" alt="">
+									</div>
+									<div class="info-block__content">
+										<div class="info-block__text">Высокая достоверность исследования</div>
+									</div>
+								</div><!--/info-block__item-->
+								<div class="info-block__item">
+									<div class="info-block__icon info-block__icon_mr">
+										<img src="assets/images/icon/ambulance.svg" alt="">
+									</div>
+									<div class="info-block__content">
+										<div class="info-block__text">Выезд к пациентам в офис</div>
+									</div>
+								</div><!--/info-block__item-->
+								<div class="info-block__item">
+									<div class="info-block__icon info-block__icon_mr">
+										<img src="assets/images/icon/gift.svg" alt="">
+									</div>
+									<div class="info-block__content">
+										<div class="info-block__text">Доступные цены и скидки за объем</div>
+									</div>
+								</div><!--/info-block__item-->
+								<div class="info-block__item">
+									<div class="info-block__icon info-block__icon_mr">
+										<img src="assets/images/icon/virus.svg" alt="">
+									</div>
+									<div class="info-block__content">
+										<div class="info-block__text">Полный спектр исследования COVID-19 </div>
+									</div>
+								</div><!--/info-block__item-->
+							</div><!--/info-block-->
+							<div class="page__block mt-55">
+								<div class="block__tabs block__tabs1">
+									<a href="#" onclick="javascript:tab1(1);return false;" class="t1 active">Этапы исследования</a>
+									<a href="#" onclick="javascript:tab1(2);return false;"  class="t2">Гарантия качества</a>
+									<a href="#" onclick="javascript:tab1(3);return false;"  class="t3">Безопасность пациентов</a>
+								</div>
+								<div class="block__tab block__tab1 tab_1">
+									<div class="steps steps_55">
+										<div class="steps__inner-border">
+											<div class="steps__item">
+												<div class="steps__title">
+													<div>1</div>
+												</div>
+												<div class="steps__info text">
+													<p>Пришлите заявку или позвоните нам. Менеджер уточнит все детали заказа и проконсультирует по любым вопросам.</p>
+												</div>
+											</div><!--/steps__item-->
+											<div class="steps__item">
+												<div class="steps__title">
+													<div>2</div>
+												</div>
+												<div class="steps__info text">
+													<p>Получите от нас шаблон договора, коммерческое предложение и шаблоны документы для внесения данных обследованных сотрудников.</p>
+												</div>
+											</div><!--/steps__item-->
+											<div class="steps__item">
+												<div class="steps__title">
+													<div>3</div>
+												</div>
+												<div class="steps__info text">
+													<p>Пришлите реквизиты компании, менеджер подготовит для Вас договор. Подпишите его, отсканируйте и направьте обратно.</p>
+												</div>
+											</div><!--/steps__item-->
+											<div class="steps__item">
+												<div class="steps__title">
+													<div>4</div>
+												</div>
+												<div class="steps__info text">
+													<p>Оплатите выставленный счет и выберите удобную дату и время обследования сотрудников.</p>
+												</div>
+											</div><!--/steps__item-->
+											<div class="steps__item">
+												<div class="steps__title">
+													<div>5</div>
+												</div>
+												<div class="steps__info text">
+													<p>Получите результаты исследований на электронную почту или через личный кабинет, логин и пароль от которого мы Вам пришлем.</p>
+												</div>
+											</div><!--/steps__item-->
+									</div><!--/steps__inner-border-->
+										<div class="steps__item steps__item_last">
+											<div class="steps__title">
+													<div>6</div>
+											</div>
+											<div class="steps__info text">
+												<p>До 10-го числа следующего месяца курьер доставит закрывающие документы для бухгалтерии по требуемому адресу.</p>
+											</div>
+										</div><!--/steps__item-->
+									</div><!--/steps-->
+								</div><!--/block__tab-->
+								<div class="block__tab block__tab1 tab_2">
+									<div class="guarantee-block">
+										<div class="guarantee-block__column guarantee-block__info">
+											<div class="text text_big">
+												<p>В данный момент для диагностики коронавируса SARS-C0V-2 (Covid-19) лаборатория ДЦЛИ использует наборы реагентов, зарегистрированные на территории Российской Федерации.</p>
+											</div>
+											<div class="text text_big">
+												<p>(ПЦР с обратной транскрипцией и гибридизационно-флуоресцентной детекцией в режиме real-time)</p>
+											</div>
+											<ul class="menu-dots">
+												<li>АмплиПрайм SARS-CoV-2 DUO (ООО «НекстБио»).</li>
+												<li>ПОЛИВИР SARS-CoV-2 (ООО НПФ «Литех» разработан совместно с ФМБА и НИЦЭМ им. Гамалеи).</li>
+												<li>COV-2-Тест (ООО «ТестГен»).</li>
+											</ul>
+										</div>
+										<div class="guarantee-block__column guarantee-block__sertificats">
+											<div>
+												<img data-fancybox="gallery-docs" src="assets/images/statutory-docs.jpg" alt="">
+											</div>
+											<div>
+												<img data-fancybox="gallery-docs" src="assets/images/guarantee-docs_1.jpg" alt="">
+											</div>
+											<div>
+												<img data-fancybox="gallery-docs" src="assets/images/guarantee-docs_2.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div><!--/block__tab-->
+								<div class="block__tab block__tab1 tab_3">
+									<h3 class="title-medium mb-25">Для пациента это абсолютно безопасно!</h3>
+									<div class="about-block about-block_white">
+										<div class="about-block__content">
+											<div class="text">
+												<p>Все Контакт с внешней средой полностью исключен, все расходные материалы у нас одноразовые, включая весь верхний защитный костюм, который утилизируется после каждого пациента.</p>
+											</div>
+											<ul class="menu-dots">
+												<li>Все медсестры ДЦЛИ, которые работают с коронавирусом, используют специальный многослойный защитный костюм.</li>
+												<li>На ногах – бахилы, перед входом в квартиру поверх них надеваются вторые, высокие, до колен.</li>
+												<li>Такая же система защиты рук: мы заходим в квартиру уже в перчатках, которые перед взятием биоматериала обрабатываются мощным антисептиком, а сверху надевается вторая стерильная пара. Таким образом, и пациент, и медсестра избегают вероятности контакта.</li>
+											</ul>
+										</div>
+										<div class="about-block__photo">
+											<img src="assets/images/protective-suit.jpg" alt="">
+										</div>
+									</div><!--/about-block-->
+								</div><!--/block__tab-->
+							</div><!--/page__block-->
+							<div class="page__block mt-55">
+								<div class="block__tabs block__tabs2">
+									<a href="#" onclick="javascript:tab2(1);return false;" class="t1 active">Цены на исследования</a>
+									<a href="#" onclick="javascript:tab2(2);return false;"  class="t2">Сравнение с ценами конкурентов</a>
+								</div>
+								<div class="block__tab block__tab2 tab_1">
+									<div class="timetable timetable_medium">
+										<div class="timetable__header">
+											<div class="timetable__row">
+												<div class="timetable__item">Исследование</div>
+												<div class="timetable__item timetable__item_purple">Сроки</div>
+												<div class="timetable__item">Стоимость</div>
+											</div>
+										</div><!--/timetable__header-->
+										<div class="timetable__content">
+											<div class="timetable__row">
+												<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+												<div class="timetable__item">до 3-х дней</div>
+												<div class="timetable__item">1 500 ₽</div>
+											</div>
+											<div class="timetable__row">
+												<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+												<div class="timetable__item">до 3-х дней</div>
+												<div class="timetable__item">1 500 ₽</div>
+											</div>
+											<div class="timetable__row">
+												<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+												<div class="timetable__item">до 3-х дней</div>
+												<div class="timetable__item">1 500 ₽</div>
+											</div>
+											<div class="timetable__row">
+												<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+												<div class="timetable__item timetable__item_purple">до 3-х дней</div>
+												<div class="timetable__item">1 500 ₽</div>
+											</div>
+										
+											<div class="timetable__more">
+												<div class="timetable__row ">
+													<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+													<div class="timetable__item timetable__item_purple">до 3-х дней</div>
+													<div class="timetable__item">1 500 ₽</div>
+												</div>
+												<div class="timetable__row ">
+													<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+													<div class="timetable__item timetable__item_purple">до 3-х дней</div>
+												<div class="timetable__item">1 500 ₽</div>
+												</div>
+												<div class="timetable__row ">
+													<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+													<div class="timetable__item timetable__item_purple">до 3-х дней</div>
+													<div class="timetable__item">1 500 ₽</div>
+												</div>
+											</div>
+											<div class="timetable__row">
+												<div class="timetable__item"><a href="#" class="timetable__btn-more">Загрузить все</a></div>
+												<div class="timetable__item"></div>
+												<div class="timetable__item"></div>
+											</div>
+										</div><!--/timetable__content-->
+									</div><!--/timetable-->
+								</div><!--/block__tab-->
+								<div class="block__tab block__tab2 tab_2">
+									<div class="timetable timetable_five timetable_many timetable_medium">
+										<div class="timetable__header">
+												<div class="timetable__row">
+													<div class="timetable__item">Исследование</div>
+													<div class="timetable__item">Стоимость исследования</div>
+													<div class="timetable__item">Сроки</div>
+													<div class="timetable__item">Стоимость срочного исследования</div>
+													<div class="timetable__item">Стоимость взятия мазка</div>
+												</div>
+											</div><!--/timetable__header-->
+											<div class="timetable__content">
+												<div class="timetable__row">
+													<div class="timetable__item">Тест на количественные антитела к COVID-19 IgG+IgM в ДЦЛИ</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Сроки</span>
+														<span>до 3-х дней</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость срочного исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость взятия мазка</span>
+														<span>1 500 ₽</span>
+													</div>
+												</div>
+												<div class="timetable__row">
+													<div class="timetable__item">Среднее значение в коммерческих лабораториях</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Сроки</span>
+														<span>до 3-х дней</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость срочного исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость взятия мазка</span>
+														<span>1 500 ₽</span>
+													</div>
+												</div>
+												<div class="timetable__row">
+													<div class="timetable__item">Лаборатория 1</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Сроки</span>
+														<span>до 3-х дней</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость срочного исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость взятия мазка</span>
+														<span>1 500 ₽</span>
+													</div>
+												</div>
+												<div class="timetable__row">
+													<div class="timetable__item">Лаборатория 2</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Сроки</span>
+														<span>до 3-х дней</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость срочного исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость взятия мазка</span>
+														<span>1 500 ₽</span>
+													</div>
+												</div>
+												<div class="timetable__row">
+													<div class="timetable__item">Лаборатория 3</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Сроки</span>
+														<span>до 3-х дней</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость срочного исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость взятия мазка</span>
+														<span>1 500 ₽</span>
+													</div>
+												</div>
+												<div class="timetable__row">
+													<div class="timetable__item">Лаборатория 4</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Сроки</span>
+														<span>до 3-х дней</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость срочного исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость взятия мазка</span>
+														<span>1 500 ₽</span>
+													</div>
+												</div>
+												<div class="timetable__row timetable__row_decor">
+													<div class="timetable__item"></div>
+													<div class="timetable__item"></div>
+													<div class="timetable__item"></div>
+													<div class="timetable__item"></div>
+													<div class="timetable__item"></div>
+												</div>
+											</div><!--/timetable__content-->
+										</div><!--/timetable-->
+								</div><!--/block__tab-->
+							</div><!--/page__block-->
+							<div class="page__block">
+								<div class="map-block">
+									<h2 class="title-medium">Как к нам добраться</h2>
+									<div class="map-block__geo">
+										<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+									</div>
+									<div class="map-block__buttons">
+										<a href="#" class="map-block__btn map-block__btn-yandex" target="blank">
+											<img src="assets/images/icon/yandex-nav.svg" alt="">
+											<span>Яндекс.Карты</span>
+										</a>
+										<a href="#" class="map-block__btn" target="blank">
+											<img src="assets/images/icon/google-maps.svg" alt="">
+											<span>Google Maps</span>
+										</a>
+									</div>
+									<div class="map-block__map">
+										<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa3d4cd9a3087f14090d976228702ecd8070f193772ae23c6be5ad4c26e399b7c&amp;source=constructor"  frameborder="0"></iframe>
+									</div>
+								</div><!--/map-block-->
+							</div><!--/page__block-->
+							<div class="faq-block mt-55">
+								<h2 class="title-medium mb-40">Часто задаваемые вопросы</h2>
+								<div class="faq-block__inner">
+									<div class="faq-block__item">
+										<div class="faq-block__question">Как быстро приезжает медсестра?</div>
+										<div class="faq-block__answer">
+											<p>Гомолог облучает продукт реакции. Потенциометрия расщепляет радикальный бромид серебра. Царская водка модифицирует гетероциклический интермедиат, поглощая их в количестве сотен и тысяч процентов от собственного исходного объема. Электронное облако разъедает энергетический подуровень. Везикула, как и везде в пределах наблюдаемой вселенной, восстанавливает имидазол.</p>
+										</div>
+									</div><!--/faq-block__item-->
+									<div class="faq-block__item">
+										<div class="faq-block__question">Действуют ли акции и дисконтная программа?</div>
+										<div class="faq-block__answer">
+											<p>Гомолог облучает продукт реакции. Потенциометрия расщепляет радикальный бромид серебра. Царская водка модифицирует гетероциклический интермедиат, поглощая их в количестве сотен и тысяч процентов от собственного исходного объема. Электронное облако разъедает энергетический подуровень. Везикула, как и везде в пределах наблюдаемой вселенной, восстанавливает имидазол.</p>
+										</div>
+									</div><!--/faq-block__item-->
+									<div class="faq-block__item">
+										<div class="faq-block__question">Как быстро приезжает медсестра?</div>
+										<div class="faq-block__answer">
+											<p>Гомолог облучает продукт реакции. Потенциометрия расщепляет радикальный бромид серебра. Царская водка модифицирует гетероциклический интермедиат, поглощая их в количестве сотен и тысяч процентов от собственного исходного объема. Электронное облако разъедает энергетический подуровень. Везикула, как и везде в пределах наблюдаемой вселенной, восстанавливает имидазол.</p>
+										</div>
+									</div><!--/faq-block__item-->
+									<div class="faq-block__item">
+										<div class="faq-block__question">Действуют ли акции и дисконтная программа?</div>
+										<div class="faq-block__answer">
+											<p>Гомолог облучает продукт реакции. Потенциометрия расщепляет радикальный бромид серебра. Царская водка модифицирует гетероциклический интермедиат, поглощая их в количестве сотен и тысяч процентов от собственного исходного объема. Электронное облако разъедает энергетический подуровень. Везикула, как и везде в пределах наблюдаемой вселенной, восстанавливает имидазол.</p>
+										</div>
+									</div><!--/faq-block__item-->
+									<div class="faq-block__item">
+										<div class="faq-block__question">Как быстро приезжает медсестра?</div>
+										<div class="faq-block__answer">
+											<p>Гомолог облучает продукт реакции. Потенциометрия расщепляет радикальный бромид серебра. Царская водка модифицирует гетероциклический интермедиат, поглощая их в количестве сотен и тысяч процентов от собственного исходного объема. Электронное облако разъедает энергетический подуровень. Везикула, как и везде в пределах наблюдаемой вселенной, восстанавливает имидазол.</p>
+										</div>
+									</div><!--/faq-block__item-->
+									<div class="faq-block__item">
+										<div class="faq-block__question">Действуют ли акции и дисконтная программа?</div>
+										<div class="faq-block__answer">
+											<p>Гомолог облучает продукт реакции. Потенциометрия расщепляет радикальный бромид серебра. Царская водка модифицирует гетероциклический интермедиат, поглощая их в количестве сотен и тысяч процентов от собственного исходного объема. Электронное облако разъедает энергетический подуровень. Везикула, как и везде в пределах наблюдаемой вселенной, восстанавливает имидазол.</p>
+										</div>
+									</div><!--/faq-block__item-->
+									<div class="faq-block__item">
+										<div class="faq-block__question">Как быстро приезжает медсестра?</div>
+										<div class="faq-block__answer">
+											<p>Гомолог облучает продукт реакции. Потенциометрия расщепляет радикальный бромид серебра. Царская водка модифицирует гетероциклический интермедиат, поглощая их в количестве сотен и тысяч процентов от собственного исходного объема. Электронное облако разъедает энергетический подуровень. Везикула, как и везде в пределах наблюдаемой вселенной, восстанавливает имидазол.</p>
+										</div>
+									</div><!--/faq-block__item-->
+									<div class="faq-block__item">
+										<div class="faq-block__question">Действуют ли акции и дисконтная программа?</div>
+										<div class="faq-block__answer">
+											<p>Гомолог облучает продукт реакции. Потенциометрия расщепляет радикальный бромид серебра. Царская водка модифицирует гетероциклический интермедиат, поглощая их в количестве сотен и тысяч процентов от собственного исходного объема. Электронное облако разъедает энергетический подуровень. Везикула, как и везде в пределах наблюдаемой вселенной, восстанавливает имидазол.</p>
+										</div>
+									</div><!--/faq-block__item-->
+									<div class="faq-block__item">
+										<div class="faq-block__question">Как быстро приезжает медсестра?</div>
+										<div class="faq-block__answer">
+											<p>Гомолог облучает продукт реакции. Потенциометрия расщепляет радикальный бромид серебра. Царская водка модифицирует гетероциклический интермедиат, поглощая их в количестве сотен и тысяч процентов от собственного исходного объема. Электронное облако разъедает энергетический подуровень. Везикула, как и везде в пределах наблюдаемой вселенной, восстанавливает имидазол.</p>
+										</div>
+									</div><!--/faq-block__item-->
+								</div>
+							</div><!--/faq-block-->
+							<section class="stocks mt-55">
+								<div class="stocks__header">
+									<h2 class="title">Акции и преложения</h2>
+									<a href="#" class="link">Смотреть все</a>
+								</div>
+								<div class="stocks__inner">
+									<div class="stocks__item">
+										<div class="stocks__img">
+											<img src="assets/images/covid.png" alt="">
+										</div>
+										<a href="#" class="stocks__link">Диагностика коронавируса COVID-19</a>
+									</div><!--/stocks__item-->
+									<div class="stocks__item">
+										<div class="stocks__img">
+											<img src="assets/images/girl_1.png" alt="">
+										</div>
+										<a href="#" class="stocks__link">Проверка гормонального фона по специальной цене</a>
+									</div><!--/stocks__item-->
+									<div class="stocks__item">
+										<div class="stocks__img">
+											<img src="assets/images/girl_2.png" alt="">
+										</div>
+										<a href="#" class="stocks__link">Проверка уровень витамина D по выгодной цене</a>
+									</div><!--/stocks__item-->
+									<div class="stocks__item">
+										<div class="stocks__img">
+											<img src="assets/images/hands.png" alt="">
+										</div>
+										<a href="#" class="stocks__link">Онкодиагностика на любом этапе</a>
+									</div><!--/stocks__item-->
+								</div>
+							</section><!--/stocks-->
+							<div class="page-contact">
+								<div class="page-contact__row">
+									<div class="title-medium">Мы всегда на связи</div>
+									<div class="page-contact__link">
+										<a href="tel:+78001234567">8 (800) 123-45-67</a>
+									</div>
+									<div class="page-contact__link">
+										<a href="tel:+78001234567">8 (800) 123-45-67</a>
+									</div>
+								</div>
+								<div class="text">
+									<p>Если вы хотите узнать больше, позвоните нам. Мы ответим на вопросы, а также сориентируем по стоимости услуг.</p>
+								</div>
+							</div><!--/page-contact-->
+						</div><!--/page__wrapper-->
+						<div class="page-share">
+							<div class="page-share__title">Поделиться:</div>
+							<div class="page-share__social">
+								<a href="#" target="blank">
+									<img src="assets/images/vk-bl.svg" alt="">
+								</a>
+								<a href="#" target="blank">
+									<img src="assets/images/fb-bl.svg" alt="">
+								</a>
+								<a href="#" target="blank">
+									<img src="assets/images/odk-bl.svg" alt="">
+								</a>
+								<a href="#" target="blank">
+									<img src="assets/images/tg-bl.svg" alt="">
+								</a>
+								<a href="#" target="blank">
+									<img src="assets/images/wtsp-bl.svg" alt="">
+								</a>
+							</div>
+						</div><!--/page-share-->
+					</div>
+				</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__inner">
+				<div class="container">
+					<div class="footer__head">
+						<div>
+							<div class="footer__title">Диагностический центр лабораторных исследований</div>
+							<a href="https://yandex.ru/maps/-/CCUm5VDKtA" class="footer__link">117105 Москва, Варшавское шоссе, 19</a>
+						</div>
+						<div class="footer__social">
+							<a href="#" target="blank">
+								<img src="assets/images/vk.svg" alt="">
+							</a>
+							<a href="#" target="blank">
+								<img src="assets/images/yt.svg" alt="">
+							</a>
+							<a href="#" target="blank">
+								<img src="assets/images/inst.svg" alt="">
+							</a>
+							<a href="#" target="blank">
+								<img src="assets/images/fb.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="footer__menu">
+						<div class="footer__column">
+							<ul>
+								<li>О центре</li>
+								<li><a href="#" class="footer__link">История</a></li>
+								<li><a href="#" class="footer__link">Маркетинговая легенда</a></li>
+								<li><a href="#" class="footer__link">Лаборатория и мощности</a></li>
+								<li><a href="#" class="footer__link">Руководство</a></li>
+								<li><a href="#" class="footer__link">Контактная информация</a></li>
+							</ul>
+						</div><!--/footer__column-->
+						<div class="footer__column">
+							<ul>
+								<li>О центре</li>
+								<li><a href="#" class="footer__link">История</a></li>
+								<li><a href="#" class="footer__link">Маркетинговая легенда</a></li>
+								<li><a href="#" class="footer__link">Лаборатория и мощности</a></li>
+								<li><a href="#" class="footer__link">Руководство</a></li>
+								<li><a href="#" class="footer__link">Контактная информация</a></li>
+							</ul>
+						</div><!--/footer__column-->
+						<div class="footer__column">
+							<ul>
+								<li>О центре</li>
+								<li><a href="#" class="footer__link">История</a></li>
+								<li><a href="#" class="footer__link">Маркетинговая легенда</a></li>
+								<li><a href="#" class="footer__link">Лаборатория и мощности</a></li>
+								<li><a href="#" class="footer__link">Руководство</a></li>
+								<li><a href="#" class="footer__link">Контактная информация</a></li>
+							</ul>
+						</div><!--/footer__column-->
+						<div class="footer__column">
+							<ul>
+								<li>О центре</li>
+								<li><a href="#" class="footer__link">История</a></li>
+								<li><a href="#" class="footer__link">Маркетинговая легенда</a></li>
+								<li><a href="#" class="footer__link">Лаборатория и мощности</a></li>
+								<li><a href="#" class="footer__link">Руководство</a></li>
+								<li><a href="#" class="footer__link">Контактная информация</a></li>
+							</ul>
+						</div><!--/footer__column-->
+					</div><!--/footer__menu-->
+					<div class="footer__row">
+						<a href="#" class="btn">Версия для слабовидящих</a>
+						<div class="footer__contact">
+							<a href="tel:+74953966668">8 (495) 396-66-68</a>
+							<a href="mailto:">dcli@zdrav.mos.ru</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__foot">
+				<div class="container">
+					<div class="footer__row">
+						<a href="#" class="footer__lang lang">
+							<img src="assets/images/eng.svg" alt="">
+							<span>English</span>
+						</a>
+						<div class="copyright">Copyright © | 2021 ГБУЗ "ДЦЛИ ДЗМ"</div>
+						<a href="#" class="footer__link">Пользовательское соглашение</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="form-popup">
+			<div class="closex"></div>
+			<div class="form-popup__inner">
+				<span class="form-popup__close">
+					<svg>
+						<use xlink:href="#close"></use>
+					</svg>
+				</span>
+				<div class="form-block">
+					<div class="form-block__form">
+						<h2 class="title">Заявка на консультацию</h2>
+						<form>
+							<div class="form-block__inner">
+								<input type="text" placeholder="Ваше имя" class="form-block__input_small">
+								<input type="text" placeholder="Ваша организация" class="form-block__input_small">
+								<input type="text" placeholder="Номер телефона" class="form-block__input_small">
+								<input type="text" placeholder="Ваш Email" class="form-block__input_small">
+								<div class="form-block__captcha-place">
+									<img src="assets/images/captcha-place.jpg" alt="">
+								</div>
+							</div>
+							<div class="form-block__agree">
+								Я даю свое согласие на обработку и хранение персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a>.
+							</div>
+							<div class="form-block__btn">
+								<button class="btn btn-close" type="submit">Записаться</button>
+							</div>
+						</form>
+					</div>
+				</div><!--/form-block-->
+			</div>
+		</div><!--/form-popup-->
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="assets/js/jquery.formstyler.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
