@@ -18,6 +18,22 @@ function tabs(n)
   $('.block__tab.tab_'+n).fadeIn(222);
 };
 
+function tab1(n)
+{
+  $('.block__tabs1 a').removeClass('active');
+  $('.block__tabs1 a.t'+n).addClass('active');
+  $('.block__tab1').fadeOut(0);
+  $('.block__tab1.tab_'+n).fadeIn(222);
+};
+
+function tab2(n)
+{
+  $('.block__tabs2 a').removeClass('active');
+  $('.block__tabs2 a.t'+n).addClass('active');
+  $('.block__tab2').fadeOut(0);
+  $('.block__tab2.tab_'+n).fadeIn(222);
+};
+
 $(document).ready(function() {
 	/*======Menu-toggle=============*/
 	
