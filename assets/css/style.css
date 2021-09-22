@@ -1976,6 +1976,9 @@
     margin-bottom: 8px; }
     .steps__title > *:nth-child(2) {
       font-size: 19px; }
+  @media (min-width: 992px) {
+    .steps_55 {
+      width: 55%; } }
 
 @-webkit-keyframes border-dance {
   0% {
@@ -2515,7 +2518,7 @@
   .indicators__filter {
     width: 50%; }
   .timetable_five .timetable__item:first-child {
-    padding-left: 0; }
+    padding-left: 0 !important; }
   .administration-block__photo {
     width: calc(30% - 30px);
     margin-right: 30px; }
@@ -4454,9 +4457,6 @@ select {
   padding-top: 86px; }
   .block__tab.tab_2, .block__tab.tab_3 {
     display: none; }
-
-.block .timetable {
-  margin-top: 0; }
 
 /*=================/tabs============*/
 /*===================/Projects===============*/

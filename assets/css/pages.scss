@@ -2219,6 +2219,11 @@
 			}
 		}
 	}
+	&_55 {
+		@media(min-width: 992px) {
+			width: 55%;
+		}
+	}
 }
 
 @keyframes border-dance {
@@ -2867,7 +2872,7 @@
 	.timetable_five {
 		.timetable__item {
 			&:first-child {
-				padding-left: 0;
+				padding-left: 0!important;
 			}
 		}
 	}
