@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link href="assets/css/jquery.formstyler.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
 	<title>Лабораторная диагностика COVID-19</title>
 </head>
 <body>
@@ -200,7 +201,7 @@
 			</div><!--/menu-->
 		</header><!--/header-->
 		<main class="main">
-				<div class="page page_covid">
+				<div class="page page_covid  page_covid-physical">
 					<div class="container">
 						<div class="page__header mb-0">
 							<div class="breadcrumbs">
@@ -213,7 +214,7 @@
 						<div class="page__wrapper">
 							<div class="about-block page__block mb-70">
 								<div class="about-block__photo">
-									<img src="assets/images/woman-mask.jpg" alt="">
+									<img src="assets/images/covid-19.jpg" alt="">
 								</div>
 								<div class="about-block__content">
 									<h2 class="title-medium">Диагностика COVID-19 в лабораториях ДЦЛИ</h2>
@@ -239,7 +240,7 @@
 										<img src="assets/images/icon/medical-checkup_1.svg" alt="">
 									</div>
 									<div class="info-block__content">
-										<div class="info-block__text">Результаты в день обращения</div>
+										<div class="info-block__text">Высокая достоверность исследования</div>
 									</div>
 								</div><!--/info-block__item-->
 								<div class="info-block__item">
@@ -252,10 +253,10 @@
 								</div><!--/info-block__item-->
 								<div class="info-block__item">
 									<div class="info-block__icon info-block__icon_mr">
-										<img src="assets/images/icon/microscope_1.svg" alt="">
+										<img src="assets/images/icon/gift.svg" alt="">
 									</div>
 									<div class="info-block__content">
-										<div class="info-block__text">Высокоточное оборудование</div>
+										<div class="info-block__text">Доступные цены и система скидок</div>
 									</div>
 								</div><!--/info-block__item-->
 								<div class="info-block__item">
@@ -267,101 +268,302 @@
 									</div>
 								</div><!--/info-block__item-->
 							</div><!--/info-block-->
-							<div class="page__block mt-70">
-									<div class="service-box service-box_100">
-										<div class="service-box__photo">
-											<img src="assets/images/family.png" alt="">
-										</div>
-										<div class="service-box__info service-box__info_right">
-											<div class="service-box__title">Услуги для физических лиц</div>
+							<div class="page__block mt-55">
+								<div class="block__tabs block__tabs1">
+									<a href="#" onclick="javascript:tab1(1);return false;" class="t1 active">Этапы исследования</a>
+									<a href="#" onclick="javascript:tab1(2);return false;"  class="t2">Гарантия качества</a>
+									<a href="#" onclick="javascript:tab1(3);return false;"  class="t3">Безопасность пациентов</a>
+								</div>
+								<div class="block__tab block__tab1 tab_1">
+									<div class="stages-block">
+										<div class="stages-block__item">
+											<div class="stages-block__number">1</div>
+											<div class="stages-block__title stages-block__title_blue">Сбор биоматериала</div>
+											<div class="stages-block__text">Взятие биоматериала происходит из зева. Важно правильно взять биоматериал, для корректного результата его должно быть достаточное количество. Опытная медсестра гарантирует, что в пробирку попадет достаточное количество биоматериала.</div>
+										</div><!--/stages-block__item-->
+										<div class="stages-block__item">
+											<div class="stages-block__number">2</div>
+											<div class="stages-block__title">Транспортировка</div>
+											<div class="stages-block__text">Промаркированный и упакованный биоматериал отправляется с сотрудником в сумке- холодильнике. Уже днем он окажется в лаборатории, а на следующей день пациент узнает свой результат.</div>
+										</div><!--/stages-block__item-->
+										<div class="stages-block__item">
+											<div class="stages-block__number">3</div>
+											<div class="stages-block__title">Получение результатов</div>
+											<div class="stages-block__text">Получить результаты вы можете одним из способов:</div>
 											<ul class="menu-dots">
-												<li>Кратчайшие сроки исполнения заказов</li>
-												<li>Доступные цены</li>
-												<li>Гарантия качества</li>
+												<li>По электронной почте </li>
+												<li>В Личном кабинете</li>
+												<li>Курьером</li>
+												<li>В любом отделении</li>
 											</ul>
-											<div class="btn__wrapper btn__wrapper_right">
-												<a href="covid-physical.html" class="btn">Подробнее</a>
+										</div><!--/stages-block__item-->
+									</div><!--/stages-block-->
+								</div><!--/block__tab-->
+								<div class="block__tab block__tab1 tab_2">
+									<div class="guarantee-block">
+										<div class="guarantee-block__column guarantee-block__info">
+											<div class="text text_big">
+												<p>В данный момент для диагностики коронавируса SARS-C0V-2 (Covid-19) лаборатория ДЦЛИ использует наборы реагентов, зарегистрированные на территории Российской Федерации.</p>
+											</div>
+											<div class="text text_big">
+												<p>(ПЦР с обратной транскрипцией и гибридизационно-флуоресцентной детекцией в режиме real-time)</p>
+											</div>
+											<ul class="menu-dots">
+												<li>АмплиПрайм SARS-CoV-2 DUO (ООО «НекстБио»).</li>
+												<li>ПОЛИВИР SARS-CoV-2 (ООО НПФ «Литех» разработан совместно с ФМБА и НИЦЭМ им. Гамалеи).</li>
+												<li>COV-2-Тест (ООО «ТестГен»).</li>
+											</ul>
+										</div>
+										<div class="guarantee-block__column guarantee-block__sertificats">
+											<div>
+												<img data-fancybox="gallery-docs" src="assets/images/statutory-docs.jpg" alt="">
+											</div>
+											<div>
+												<img data-fancybox="gallery-docs" src="assets/images/guarantee-docs_1.jpg" alt="">
+											</div>
+											<div>
+												<img data-fancybox="gallery-docs" src="assets/images/guarantee-docs_2.jpg" alt="">
 											</div>
 										</div>
-									</div><!--/service-box-->
-									<div class="service-box service-box_100">
-										<div class="service-box__info service-box__info_left">
-											<div class="service-box__title">Услуги для юридических лиц</div>
-											<ul class="menu-dots">
-												<li>Широкие технические возможности</li>
-												<li>Система  скидок</li>
-												<li>Гарантия качества</li>
-											</ul>
-											<div class="btn__wrapper btn__wrapper_right">
-												<a href="covid-juridical.html" class="btn">Подробнее</a>
+									</div>
+								</div><!--/block__tab-->
+								<div class="block__tab block__tab1 tab_3">
+									<h3 class="title-medium mb-25">Для пациента это абсолютно безопасно!</h3>
+									<div class="about-block about-block_white">
+										<div class="about-block__content">
+											<div class="text">
+												<p>Все Контакт с внешней средой полностью исключен, все расходные материалы у нас одноразовые, включая весь верхний защитный костюм, который утилизируется после каждого пациента.</p>
 											</div>
+											<ul class="menu-dots">
+												<li>Все медсестры ДЦЛИ, которые работают с коронавирусом, используют специальный многослойный защитный костюм.</li>
+												<li>На ногах – бахилы, перед входом в квартиру поверх них надеваются вторые, высокие, до колен.</li>
+												<li>Такая же система защиты рук: мы заходим в квартиру уже в перчатках, которые перед взятием биоматериала обрабатываются мощным антисептиком, а сверху надевается вторая стерильная пара. Таким образом, и пациент, и медсестра избегают вероятности контакта.</li>
+											</ul>
 										</div>
-										<div class="service-box__photo">
-											<img src="assets/images/city.png" alt="">
+										<div class="about-block__photo">
+											<img src="assets/images/protective-suit.jpg" alt="">
 										</div>
-									</div><!--/service-box-->
+									</div><!--/about-block-->
+								</div><!--/block__tab-->
+							</div><!--/page__block-->
+							<div class="page__block mt-55">
+								<div class="block__tabs block__tabs2">
+									<a href="#" onclick="javascript:tab2(1);return false;" class="t1 active">Цены на исследования</a>
+									<a href="#" onclick="javascript:tab2(2);return false;"  class="t2">Сравнение с ценами конкурентов</a>
+								</div>
+								<div class="block__tab block__tab2 tab_1">
+									<div class="timetable timetable_medium">
+										<div class="timetable__header">
+											<div class="timetable__row">
+												<div class="timetable__item">Исследование</div>
+												<div class="timetable__item timetable__item_purple">Сроки</div>
+												<div class="timetable__item">Стоимость</div>
+											</div>
+										</div><!--/timetable__header-->
+										<div class="timetable__content">
+											<div class="timetable__row">
+												<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+												<div class="timetable__item">до 3-х дней</div>
+												<div class="timetable__item">1 500 ₽</div>
+											</div>
+											<div class="timetable__row">
+												<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+												<div class="timetable__item">до 3-х дней</div>
+												<div class="timetable__item">1 500 ₽</div>
+											</div>
+											<div class="timetable__row">
+												<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+												<div class="timetable__item">до 3-х дней</div>
+												<div class="timetable__item">1 500 ₽</div>
+											</div>
+											<div class="timetable__row">
+												<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+												<div class="timetable__item timetable__item_purple">до 3-х дней</div>
+												<div class="timetable__item">1 500 ₽</div>
+											</div>
+										
+											<div class="timetable__more">
+												<div class="timetable__row ">
+													<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+													<div class="timetable__item timetable__item_purple">до 3-х дней</div>
+													<div class="timetable__item">1 500 ₽</div>
+												</div>
+												<div class="timetable__row ">
+													<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+													<div class="timetable__item timetable__item_purple">до 3-х дней</div>
+												<div class="timetable__item">1 500 ₽</div>
+												</div>
+												<div class="timetable__row ">
+													<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
+													<div class="timetable__item timetable__item_purple">до 3-х дней</div>
+													<div class="timetable__item">1 500 ₽</div>
+												</div>
+											</div>
+											<div class="timetable__row">
+												<div class="timetable__item"><a href="#" class="timetable__btn-more">Загрузить все</a></div>
+												<div class="timetable__item"></div>
+												<div class="timetable__item"></div>
+											</div>
+										</div><!--/timetable__content-->
+									</div><!--/timetable-->
+								</div><!--/block__tab-->
+								<div class="block__tab block__tab2 tab_2">
+									<div class="timetable timetable_five timetable_many timetable_medium">
+										<div class="timetable__header">
+												<div class="timetable__row">
+													<div class="timetable__item">Исследование</div>
+													<div class="timetable__item">Стоимость исследования</div>
+													<div class="timetable__item">Сроки</div>
+													<div class="timetable__item">Стоимость срочного исследования</div>
+													<div class="timetable__item">Стоимость взятия мазка</div>
+												</div>
+											</div><!--/timetable__header-->
+											<div class="timetable__content">
+												<div class="timetable__row">
+													<div class="timetable__item">Тест на количественные антитела к COVID-19 IgG+IgM в ДЦЛИ</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Сроки</span>
+														<span>до 3-х дней</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость срочного исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость взятия мазка</span>
+														<span>1 500 ₽</span>
+													</div>
+												</div>
+												<div class="timetable__row">
+													<div class="timetable__item">Среднее значение в коммерческих лабораториях</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Сроки</span>
+														<span>до 3-х дней</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость срочного исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость взятия мазка</span>
+														<span>1 500 ₽</span>
+													</div>
+												</div>
+												<div class="timetable__row">
+													<div class="timetable__item">Лаборатория 1</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Сроки</span>
+														<span>до 3-х дней</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость срочного исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость взятия мазка</span>
+														<span>1 500 ₽</span>
+													</div>
+												</div>
+												<div class="timetable__row">
+													<div class="timetable__item">Лаборатория 2</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Сроки</span>
+														<span>до 3-х дней</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость срочного исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость взятия мазка</span>
+														<span>1 500 ₽</span>
+													</div>
+												</div>
+												<div class="timetable__row">
+													<div class="timetable__item">Лаборатория 3</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Сроки</span>
+														<span>до 3-х дней</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость срочного исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость взятия мазка</span>
+														<span>1 500 ₽</span>
+													</div>
+												</div>
+												<div class="timetable__row">
+													<div class="timetable__item">Лаборатория 4</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Сроки</span>
+														<span>до 3-х дней</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость срочного исследования</span>
+														<span>1 500 ₽</span>
+													</div>
+													<div class="timetable__item">
+														<span class="timetable__item_title">Стоимость взятия мазка</span>
+														<span>1 500 ₽</span>
+													</div>
+												</div>
+												<div class="timetable__row timetable__row_decor">
+													<div class="timetable__item"></div>
+													<div class="timetable__item"></div>
+													<div class="timetable__item"></div>
+													<div class="timetable__item"></div>
+													<div class="timetable__item"></div>
+												</div>
+											</div><!--/timetable__content-->
+										</div><!--/timetable-->
+								</div><!--/block__tab-->
 							</div><!--/page__block-->
 							<div class="page__block">
-								<h2 class="title-medium">Цены на исследования</h2>
-								<div class="timetable timetable_medium">
-									<div class="timetable__header">
-										<div class="timetable__row">
-											<div class="timetable__item">Исследование</div>
-											<div class="timetable__item timetable__item_purple">Сроки</div>
-											<div class="timetable__item">Стоимость</div>
-										</div>
-									</div><!--/timetable__header-->
-									<div class="timetable__content">
-										<div class="timetable__row">
-											<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
-											<div class="timetable__item">до 3-х дней</div>
-											<div class="timetable__item">1 500 ₽</div>
-										</div>
-										<div class="timetable__row">
-											<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
-											<div class="timetable__item">до 3-х дней</div>
-											<div class="timetable__item">1 500 ₽</div>
-										</div>
-										<div class="timetable__row">
-											<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
-											<div class="timetable__item">до 3-х дней</div>
-											<div class="timetable__item">1 500 ₽</div>
-										</div>
-										<div class="timetable__row">
-											<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
-											<div class="timetable__item timetable__item_purple">до 3-х дней</div>
-											<div class="timetable__item">1 500 ₽</div>
-										</div>
-										<div class="timetable__row timetable__row_more">
-											<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
-											<div class="timetable__item timetable__item_purple">до 3-х дней</div>
-											<div class="timetable__item">1 500 ₽</div>
-										</div>
-										
-										<div class="timetable__more">
-											<div class="timetable__row ">
-												<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
-												<div class="timetable__item timetable__item_purple">до 3-х дней</div>
-												<div class="timetable__item">1 500 ₽</div>
-											</div>
-											<div class="timetable__row ">
-												<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
-												<div class="timetable__item timetable__item_purple">до 3-х дней</div>
-												<div class="timetable__item">1 500 ₽</div>
-											</div>
-											<div class="timetable__row ">
-												<div class="timetable__item">НОВЫЙ КОРОНАВИРУС COVID-19 (SARS-Cov-2), определение РНК (кач.) ПЦР-исследование</div>
-												<div class="timetable__item timetable__item_purple">до 3-х дней</div>
-												<div class="timetable__item">1 500 ₽</div>
-											</div>
-										</div>
-										<div class="timetable__row">
-											<div class="timetable__item"><a href="#" class="timetable__btn-more">Загрузить все</a></div>
-											<div class="timetable__item"></div>
-											<div class="timetable__item"></div>
-										</div>
-									</div><!--/timetable__content-->
-								</div><!--/timetable-->
+								<div class="map-block">
+									<h2 class="title-medium">Как к нам добраться</h2>
+									<div class="map-block__geo">
+										<a href="https://yandex.ru/maps/-/CCUm5VDKtA">Москва, Варшавское шоссе, 19</a>
+									</div>
+									<div class="map-block__buttons">
+										<a href="#" class="map-block__btn map-block__btn-yandex" target="blank">
+											<img src="assets/images/icon/yandex-nav.svg" alt="">
+											<span>Яндекс.Карты</span>
+										</a>
+										<a href="#" class="map-block__btn" target="blank">
+											<img src="assets/images/icon/google-maps.svg" alt="">
+											<span>Google Maps</span>
+										</a>
+									</div>
+									<div class="map-block__map">
+										<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa3d4cd9a3087f14090d976228702ecd8070f193772ae23c6be5ad4c26e399b7c&amp;source=constructor"  frameborder="0"></iframe>
+									</div>
+								</div><!--/map-block-->
 							</div><!--/page__block-->
 							<div class="faq-block mt-55">
 								<h2 class="title-medium mb-40">Часто задаваемые вопросы</h2>
@@ -617,6 +819,7 @@
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="assets/js/jquery.formstyler.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 	<script src="assets/js/script.js"></script>
 </body>
 </html>
