@@ -65,7 +65,9 @@
   /*======Page_covid=========*/
   /*======/page_covid=========*/
   /*======Page_corporate-client=========*/
-  /*======/page_corporate-client=========*/ }
+  /*======/page_corporate-client=========*/
+  /*======Page_new-client=========*/
+  /*======/page_new-client=========*/ }
   .page__header {
     width: 75%;
     margin-bottom: 40px; }
@@ -458,6 +460,11 @@
     object-position: bottom left; }
   .page_corporate-client .service-box {
     background-color: #ededed; }
+  .page_new-client .about-block__photo img {
+    -o-object-position: bottom left;
+    object-position: bottom left; }
+  .page_new-client .card__wrapper_four .card__text {
+    font-weight: 500; }
 
 /*=============Items============*/
 .reviews__item, .faq-item {
@@ -730,6 +737,9 @@
     margin-bottom: 5px; }
     .card__text_small:last-child {
       margin-bottom: 0; }
+    .card__text_small .menu-dots li {
+      font-size: 12px;
+      margin-bottom: 3px; }
 
 .card__date {
   font-family: "Montserrat", sans-serif;
