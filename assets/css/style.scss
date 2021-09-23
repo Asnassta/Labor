@@ -92,6 +92,13 @@ body {
 		font-weight: 600;
 		line-height: 1.2;
 		color: $bl;
+		a {
+			font-family: $ff;
+			font-size: 21px;
+			font-weight: 600;
+			line-height: 1.2;
+			color: $bl;
+		}
 	}
 	&-small {
 		font-family: $ff;
@@ -149,7 +156,7 @@ body {
 	text-transform: uppercase;
 	display: inline-block;
 	position: relative;
-	padding-right: 24px;
+	padding-right: 26px;
 	transition: all .2s linear;
 	&:after {
 		content: "";
@@ -1536,6 +1543,15 @@ select {
 		}
 		&-medium {
 			font-size: 16px;
+			a {
+				font-size: 16px;
+				&.link {
+					&:after {
+						top: 9px;
+						right: 5px;
+					}
+				}
+			}
 		}
 	}
 	.subtitle {

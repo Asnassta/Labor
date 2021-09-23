@@ -2263,6 +2263,22 @@
   display: none; }
 
 /*=========/FAQ-block==========*/
+/*=========List-block==========*/
+.list-block_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .list-block_flex > * {
+    width: calc(50% - 75px);
+    margin-right: 150px;
+    padding-left: 10px; }
+    .list-block_flex > *:last-child {
+      margin-right: 0; }
+
+.list-block li {
+  margin-bottom: 5px; }
+
+/*=========/list-block==========*/
 /*========Page-slider=========*/
 .page-slider__header {
   display: -webkit-box;
@@ -2556,7 +2572,11 @@
     .guarantee-block__column {
       width: 100%; }
     .guarantee-block__info {
-      padding: 0 0 20px 0; } }
+      padding: 0 0 20px 0; }
+  .list-block_flex > * {
+    width: calc(50% - 30px);
+    margin-right: 60px;
+    padding-left: 10px; } }
 
 @media (max-width: 880px) and (min-width: 766px) {
   .sidebar-block .title {
@@ -2969,7 +2989,13 @@
   .timetable_medium .timetable__item:first-child {
     padding-left: 0; }
   .timetable__btn-more {
-    margin-left: 20px; } }
+    margin-left: 20px; }
+  .list-block_flex {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .list-block_flex > * {
+      width: 100%;
+      margin-right: 0; } }
 
 @media (max-width: 414px) {
   .page-gallery__item {
@@ -3465,6 +3491,12 @@ body.hidden {
     font-weight: 600;
     line-height: 1.2;
     color: #000000; }
+    .title-medium a {
+      font-family: "Montserrat", sans-serif;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #000000; }
   .title-small {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -3522,7 +3554,7 @@ body.hidden {
   text-transform: uppercase;
   display: inline-block;
   position: relative;
-  padding-right: 24px;
+  padding-right: 26px;
   -webkit-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear; }
@@ -4851,6 +4883,11 @@ select {
       font-size: 18px; }
     .title-medium {
       font-size: 16px; }
+      .title-medium a {
+        font-size: 16px; }
+        .title-medium a.link:after {
+          top: 9px;
+          right: 5px; }
   .subtitle {
     font-size: 14px; }
   .menu__column {

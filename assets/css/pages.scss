@@ -2517,6 +2517,25 @@
 }
 /*=========/FAQ-block==========*/
 
+/*=========List-block==========*/
+.list-block {
+	&_flex {
+		display: flex;
+		>* {
+			width: calc(50% - 75px);
+			margin-right: 150px;
+			padding-left: 10px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	li {
+		margin-bottom: 5px;
+	}
+}
+/*=========/list-block==========*/
+
 /*========Page-slider=========*/
 .page-slider {
 	&__header {
@@ -2947,6 +2966,15 @@
 		}
 		&__info {
 			padding: 0 0 20px 0;
+		}
+	}
+	.list-block {
+		&_flex {
+			>* {
+				width: calc(50% - 30px);
+				margin-right: 60px;
+				padding-left: 10px;
+			}
 		}
 	}
 }
@@ -3615,6 +3643,16 @@
 		}
 		&__btn-more {
 			margin-left: 20px;
+		}
+	}
+
+	.list-block {
+		&_flex {
+			flex-wrap: wrap;
+			>* {
+				width: 100%;
+				margin-right: 0;
+			}
 		}
 	}
 }
