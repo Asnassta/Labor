@@ -63,7 +63,9 @@
   /*======Page_service-home=========*/
   /*======/page_service-home=========*/
   /*======Page_covid=========*/
-  /*======/page_covid=========*/ }
+  /*======/page_covid=========*/
+  /*======Page_corporate-client=========*/
+  /*======/page_corporate-client=========*/ }
   .page__header {
     width: 75%;
     margin-bottom: 40px; }
@@ -451,6 +453,11 @@
     padding-top: 50px; }
     .page_covid .block__tab .timetable {
       margin-top: -20px; }
+  .page_corporate-client .about-block__photo img {
+    -o-object-position: bottom left;
+    object-position: bottom left; }
+  .page_corporate-client .service-box {
+    background-color: #ededed; }
 
 /*=============Items============*/
 .reviews__item, .faq-item {
@@ -2936,9 +2943,17 @@
     .service-box .service-box__title {
       font-size: 16px; }
     .service-box__photo {
-      width: 100%; }
+      width: 100%;
+      text-align: center; }
+      .service-box__photo img {
+        margin: 0 auto; }
     .service-box__info {
       width: 100%; }
+  .page_corporate-client .service-box:first-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
   .page_covid .timetable {
     margin-top: 15px; }
   .page_covid .timetable__item {
@@ -3047,6 +3062,8 @@
     font-size: 14px; }
     .card-info .card__title a {
       font-size: 14px; }
+  .card__title a {
+    font-size: 14px; }
   .procedure-list__btn .btn {
     font-size: 12px; }
   .map-block__btn span {
@@ -3505,7 +3522,7 @@ body.hidden {
   text-transform: uppercase;
   display: inline-block;
   position: relative;
-  padding-right: 21px;
+  padding-right: 24px;
   -webkit-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear; }
@@ -3526,6 +3543,8 @@ body.hidden {
     transition: all .2s linear; }
   .link:hover:after {
     right: -7px; }
+  .link_noupp {
+    text-transform: none; }
 
 .text {
   font-family: "Montserrat", sans-serif;

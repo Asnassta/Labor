@@ -561,6 +561,20 @@
 		}
 	}
 	/*======/page_covid=========*/
+	/*======Page_corporate-client=========*/
+	&_corporate-client {
+		.about-block {
+			&__photo {
+				img {
+					object-position: bottom left;
+				}
+			}
+		}
+		.service-box {
+			background-color: $gray;
+		}
+	}
+	/*======/page_corporate-client=========*/
 }
 
 /*=============Items============*/
@@ -3549,9 +3563,20 @@
 		}
 		&__photo {
 			width: 100%;
+			text-align: center;
+			img {
+				margin: 0 auto;
+			}
 		}
 		&__info {
 			width: 100%;
+		}
+	}
+	.page_corporate-client {
+		.service-box {
+			&:first-child {
+				flex-direction: column;
+			}
 		}
 	}
 	.page_covid {
@@ -3758,6 +3783,11 @@
 				a {
 					font-size: 14px;
 				}
+			}
+		}
+		&__title {
+			a {
+				font-size: 14px;
 			}
 		}
 	}

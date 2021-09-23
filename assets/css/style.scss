@@ -149,7 +149,7 @@ body {
 	text-transform: uppercase;
 	display: inline-block;
 	position: relative;
-	padding-right: 21px;
+	padding-right: 24px;
 	transition: all .2s linear;
 	&:after {
 		content: "";
@@ -167,6 +167,9 @@ body {
 		&:after {
 			right: -7px;
 		}
+	}
+	&_noupp {
+		text-transform: none;
 	}
 }
 
