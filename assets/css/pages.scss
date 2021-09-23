@@ -1096,6 +1096,9 @@
 		}
 		.card__text {
 			line-height: 1.5;
+			&_small {
+				font-weight: 500;
+			}
 		}
 	}
 }
@@ -2561,6 +2564,28 @@
 	}
 }
 /*=========/list-block==========*/
+/*=========Include-block==========*/
+.include-block {
+	&_center {
+		display: flex;
+		justify-content: center;
+		>* {
+			width: 15%;
+			margin-right: 75px;
+			text-align: center;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&__icon {
+		margin-bottom: 20px;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+/*=========/include-block==========*/
 
 /*========Page-slider=========*/
 .page-slider {
@@ -3000,6 +3025,13 @@
 				width: calc(50% - 30px);
 				margin-right: 60px;
 				padding-left: 10px;
+			}
+		}
+	}
+	.include-block {
+		&_center {
+			>* {
+				width: 33.33333%;
 			}
 		}
 	}
@@ -3678,6 +3710,21 @@
 			>* {
 				width: 100%;
 				margin-right: 0;
+			}
+		}
+	}
+	.include-block {
+		&_center {
+			flex-wrap: wrap;
+			>* {
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 25px;
+			}
+		}
+		&__icon {
+			img {
+				max-width: 70px;
 			}
 		}
 	}
